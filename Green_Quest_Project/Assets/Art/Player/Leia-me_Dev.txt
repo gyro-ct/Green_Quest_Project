@@ -1,0 +1,10 @@
+Olá! Sou uma guia para o Sprite Sheet de nosso(a) Player de cabelos azuis!
+
+➼ Primeira fileira de sprites = "move", que servirá para movimentar o player pelo mapa;
+➼ Segunda fileira de sprites = "grab", que representa o ato de pegar ou interagir com um novo objeto;
+➼ Terceira fileira de sprites = "carry", para que o player possa carregar um objeto pelo cenário;
+➼ Quarta fileira de sprites = "idle 1", é importante piscar algumas vezes ao dia, recomendo;
+➼ Quinta fileira de sprites = "idle 2", porque o player pode existir sem fazer absolutamente nada, se ele assim quiser.
+
+⚠ Os sprites de move, grab e carry precisam ser configurados a uma velocidade mínima de 120 ms de transição (talvez um pouquinho mais rápido que isso possa ficar legal);
+⚠ Os sprites de idle, que serão intercalados, podem ser configurados a uma velocidade de 90 ms de transição;
