@@ -50,6 +50,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 2056904899
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8401692288953904933, guid: dc6fb12899c9c10138f63718975e02cd,
+  m_Sprite: {fileID: 4553746745260134834, guid: 38b9f59ed60ab1747bcb1f0779236092,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -119,9 +120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879b5d78d809585c5bf7ad719bbf4e1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6.5
+  moveSpeed: 7.5
   playerRBody: {fileID: 8190571221998339858}
   animator: {fileID: 8190571221998339871}
+  areaTransitionName: 
 --- !u!95 &8190571221998339871
 Animator:
   serializedVersion: 3
@@ -158,7 +160,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1.3125}
+    oldSize: {x: 1.329247, y: 2}
     newSize: {x: 0.15, y: 0.21}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
