@@ -7,16 +7,15 @@ public class EssentialsLoader : MonoBehaviour
     public GameObject UIScreen;
     public GameObject player;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if(UIFade.instance == null)
         {
-            UIFade.instance = Instantiate(UIScreen).GetComponent<UIFade>();
+            Instantiate(UIScreen);
         }
         if(PlayerController.instance == null)
         {
-            PlayerController clone = Instantiate(player).GetComponent<PlayerController>();
-            PlayerController.instance = clone;
+            Instantiate(player);
         }
     }
 
