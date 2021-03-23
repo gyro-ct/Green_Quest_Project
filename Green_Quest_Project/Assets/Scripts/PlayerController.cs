@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
 		
 		
 		
-		if(movement.x > 0.1 || movement.y > 0.1)
+		if(movement.x > 0.1 || movement.y > 0.1 || movement.x < -0.1 || movement.y < -0.1)
 		{
 			animator.SetBool("IsRunning", true);
 		} else {
@@ -102,6 +102,40 @@ public class PlayerController : MonoBehaviour
     {
         bottomLeftLimit = botLeft + new Vector3(0.5f,0.5f,0f);
         topRightLimit = topRight + new Vector3(-0.5f,0.5f,0f);
+    }
+    
+    
+    // Call when collision is happening, here to check collision with movable objects
+    void OnCollisionStay2D(Collision2D col)
+    {
+    
+    	//Debug.Log(col.gameObject.tag);
+    
+    	if (col.gameObject.tag == "Movables")
+    	{
+    		
+    		if (animator.GetBool("IsMovingObject") == false)
+    		{
+    			animator.SetBool("IsMovingObject", true);
+    			//Debug.Log("1" + animator.GetBool("IsMovingObject"));
+    		}
+    		
+    		Debug.Log("2" + Mathf.Abs(movement.x) + "   " + Mathf.Abs(movement.y));
+    		if(Mathf.Abs(movement.x) < 0.1 && Mathf.Abs(movement.y) < 0.1)
+		{
+			animator.SetBool("IsMovingObject", false);
+		}
+    		
+    	}
+    }
+    
+    // Call when collision finishes, here to check collision with movable objects
+    void OnCollisionExit2D(Collision2D col)
+    {
+    	if (col.gameObject.tag == "Movables")
+    	{
+	    animator.SetBool("IsMovingObject", false);
+	}
     }
     
     IEnumerator ExampleCoroutine()
