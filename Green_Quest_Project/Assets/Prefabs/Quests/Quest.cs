@@ -19,6 +19,7 @@ public class Quest
     public int id; // Identificação da quest
     public QuestProgress progress; // Progresso da quest [ver enum]
     public string description; // Descrição da quest
+    public string hint; // Hint quando quest está sendo feita
     public string done_message; // Mensagem quando completa
     public int nextQuest; // Identificação da próxima quest (se houver)
 
