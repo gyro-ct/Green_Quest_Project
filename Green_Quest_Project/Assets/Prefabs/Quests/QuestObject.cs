@@ -36,7 +36,8 @@ public class QuestObject : MonoBehaviour
     void Update(){
         if(inTrigger && Input.GetKeyDown(KeyCode.Space)){
             Debug.Log("WORKING");
-            QuestManager.questManager.QuestRequest(this);
+            //QuestManager.questManager.QuestRequest(this);
+            QuestUIManager.uiManager.CheckQuest(this);
         }
         SetQuestMarker();
     } 

@@ -53,6 +53,7 @@ public class QuestUIManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+        HideQuestPanel();
     }
 
     void Update(){
@@ -67,7 +68,7 @@ public class QuestUIManager : MonoBehaviour
         QuestManager.questManager.QuestRequest(questObject);
 
         if ((questRunning || questAvailable) && !questPanelActive){
-            // Show the quest panel
+            ShowQuestPanel();
         } else {
             Debug.Log("Nenhuma quest");
         }
@@ -77,7 +78,26 @@ public class QuestUIManager : MonoBehaviour
     public void ShowQuestPanel(){
         questPanelActive = true;
         questPanel.SetActive(questPanelActive);
-        // Fill data
+        FillQuestButtons();
+    }
+
+    public void HideQuestPanel(){
+        questPanelActive = false;
+        questAvailable = false;
+        questRunning = false;
+
+        questTitle.text = "";
+        questDescription.text = "";
+        questSummary.text = "";
+
+        availableQuests.Clear();
+        activeQuests.Clear();
+
+        for (int i=0; i<qButtons.Count;i++){
+            Destroy(qButtons[i]);
+        }
+        qButtons.Clear();
+        questPanel.SetActive(questPanelActive);
     }
 
     void FillQuestButtons(){
