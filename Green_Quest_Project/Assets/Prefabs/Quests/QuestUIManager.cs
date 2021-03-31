@@ -120,4 +120,36 @@ public class QuestUIManager : MonoBehaviour
         }
     }
 
+    // Mostrar informações das Quests
+
+    public void ShowSelectedQuest(int questID){
+        for (int i=0; i<availableQuests.Count; i++){
+            if(availableQuests[i].id == questID){
+                questTitle.text = availableQuests[i].name;
+                Debug.Log(availableQuests[i].progress);
+                if(availableQuests[i].progress == Quest.QuestProgress.AVAILABLE){
+                    questDescription.text = availableQuests[i].description;
+                    // Podemos mudar essa mensagem!
+                    questSummary.text = availableQuests[i].questObjective + " : " + availableQuests[i].questObjectiveCount + " / " + availableQuests[i].questObjectiveRequirements;
+                }
+            }
+        }
+
+        for (int i=0; i<activeQuests.Count; i++){
+            Debug.Log("HEY" + i);
+            if(activeQuests[i].id == questID){
+                questTitle.text = activeQuests[i].name;
+                Debug.Log(activeQuests[i].progress);
+                if(activeQuests[i].progress == Quest.QuestProgress.ACCEPTED){
+                    questDescription.text = activeQuests[i].hint;
+                    // Podemos mudar essa mensagem!
+                    questSummary.text = activeQuests[i].questObjective + " : " + activeQuests[i].questObjectiveCount + " / " + activeQuests[i].questObjectiveRequirements;
+                } else if (activeQuests[i].progress == Quest.QuestProgress.COMPLETED){
+                    questDescription.text = activeQuests[i].congratulation;
+                    questSummary.text = activeQuests[i].questObjective + " : " + activeQuests[i].questObjectiveCount + " / " + activeQuests[i].questObjectiveRequirements;
+                }
+            }
+        }
+    }
+
 }

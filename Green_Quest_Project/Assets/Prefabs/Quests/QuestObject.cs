@@ -42,8 +42,9 @@ public class QuestObject : MonoBehaviour
         SetQuestMarker();
     } 
 
-    void SetQuestMarker(){
+    public void SetQuestMarker(){
         // Checa primeiro se há quests completas
+        Debug.Log("ENTERED_MARKER");
         if (QuestManager.questManager.CheckCompleteQuests(this)){
             marker.SetActive(true);
             image.sprite = receivableSprite;
