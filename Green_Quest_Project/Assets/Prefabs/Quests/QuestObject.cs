@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class QuestObject : MonoBehaviour
 {
+    public static QuestObject questObject;
     private bool inTrigger = false;
 
     // Identificador das quests que podem ser oferecidas
@@ -22,6 +23,14 @@ public class QuestObject : MonoBehaviour
         SetQuestMarker();
     }
 
+    /*void Awake(){
+        if (questObject == null){
+            questObject = this;
+        } else if (questObject != this) {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
+    }*/
     void OnTriggerEnter2D(Collider2D other){
         if (other.tag == "Player"){
             inTrigger = true;

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class QuestUIManager : MonoBehaviour
 {
@@ -76,6 +78,7 @@ public class QuestUIManager : MonoBehaviour
     }
 
     public void ShowQuestPanel(){
+        Debug.Log("Entrou no Show");
         questPanelActive = true;
         questPanel.SetActive(questPanelActive);
         FillQuestButtons();

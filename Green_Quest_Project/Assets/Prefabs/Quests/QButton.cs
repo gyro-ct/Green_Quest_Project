@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class QButton : MonoBehaviour
 {
 
     public int questID;
-    public Text questTitle;
+    public TMP_Text questTitle;
 
     // Only prefabs can be instantiated
     private GameObject acceptButton;

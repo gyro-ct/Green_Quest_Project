@@ -38,7 +38,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 224.54419, y: -74.397675}
+  m_AnchoredPosition: {x: 228, y: -74.397675}
   m_SizeDelta: {x: 799.0884, y: 198.7955}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4736532272468564329
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5eb32a5613b6ec54a87aadec057dfbe6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc2c37a459fa3814cb1e514fbb0ce3b5, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -153,7 +153,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 6120265339105655453}
-          m_TargetAssemblyTypeName: 
+          m_TargetAssemblyTypeName: DialogueEditor.UIConversationButton, Assembly-CSharp
           m_MethodName: OnHover
           m_Mode: 6
           m_Arguments:
@@ -228,7 +228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 32, y: 16}
+  m_AnchoredPosition: {x: 32, y: 27}
   m_SizeDelta: {x: -19.75, y: -46.1852}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4901622757418411431
@@ -259,10 +259,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: SIM
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a9ff38184b91c0b4ab0fca558e3a4788, type: 2}
+  m_sharedMaterial: {fileID: -6695386654235650512, guid: a9ff38184b91c0b4ab0fca558e3a4788,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -286,7 +287,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 136.6
+  m_fontSize: 90.8
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -322,7 +323,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 71.86743, y: 0, z: 137.77295, w: 0}
+  m_margin: {x: 71.86743, y: 31.024109, z: 137.77295, w: 13.960907}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
