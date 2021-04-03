@@ -36,6 +36,7 @@ public class QuestObject : MonoBehaviour
             inTrigger = true;
         }
     }
+    
     void OnTriggerExit2D(Collider2D other){
         if (other.tag == "Player"){
             inTrigger = false;
