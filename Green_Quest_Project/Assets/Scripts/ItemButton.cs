@@ -1,9 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
-public class PanelButton : MonoBehaviour
+public class ItemButton : MonoBehaviour
 {
+
+    public Image buttonImage;
+    public TMP_Text amountText;
+    public int buttonValue;
+
+
     // Start is called before the first frame update
     void Start()
     {
