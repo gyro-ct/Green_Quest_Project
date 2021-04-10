@@ -59,10 +59,11 @@ public class QuestUIManager : MonoBehaviour
     }
 
     void Update(){
-        if (Input.GetKeyDown(KeyCode.Q)){
+        /*if (Input.GetKeyDown(KeyCode.Q)){
             questLogPanelActive = !questLogPanelActive;
             ShowQuestLogPanel();
-        }
+        }*/
+
     }
 
     public void CheckQuest(QuestObject questObject){
@@ -85,7 +86,9 @@ public class QuestUIManager : MonoBehaviour
     }
 
     public void ShowQuestLogPanel(){
-        questLogPanel.SetActive(questLogPanelActive);
+        //questLogPanel.SetActive(questLogPanelActive);
+        questLogPanelActive = true;
+        questLogPanel.SetActive(true);
         if (questLogPanelActive && !questPanelActive){
             foreach(Quest curQuest in QuestManager.questManager.currentQuestList){
                 GameObject questButton = Instantiate(qLogButton);
