@@ -1,29 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Item : MonoBehaviour
+public class Item 
 {
     
-    public bool isItem;
-    public int IDDoItem;
-    public Sprite iconeDoItem;
-    public string nomeDoItem;
-    public string descrição1;
-    [UnityEngine.TextArea]
-    public string descrição2;
-    
+    [Header("Item Details")]
+    public string itemName;
+    public string description1;
+    public string description2;
+    public int value;
+    public Sprite itemSprite;
 
-    
-    
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
