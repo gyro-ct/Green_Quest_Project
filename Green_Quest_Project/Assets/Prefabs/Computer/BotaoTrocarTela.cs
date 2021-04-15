@@ -5,7 +5,9 @@ using UnityEngine;
 public class BotaoTrocarTela : MonoBehaviour
 {
     public GameObject thePanel;
+    public GameObject theContactPanel;
     public GameObject theBigPanel;
+    public string TAG;
 
     /*void Update(){
         if (Input.GetKeyDown(KeyCode.E)){
@@ -20,16 +22,29 @@ public class BotaoTrocarTela : MonoBehaviour
     }*/
 
     public void TrocarTela(){
-        thePanel.SetActive(true);
+        if (TAG == "Folder"){
+            thePanel.SetActive(true);
+        } else if (TAG == "Contact"){
+            theContactPanel.SetActive(true);
+        }
+        
     }
 
     public void Close(){
-        thePanel.SetActive(false);
+        if (TAG == "Folder"){
+            thePanel.SetActive(false);
+        } else if (TAG == "Contact"){
+            theContactPanel.SetActive(false);
+        }
     }
 
     public void CloseAll(){
         Debug.Log("CLOSE");
+
         thePanel.SetActive(false);
+        theContactPanel.SetActive(false);
         theBigPanel.SetActive(false);
     }
+
+    
 }

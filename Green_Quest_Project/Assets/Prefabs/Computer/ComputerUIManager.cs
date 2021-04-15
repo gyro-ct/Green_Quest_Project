@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DialogueEditor;
 public class ComputerUIManager : MonoBehaviour
 {
 
     public static ComputerUIManager computerManager;
-    
+    public NPCConversation myConversation;
     public GameObject theBigPanel;
+    public GameObject Animation;
+    public GameObject MainPanelConversation;
 
     private bool theBigPanelActive = false;
 
@@ -31,5 +33,16 @@ public class ComputerUIManager : MonoBehaviour
 
     public void ShowThePanel(){
         theBigPanel.SetActive(theBigPanelActive);
+    }
+
+    public void AAAAAAAAAAAAAAAAAAAAAAAAAAA()
+    {
+
+        Debug.Log("LOL");
+        Animation.SetActive(false);
+        MainPanelConversation.SetActive(true);
+        Debug.Log("Conversation");
+        ConversationManager.Instance.StartConversation(myConversation);
+        Debug.Log("ConversationPast");
     }
 }
