@@ -42,7 +42,6 @@ public class ItemManager : MonoBehaviour
         Debug.Log(ItemTabAction);
         if(!ItemTabAction)
         {
-            Debug.Log("Entrou no action");
             foreach (Item item in ListItem)
             {
                 
@@ -67,10 +66,9 @@ public class ItemManager : MonoBehaviour
 
     public void hideInformation()
     {
-        Debug.Log(ItemTabAction);
+
         if(ItemTabAction)
         {
-            Debug.Log("Entrou if do hide");
             for (int i = 0; i < ListButtons.Count; i++)
             {
                 Destroy(ListButtons[i]);

@@ -36,7 +36,7 @@ public class Pickup : MonoBehaviour
             
             Thisitem.itemName = NomeDoItem;
             Thisitem.description1 = Descrição1;
-            Thisitem.description2 = Descrição1;
+            Thisitem.description2 = Descrição2;
             Thisitem.value = IDDoItem;
             Thisitem.itemSprite = ImagemDoItem;
             ItemManager.itemmanager.ListItem.Add(Thisitem);
