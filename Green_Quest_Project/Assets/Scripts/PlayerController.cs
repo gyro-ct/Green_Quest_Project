@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
         	movement.y = 0.0f;
         	animator.SetFloat("Horizontal", movement.x); // set declared blend parameter "Horizontal" as input from keyboard
 		animator.SetFloat("Vertical", movement.y); // same set but vertical
-        	StartCoroutine(ExampleCoroutine());
+        	StartCoroutine(ExampleCoroutine(0.5f));
         }
         
         // Input
@@ -94,6 +94,10 @@ public class PlayerController : MonoBehaviour
 	}
     }
     
+    public void startCo(float time){
+        StartCoroutine(ExampleCoroutine2(time));
+    }
+
     // Update executed in a fixed timer (always 15 times a sec)
     void FixedUpdate()
     {
@@ -141,13 +145,27 @@ public class PlayerController : MonoBehaviour
 	}
     }
     
-    IEnumerator ExampleCoroutine()
+    IEnumerator ExampleCoroutine2(float time)
     {
         //Print the time of when the function is first called.
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
 
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(time);
+
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        
+        Q101QuizManager.q101.Ligacao();
+    }
+
+    IEnumerator ExampleCoroutine(float time)
+    {
+        //Print the time of when the function is first called.
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(time);
 
         //After we have waited 5 seconds print the time again.
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
