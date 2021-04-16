@@ -25,6 +25,7 @@ public class BotaoTrocarTela : MonoBehaviour
         if (TAG == "Folder"){
             thePanel.SetActive(true);
         } else if (TAG == "Contact"){
+            Debug.Log("CONTACT");
             theContactPanel.SetActive(true);
         }
         
