@@ -130,6 +130,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 429041936818533659, guid: 32f7ae0f8551d98468b843acd9d7a607,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8602090262790085998, guid: 32f7ae0f8551d98468b843acd9d7a607,
         type: 3}
       propertyPath: m_Name
@@ -267,6 +272,18 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65201d4efac5eae4599880417f6ffe04, type: 3}
+--- !u!114 &566910213 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5299211834326231601, guid: 6aa27f5d52fc13330913c10a00f8fa90,
+    type: 3}
+  m_PrefabInstance: {fileID: 5299211835089882361}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5299211835089882361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -274,6 +291,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5299211833283134534, guid: 6aa27f5d52fc13330913c10a00f8fa90,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299211833283134534, guid: 6aa27f5d52fc13330913c10a00f8fa90,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 177f33c5dfb9b4547ba05d5a10c53ef9,
+        type: 3}
     - target: {fileID: 5299211833423752649, guid: 6aa27f5d52fc13330913c10a00f8fa90,
         type: 3}
       propertyPath: m_Name
@@ -384,6 +412,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5299211833464733043, guid: 6aa27f5d52fc13330913c10a00f8fa90,
+        type: 3}
+      propertyPath: m_text
+      value: MUITO BAIXA
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299211833464733043, guid: 6aa27f5d52fc13330913c10a00f8fa90,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 31.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299211833464733043, guid: 6aa27f5d52fc13330913c10a00f8fa90,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b84871c8216a96940a2524ca2705204f,
+        type: 2}
+    - target: {fileID: 5299211833464733043, guid: 6aa27f5d52fc13330913c10a00f8fa90,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1299688833328019327, guid: b84871c8216a96940a2524ca2705204f,
+        type: 2}
+    - target: {fileID: 5299211833464733043, guid: 6aa27f5d52fc13330913c10a00f8fa90,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5299211833476942047, guid: 6aa27f5d52fc13330913c10a00f8fa90,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -409,5 +464,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5299211835213660056, guid: 6aa27f5d52fc13330913c10a00f8fa90,
+        type: 3}
+      propertyPath: m_CaptionText
+      value: 
+      objectReference: {fileID: 566910213}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6aa27f5d52fc13330913c10a00f8fa90, type: 3}

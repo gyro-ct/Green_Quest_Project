@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 945932036035465725}
   - component: {fileID: 945932036035465726}
-  - component: {fileID: 945932036035465727}
+  - component: {fileID: 1221432202389423671}
   m_Layer: 0
-  m_Name: Area Exit
+  m_Name: Area_Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &945932036035465727
+--- !u!114 &1221432202389423671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaToLoad: 
   areaTransitionName: 
-  theEntrance: {fileID: 0}
+  theEntrance: {fileID: 882202641520143857}
   waitToLoad: 1
 --- !u!1 &945932036579252463
 GameObject:

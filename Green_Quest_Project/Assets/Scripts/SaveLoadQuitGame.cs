@@ -4,13 +4,13 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
-public class SaveLoad : MonoBehaviour
+public class SaveLoadQuitGame : MonoBehaviour
 {
     
-    private void Start()
+    public void Save()
     {
         Save s = new Save();
-        //Populando o save
+        //Populando o save. O que precisa ser salvo?
         s.level = 2;
         s.inventory = new List<string>();
         s.inventory.Add("Itemsave");
@@ -57,5 +57,11 @@ public class SaveLoad : MonoBehaviour
         }
         return null;
     }   
+    
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Quit!");
+    }
 
 }

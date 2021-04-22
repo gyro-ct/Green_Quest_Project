@@ -11,6 +11,7 @@ public class Email
     public Sprite ImagemRemetente;
     public string NomeDoRemetente;
     public string TituloDoEmail;
+    [UnityEngine.TextArea]
     public string CorpoDoEmail;
     public int ID;
     public string DataDoEmail;

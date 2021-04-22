@@ -20,10 +20,10 @@ public class SettingsMenu : MonoBehaviour
             string option = resolutions[i].width + " x " + resolutions[i].height;
             options.Add(option);
 
-            Debug.Log("REGOPT"+Screen.currentResolution.width);
-            Debug.Log("REGOPT"+Screen.currentResolution.height);
-            Debug.Log("REG"+resolutions[i].width);
-            Debug.Log("REG"+resolutions[i].height);
+            //Debug.Log("REGOPT"+Screen.currentResolution.width);
+            //Debug.Log("REGOPT"+Screen.currentResolution.height);
+            //Debug.Log("REG"+resolutions[i].width);
+            //Debug.Log("REG"+resolutions[i].height);
 
             if (resolutions[i].width == Screen.currentResolution.width &&
                 resolutions[i].height == Screen.currentResolution.height){
