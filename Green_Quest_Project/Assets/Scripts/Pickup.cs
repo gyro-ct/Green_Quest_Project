@@ -40,6 +40,7 @@ public class Pickup : MonoBehaviour
             Thisitem.value = IDDoItem;
             Thisitem.itemSprite = ImagemDoItem;
             ItemManager.itemmanager.ListItem.Add(Thisitem);
+            Destroy(gameObject);
             
             
 

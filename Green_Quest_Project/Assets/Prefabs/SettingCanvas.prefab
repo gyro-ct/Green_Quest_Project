@@ -2521,7 +2521,6 @@ GameObject:
   - component: {fileID: 5299211833423752650}
   - component: {fileID: 5299211833423752651}
   - component: {fileID: 5299211833423752648}
-  - component: {fileID: 395052588}
   m_Layer: 5
   m_Name: SettingCanvas
   m_TagString: Untagged
@@ -2625,25 +2624,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resolutionDropdown: {fileID: 5299211834971388361}
   audioMixer: {fileID: 24100000, guid: 1717bad08f5345a2f92e0e76f251246b, type: 2}
---- !u!95 &395052588
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5299211833423752649}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cbedf085e681a414db228c3aa831bec6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5299211833430469805
 GameObject:
   m_ObjectHideFlags: 0
