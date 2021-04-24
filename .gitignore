@@ -9,9 +9,12 @@
 [Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
+[Pp]ackages/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
+!/[Pp]rojectSettings/PackageManagerSettings.asset
+!/[Aa]ssets/[Pp]layFabEditorExtensions/[Ee]ditor/[Rr]esources/PlayFabEditorPrefsSO.asset
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
