@@ -73,7 +73,7 @@ public class ConvManager : MonoBehaviour
                 ContatosButton CBbutton = CButton.GetComponent<ContatosButton>();
                 CBbutton.imgPersonagem = contato.imgPersonagem;
                 CBbutton.nome = contato.nome;
-                CBbutton.desc = contato.nome;
+                CBbutton.desc = contato.desc;
                 CBbutton.fazerLigacao = contato.LigacaoPadrao;
                 CBbutton.nomeBotao.text = contato.nome;
                 CBbutton.descPainel.text = contato.desc;
