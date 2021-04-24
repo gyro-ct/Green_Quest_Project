@@ -4819,7 +4819,7 @@ PrefabInstance:
     - target: {fileID: 1871204917636672918, guid: e2c4798fd8ff2ae49a1d07b624f41de8,
         type: 3}
       propertyPath: m_Name
-      value: ContatoButton (1)
+      value: "Bot\xE3oContato"
       objectReference: {fileID: 0}
     - target: {fileID: 1871204917636672919, guid: e2c4798fd8ff2ae49a1d07b624f41de8,
         type: 3}
@@ -11805,7 +11805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &698706825
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38732,9 +38732,9 @@ MonoBehaviour:
     nome: Eva
     desc: Minha pequena Eva
     LigacaoPadrao:
-      name: 
-      ID: 0
-      Conversa: {fileID: 0}
+      name: teste ...
+      ID: 19
+      Conversa: {fileID: 1624901616}
     ID: 1
   imagemPersonagemPainel: {fileID: 1926531974}
   descPainel: {fileID: 1244362640}
