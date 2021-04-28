@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 topRightLimit;
     public string areaTransitionName;
     public bool canMove;
+    public bool GotFish;
     
 
 
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
     	canMove = true;
+        GotFish = false;
         if (instance == null)
         {
             instance = this;
@@ -111,16 +113,29 @@ public class PlayerController : MonoBehaviour
         topRightLimit = topRight + new Vector3(-0.5f,0.5f,0f);
     }
     
-    
+    // Call when fishing
+    void OnTriggerStay2D(Collider2D col){
+        Debug.Log("TRIGGER "+col.gameObject.tag);
+        if (col.gameObject.tag == "Peixe"){
+            GotFish = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col){
+        Debug.Log("TRIGGEREXIT "+col.gameObject.tag);
+        if (col.gameObject.tag == "Peixe"){
+            GotFish = false;
+        }
+    }
+
     // Call when collision is happening, here to check collision with movable objects
     void OnCollisionStay2D(Collision2D col)
     {
     
-    	//Debug.Log(col.gameObject.tag);
+    	Debug.Log(col.gameObject.tag);
     
     	if (col.gameObject.tag == "Movables")
     	{
-    		
     		if (animator.GetBool("IsMovingObject") == false)
     		{
     			animator.SetBool("IsMovingObject", true);
@@ -132,6 +147,7 @@ public class PlayerController : MonoBehaviour
 		{
 			animator.SetBool("IsMovingObject", false);
 		}
+        
     		
     	}
     }
@@ -139,10 +155,11 @@ public class PlayerController : MonoBehaviour
     // Call when collision finishes, here to check collision with movable objects
     void OnCollisionExit2D(Collision2D col)
     {
+        Debug.Log("EXIT" + col.gameObject.tag);
     	if (col.gameObject.tag == "Movables")
     	{
 	    animator.SetBool("IsMovingObject", false);
-	}
+	    }
     }
     
     IEnumerator ExampleCoroutine2(float time)

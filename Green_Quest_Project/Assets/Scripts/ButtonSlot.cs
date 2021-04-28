@@ -14,10 +14,12 @@ public class ButtonSlot : MonoBehaviour
     public int ID;
     public GameObject Use;
     public GameObject Discard;
+    public GameObject DescPanel;
     
     public string nome;
     public string descricao1;
     public string descricao2;
+    public Item myItem;
 
    void Start()
     {
@@ -37,6 +39,9 @@ public class ButtonSlot : MonoBehaviour
         Descricao2.text = descricao2;
         Use.SetActive(true);
         Discard.SetActive(true);
+        DescPanel.SetActive(true);
+        UseButton Usebutton = Use.GetComponent<UseButton>();
+        Usebutton.myItem = myItem;
         
     }
 

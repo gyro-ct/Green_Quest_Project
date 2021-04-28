@@ -44,7 +44,7 @@ public class ItemManager : MonoBehaviour
         {
             foreach (Item item in ListItem)
             {
-                
+                Debug.Log(item);
                 GameObject ItemButton = Instantiate(button);
                 ButtonSlot Infobutton = ItemButton.GetComponent<ButtonSlot>();
                 Infobutton.nome = item.itemName;
@@ -52,6 +52,7 @@ public class ItemManager : MonoBehaviour
                 Infobutton.descricao2 = item.description2;
                 Infobutton.ID = item.value;
                 Infobutton.Icone.sprite = item.itemSprite;
+                Infobutton.myItem = item;
                 Infobutton.Icone.preserveAspect = true;
                 ItemButton.transform.SetParent(ButtonPanel,false);
                 ListButtons.Add(ItemButton);

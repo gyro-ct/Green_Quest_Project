@@ -31,8 +31,11 @@ public class Pickup : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Entrou");
+        Debug.Log(other);
         if (other.CompareTag("Player"))
         {
+            
             
             Thisitem.itemName = NomeDoItem;
             Thisitem.description1 = Descrição1;
