@@ -589,7 +589,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 9.419769, y: -0.60242605}
+  m_Offset: {x: 0.17530584, y: 0.2555915}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -600,7 +600,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 29.760311, y: 22.079445}
+  m_Size: {x: 3.7877636, y: 4.7630835}
   m_EdgeRadius: 0
 --- !u!114 &228150266
 MonoBehaviour:
@@ -2393,13 +2393,11 @@ MonoBehaviour:
   ButtonStart: {fileID: 21243484}
   ButtonStartAgain: {fileID: 1774402615}
   Boia: {fileID: 228150262}
+  Player: {fileID: 0}
   PeixesPescados: 0
   HaPeixes: 0
   myList: []
   Round: 0
-  Player: {fileID: 0}
-  Menu: {fileID: 0}
-  UI: {fileID: 0}
 --- !u!1 &1769701893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2425,7 +2423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769701893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4475, y: 0.6897, z: 0.6603053}
+  m_LocalPosition: {x: -1.4475, y: 0.6897, z: 0}
   m_LocalScale: {x: 15.319231, y: 10.107722, z: 1}
   m_Children: []
   m_Father: {fileID: 1761824046}
