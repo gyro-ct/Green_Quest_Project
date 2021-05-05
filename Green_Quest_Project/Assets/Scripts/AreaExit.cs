@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class AreaExit : MonoBehaviour
 {
+    // Place all references here
     public string areaToLoad;
     public string areaTransitionName;
     public AreaEntrance theEntrance;
@@ -16,7 +17,6 @@ public class AreaExit : MonoBehaviour
         theEntrance.transitionName = areaTransitionName;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(shoudLoadAfterFade)
@@ -29,6 +29,7 @@ public class AreaExit : MonoBehaviour
             }
         }
     }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player")

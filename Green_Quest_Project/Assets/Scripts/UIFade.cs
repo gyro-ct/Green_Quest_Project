@@ -17,7 +17,6 @@ public class UIFade : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (shouldFadeToBlack)

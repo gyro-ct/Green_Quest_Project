@@ -21,18 +21,18 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
     private Vector3 bottomLeftLimit;
     private Vector3 topRightLimit;
+    public float Stamina;
+    public float Experience;
     public string areaTransitionName;
     public bool canMove;
     public bool GotFish;
-    
-
-
-    // Start is called before the first frame update
     
     void Start()
     {
     	canMove = true;
         GotFish = false;
+        Stamina = 10f;
+        Experience = 0f;
         if (instance == null)
         {
             instance = this;
@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            
         }
         DontDestroyOnLoad(gameObject);
     }
@@ -51,7 +50,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // As Update is dependent on frame rate, it is better to use FixedUpdate for movement and Update for input handling
-        
+        // Debug.Log(Stamina);
         // Player click space button for item picking
         if(Input.GetKeyDown(KeyCode.Space))
         {
@@ -115,14 +114,14 @@ public class PlayerController : MonoBehaviour
     
     // Call when fishing
     void OnTriggerStay2D(Collider2D col){
-        Debug.Log("TRIGGER "+col.gameObject.tag);
+        //Debug.Log("TRIGGER "+col.gameObject.tag);
         if (col.gameObject.tag == "Peixe"){
             GotFish = true;
         }
     }
 
     void OnTriggerExit2D(Collider2D col){
-        Debug.Log("TRIGGEREXIT "+col.gameObject.tag);
+        //Debug.Log("TRIGGEREXIT "+col.gameObject.tag);
         if (col.gameObject.tag == "Peixe"){
             GotFish = false;
         }
@@ -132,7 +131,7 @@ public class PlayerController : MonoBehaviour
     void OnCollisionStay2D(Collision2D col)
     {
     
-    	Debug.Log(col.gameObject.tag);
+    	//Debug.Log(col.gameObject.tag);
     
     	if (col.gameObject.tag == "Movables")
     	{
@@ -142,7 +141,7 @@ public class PlayerController : MonoBehaviour
     			//Debug.Log("1" + animator.GetBool("IsMovingObject"));
     		}
     		
-    		Debug.Log("2" + Mathf.Abs(movement.x) + "   " + Mathf.Abs(movement.y));
+    		//Debug.Log("2" + Mathf.Abs(movement.x) + "   " + Mathf.Abs(movement.y));
     		if(Mathf.Abs(movement.x) < 0.1 && Mathf.Abs(movement.y) < 0.1)
 		{
 			animator.SetBool("IsMovingObject", false);
@@ -155,7 +154,7 @@ public class PlayerController : MonoBehaviour
     // Call when collision finishes, here to check collision with movable objects
     void OnCollisionExit2D(Collision2D col)
     {
-        Debug.Log("EXIT" + col.gameObject.tag);
+        //Debug.Log("EXIT" + col.gameObject.tag);
     	if (col.gameObject.tag == "Movables")
     	{
 	    animator.SetBool("IsMovingObject", false);

@@ -106,7 +106,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &8190571221998339859
@@ -124,6 +124,8 @@ MonoBehaviour:
   moveSpeed: 7.5
   playerRBody: {fileID: 8190571221998339858}
   animator: {fileID: 8190571221998339871}
+  Stamina: 0
+  Experience: 0
   areaTransitionName: 
   canMove: 0
   GotFish: 0

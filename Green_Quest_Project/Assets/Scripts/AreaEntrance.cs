@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AreaEntrance : MonoBehaviour
 {
+    // Done by Area Exit, Do not insert string here
     public string transitionName;
     
     void Start()
@@ -13,11 +14,5 @@ public class AreaEntrance : MonoBehaviour
             PlayerController.instance.transform.position = transform.position;
         }
         UIFade.instance.fadeFromBlack();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

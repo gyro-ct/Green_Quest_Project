@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class EssentialsLoader : MonoBehaviour
 {
-    public GameObject UIScreen;
+    public GameObject Hud;
+    public GameObject UITransition;
     public GameObject player;
-    // Start is called before the first frame update
+
     void Awake()
     {
         if(UIFade.instance == null)
         {
-            Instantiate(UIScreen);
+            Instantiate(UITransition);
+        }
+        if(HUD.instance == null)
+        {
+            Instantiate(Hud);
         }
         if(PlayerController.instance == null)
         {
@@ -19,9 +24,4 @@ public class EssentialsLoader : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
