@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Cama : MonoBehaviour
 {
     public bool waitToFade;
     public bool isTriggered;
     public float waitToLoad = 1f;
+    private float numToSum;
 
     void Update(){
         if(isTriggered && Input.GetKeyDown(KeyCode.Space)){
             waitToFade = true;
             UIFade.instance.fadeToBlack();
             PlayerController.instance.Stamina = 100f;
+            List<GameObject> MyList = ProgressBarManager.ProgressBarInstance.getObjects();
+
+            foreach (GameObject bar in MyList){
+                Slider slider = bar.GetComponent<Slider>();
+                numToSum = 100f - slider.value;
+                bar.GetComponent<ProgressBar>().IncrementProgress(numToSum);
+            }
+
+            
         }
         if(waitToFade){
             waitToLoad -= 0.25f * Time.deltaTime;

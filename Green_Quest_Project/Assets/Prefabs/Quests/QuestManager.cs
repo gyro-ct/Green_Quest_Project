@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class QuestManager : MonoBehaviour
 {
@@ -95,15 +97,64 @@ public class QuestManager : MonoBehaviour
         }
     }
 
-    // Aceitar uma quest
+    public GameObject questProvisoryPanel;
+    public GameObject AcceptButton;
+
+    public void ShowQuestProvisoryCanvas(int questID){
+        questProvisoryPanel.SetActive(true);
+        QuestProvisoryPanel myPanel = questProvisoryPanel.GetComponent<QuestProvisoryPanel>();
+        for(int i=0; i<questList.Count; i++){
+            if (questList[i].id == questID){
+                for(int j=0; j<currentQuestList.Count;j++){
+                    if (currentQuestList[j].id == questID){
+                        return;
+                    }
+                }
+                questList[i].progress = Quest.QuestProgress.AVAILABLE;
+                currentQuestList.Add(questList[i]);
+                QuestUIManager.uiManager.availableQuests.Add(questList[i]);
+                myPanel.nome.text = questList[i].name;
+                myPanel.desc.text = questList[i].description;
+                myPanel.HINT.text = questList[i].hint;
+                myPanel.questID = questList[i].id;
+                if (questList[i].staminaUsed <= PlayerController.instance.Stamina){
+                    AcceptButton.SetActive(true);
+                } else {
+                    AcceptButton.SetActive(false);
+                }
+            }
+        }
+    }
+
+    // Aceitar uma quest (//TODO)
     public void AcceptQuest(int questID){
         for(int i=0; i<questList.Count; i++){
             if (questList[i].id == questID && questList[i].progress == Quest.QuestProgress.AVAILABLE){
                 currentQuestList.Add(questList[i]);
                 questList[i].progress = Quest.QuestProgress.ACCEPTED;
+                QuestUIManager.uiManager.availableQuests.Remove(questList[i]);
+                QuestUIManager.uiManager.activeQuests.Add(questList[i]);
+                 
+                Debug.Log(questList[i].id);
+                
+                PlayerController.instance.Stamina = PlayerController.instance.Stamina - questList[i].staminaUsed;
+                Debug.Log("PS"+PlayerController.instance.Stamina);
+                List<GameObject> MyList = ProgressBarManager.ProgressBarInstance.getObjects();
+                Debug.Log("PS3"+MyList.Count);
+                foreach (GameObject bar in MyList){
+                    Slider slider = bar.GetComponent<Slider>();
+                    Debug.Log("PS4"+slider.value);
+                    float numToSum = -questList[i].staminaUsed;
+                    Debug.Log("PS2"+numToSum);
+                    //bar.GetComponent<ProgressBar>().IncrementProgress(numToSum);
+                    //targetProgress = 
+                    bar.GetComponent<ProgressBar>().targetProgress = slider.value + numToSum;
+                }
             }
         }
     }
+
+    public TMP_Text level;
 
     // Completar uma quest
     public void CompleteQuest(int questID){
@@ -112,7 +163,23 @@ public class QuestManager : MonoBehaviour
                 currentQuestList[i].progress = Quest.QuestProgress.DONE;
                 currentQuestList.Remove(currentQuestList[i]);
 
-                // REWARD
+                GameObject MyObj = ProgressBarManager.ProgressBarInstance.getObjectsXP();
+                Slider slider = MyObj.GetComponent<Slider>();
+                float num = 0f;
+
+                // Passar de level
+                if (slider.value + questList[i].expReward >= 100f){
+                    PlayerController.instance.Level = PlayerController.instance.Level + 1;
+                    level.text = "Level: " + PlayerController.instance.Level.ToString();
+                    PlayerController.instance.Experience = (slider.value + questList[i].expReward) - 100f;
+                    num = questList[i].expReward - 100f;
+                } else {
+                    num = questList[i].expReward;
+                    PlayerController.instance.Experience = PlayerController.instance.Experience + questList[i].expReward;
+                }
+                slider.GetComponent<ProgressBar>().IncrementProgress(num);
+
+                //TODO Canvas Quest quando termina
             }
         }
         CheckChainQuest(questID);
@@ -130,6 +197,7 @@ public class QuestManager : MonoBehaviour
             for(int i=0; i<questList.Count; i++){
                 if (questList[i].id == num && questList[i].progress == Quest.QuestProgress.NOT_AVAILABLE){
                     questList[i].progress = Quest.QuestProgress.AVAILABLE;
+                    //TODO Canvas Quest quando aceita
                 }
             }
         }

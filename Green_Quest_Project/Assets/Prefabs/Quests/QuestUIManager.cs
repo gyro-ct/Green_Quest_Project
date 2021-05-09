@@ -87,10 +87,34 @@ public class QuestUIManager : MonoBehaviour
 
     public void ShowQuestLogPanel(){
         //questLogPanel.SetActive(questLogPanelActive);
+
+        for (int i = 0; i<qButtons.Count; i++){
+            Destroy(qButtons[i]);
+        }
+        qButtons.Clear();
+
         questLogPanelActive = true;
         questLogPanel.SetActive(true);
-        if (questLogPanelActive && !questPanelActive){
-            foreach(Quest curQuest in QuestManager.questManager.currentQuestList){
+        if (questLogPanelActive){
+            foreach (Quest availableQuest in availableQuests){
+                GameObject questButton = Instantiate(qLogButton);
+                QLogButton qBScript = questButton.GetComponent<QLogButton>();
+                Debug.Log("I"+availableQuest.id+" "+availableQuest.name);
+                qBScript.questID = availableQuest.id;
+                qBScript.questTitle.text = availableQuest.name;
+                questButton.transform.SetParent(qButtonSpacerLogAvailable, false);
+                qButtons.Add(questButton);
+            }
+
+            foreach (Quest activeQuest in activeQuests){
+                GameObject questButton = Instantiate(qLogButton);
+                QLogButton qBScript = questButton.GetComponent<QLogButton>();
+                qBScript.questID = activeQuest.id;
+                qBScript.questTitle.text = activeQuest.name;
+                questButton.transform.SetParent(qButtonSpacerLogAvailable, false);
+                qButtons.Add(questButton);
+            }
+            /*foreach(Quest curQuest in QuestManager.questManager.currentQuestList){
                 GameObject questButton = Instantiate(qLogButton);
                 QLogButton qblutton = questButton.GetComponent<QLogButton>();
 
@@ -101,20 +125,31 @@ public class QuestUIManager : MonoBehaviour
 
                 questButton.transform.SetParent(qButtonSpacerLogAvailable, false);
                 qButtons.Add(questButton);
-            }
-        } else if(!questLogPanelActive && !questPanelActive){
-            HideQuestLogPanel();
-        }
+            }*/
+        } 
+        //else if(!questLogPanelActive && !questPanelActive){
+        //    HideQuestLogPanel();
+        //}
     }
 
+    public GameObject closeButton;
+
     public void ShowQuestLog(Quest activeQuest){
+        Debug.Log("Alguma coisa bizarra");
         questLogTitle.text = activeQuest.name;
         if (activeQuest.progress == Quest.QuestProgress.ACCEPTED){
-            questLogDescription.text = activeQuest.hint;
+            questLogDescription.text = activeQuest.description;
             questLogSummary.text = activeQuest.questObjective + " : " + activeQuest.questObjectiveCount + " / " + activeQuest.questObjectiveRequirements;
+            closeButton.SetActive(false);
         } else if(activeQuest.progress == Quest.QuestProgress.COMPLETED){
             questLogDescription.text = activeQuest.congratulation;
             questLogSummary.text = activeQuest.questObjective + " : " + activeQuest.questObjectiveCount + " / " + activeQuest.questObjectiveRequirements;
+            closeButton.SetActive(false);
+        } else if(activeQuest.progress == Quest.QuestProgress.AVAILABLE){
+            questLogDescription.text = activeQuest.description;
+            questLogSummary.text = activeQuest.questObjective + " : " + activeQuest.questObjectiveCount + " / " + activeQuest.questObjectiveRequirements;
+            closeButton.GetComponent<AcceptQuestNaMochila>().questID = activeQuest.id;
+            closeButton.SetActive(true);
         }
     }
 
@@ -148,7 +183,7 @@ public class QuestUIManager : MonoBehaviour
             Destroy(qButtons[i]);
         }
         qButtons.Clear();
-        questLogPanel.SetActive(questLogPanelActive);
+        questLogPanel.SetActive(false);
     }
 
     void FillQuestButtons(){

@@ -23,16 +23,18 @@ public class PlayerController : MonoBehaviour
     private Vector3 topRightLimit;
     public float Stamina;
     public float Experience;
+    public int Level;
     public string areaTransitionName;
     public bool canMove;
     public bool GotFish;
     
-    void Start()
+    void Awake()
     {
     	canMove = true;
         GotFish = false;
-        Stamina = 10f;
+        Stamina = 100f;
         Experience = 0f;
+        Level = 0;
         if (instance == null)
         {
             instance = this;
@@ -60,7 +62,7 @@ public class PlayerController : MonoBehaviour
         	movement.x = 0.0f;
         	movement.y = 0.0f;
         	animator.SetFloat("Horizontal", movement.x); // set declared blend parameter "Horizontal" as input from keyboard
-		animator.SetFloat("Vertical", movement.y); // same set but vertical
+		    animator.SetFloat("Vertical", movement.y); // same set but vertical
         	StartCoroutine(ExampleCoroutine(0.5f));
         }
         
@@ -171,8 +173,6 @@ public class PlayerController : MonoBehaviour
 
         //After we have waited 5 seconds print the time again.
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
-        
-        Q101QuizManager.q101.Ligacao();
     }
 
     IEnumerator ExampleCoroutine(float time)

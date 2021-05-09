@@ -12,6 +12,7 @@ public class ComputerUIManager : MonoBehaviour
     public GameObject MainPanelConversation;
 
     private bool theBigPanelActive = false;
+    public GameObject HUD;
 
     void Awake(){
         Debug.Log("AWAKE");
@@ -24,20 +25,21 @@ public class ComputerUIManager : MonoBehaviour
     }
 
     void Update(){
-        if (Input.GetKeyDown(KeyCode.E)){
+        /*if (Input.GetKeyDown(KeyCode.E)){
             theBigPanelActive = !theBigPanelActive;
             Debug.Log("CLICKe");
             ShowThePanel();
-        }
+        }*/
     }
 
     public void ShowThePanel(){
-        theBigPanel.SetActive(theBigPanelActive);
+        theBigPanel.SetActive(true);
+        HUD = GameObject.Find("HUD_Menus(Clone)").transform.Find("HudGame").gameObject;
+        HUD.SetActive(false);
     }
 
     public void AAAAAAAAAAAAAAAAAAAAAAAAAAA()
     {
-
         Debug.Log("LOL");
         Animation.SetActive(false);
         MainPanelConversation.SetActive(true);

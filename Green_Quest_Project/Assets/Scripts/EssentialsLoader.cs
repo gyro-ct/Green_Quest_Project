@@ -10,6 +10,10 @@ public class EssentialsLoader : MonoBehaviour
 
     void Awake()
     {
+        if(PlayerController.instance == null)
+        {
+            Instantiate(player);
+        }
         if(UIFade.instance == null)
         {
             Instantiate(UITransition);
@@ -18,10 +22,7 @@ public class EssentialsLoader : MonoBehaviour
         {
             Instantiate(Hud);
         }
-        if(PlayerController.instance == null)
-        {
-            Instantiate(player);
-        }
+        
     }
 
 }

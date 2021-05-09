@@ -27,7 +27,7 @@ public class Quest
     public int questObjectiveCount; // Quantidade coletada do objetivo [3 ouro]
     public int questObjectiveRequirements; // Quantidade de objetivos necessária [5 ouro]
 
-    public int expReward;
-    public int staminaUsed;
+    public float expReward;
+    public float staminaUsed;
 
 }

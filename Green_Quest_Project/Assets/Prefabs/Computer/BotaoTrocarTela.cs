@@ -7,6 +7,7 @@ public class BotaoTrocarTela : MonoBehaviour
     public GameObject thePanel;
     public GameObject theContactPanel;
     public GameObject theBigPanel;
+    public GameObject HUD;
     public string TAG;
 
     /*void Update(){
@@ -45,6 +46,8 @@ public class BotaoTrocarTela : MonoBehaviour
         thePanel.SetActive(false);
         theContactPanel.SetActive(false);
         theBigPanel.SetActive(false);
+        HUD = ComputerUIManager.computerManager.HUD;
+        HUD.SetActive(true);
     }
 
     

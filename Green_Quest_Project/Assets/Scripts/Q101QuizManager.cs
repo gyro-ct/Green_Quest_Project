@@ -20,6 +20,8 @@ public class Q101QuizManager : MonoBehaviour
     public NPCConversation myConversationGood;
     public NPCConversation myConversationFail;
 
+    public GameObject painelConv;
+
     public static Q101QuizManager q101;
 
     void Awake(){
@@ -40,6 +42,9 @@ public class Q101QuizManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    void Update(){
+    }
+
     public void getR(){
         Debug.Log("KKK");
         r1 = ConversationManager.Instance.GetInt("R1");
@@ -50,28 +55,41 @@ public class Q101QuizManager : MonoBehaviour
         r23 = ConversationManager.Instance.GetInt("R23");
         r3 = ConversationManager.Instance.GetInt("R3");
         r4 = ConversationManager.Instance.GetInt("R4");
+        encerrar();
         calcularNota();
     }
 
-    
+    public void encerrar(){
+        Debug.Log("KKKKKKKKKKKKKKKKKKkkk");
+        painelConv = GameObject.Find("UIComputer").transform.Find("ConversationPanel").transform.Find("SairConversa").gameObject;
+        painelConv.SetActive(true);
+    }
+
     public void calcularNota(){
         Debug.Log("Nota");
         r = r1 + r21 + r22 + r23 + r3 + r4;
-        Debug.Log(r);
+        //Debug.Log("RR" + r);
         if (r>=5){
             FoiContratado = true;
+            Debug.Log("FC "+ FoiContratado);
         } else {
             FoiContratado = false;
         }
-        PlayerController.instance.startCo(20.0f);
+        PlayerController.instance.startCo(2.0f);
+        Debug.Log("FC3 "+ FoiContratado);
+        
+        Ligacao();
     }
 
     public void Ligacao(){
-        
-        Debug.Log("Conversa2");
+        Debug.Log("FC2 "+ FoiContratado);
         if (FoiContratado){
+            Debug.Log("Conversa2");
+            QuestManager.questManager.AddQuestItem("MexerNoComputador", 1);
+            QuestManager.questManager.CompleteQuest(1);
             ConversationManager.Instance.StartConversation(myConversationGood);
         } else {
+            Debug.Log("Conversa3");
             ConversationManager.Instance.StartConversation(myConversationFail);
         }
     }
