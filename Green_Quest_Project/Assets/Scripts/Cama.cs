@@ -20,7 +20,8 @@ public class Cama : MonoBehaviour
             foreach (GameObject bar in MyList){
                 Slider slider = bar.GetComponent<Slider>();
                 numToSum = 100f - slider.value;
-                bar.GetComponent<ProgressBar>().IncrementProgress(numToSum);
+                bar.GetComponent<ProgressBar>().targetProgress = slider.value + numToSum;
+                //bar.GetComponent<ProgressBar>().IncrementProgress(numToSum);
             }
 
             

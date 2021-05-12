@@ -6,6 +6,7 @@ public class Computador : MonoBehaviour
 {
     public bool isTriggered;
     public bool isAccepted = false;
+    public bool NotDestroy = true; 
 
     void Update(){
 
@@ -32,7 +33,12 @@ public class Computador : MonoBehaviour
         if(other.tag == "Player")
         {
             isTriggered = true;
-            QuestManager.questManager.ShowQuestProvisoryCanvas(1);
+            if (NotDestroy)
+            {
+                NotDestroy = false;
+                QuestManager.questManager.ShowQuestProvisoryCanvas(1);
+            }
+            
         }
     }
 

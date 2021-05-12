@@ -102,9 +102,11 @@ public class QuestManager : MonoBehaviour
 
     public void ShowQuestProvisoryCanvas(int questID){
         questProvisoryPanel.SetActive(true);
+        Debug.Log("ShowIf");
         QuestProvisoryPanel myPanel = questProvisoryPanel.GetComponent<QuestProvisoryPanel>();
         for(int i=0; i<questList.Count; i++){
             if (questList[i].id == questID){
+                Debug.Log("ShowIf2");
                 for(int j=0; j<currentQuestList.Count;j++){
                     if (currentQuestList[j].id == questID){
                         return;
@@ -128,6 +130,7 @@ public class QuestManager : MonoBehaviour
 
     // Aceitar uma quest (//TODO)
     public void AcceptQuest(int questID){
+        Debug.Log("Accept " + questID);
         for(int i=0; i<questList.Count; i++){
             if (questList[i].id == questID && questList[i].progress == Quest.QuestProgress.AVAILABLE){
                 currentQuestList.Add(questList[i]);
@@ -177,7 +180,8 @@ public class QuestManager : MonoBehaviour
                     num = questList[i].expReward;
                     PlayerController.instance.Experience = PlayerController.instance.Experience + questList[i].expReward;
                 }
-                slider.GetComponent<ProgressBar>().IncrementProgress(num);
+                MyObj.GetComponent<ProgressBar>().targetProgress = slider.value + num;
+                //slider.GetComponent<ProgressBar>().IncrementProgress(num);
 
                 //TODO Canvas Quest quando termina
             }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3066363563836758113}
   - component: {fileID: 6429775248088761654}
   - component: {fileID: 4522541417142298484}
-  - component: {fileID: 7954207734383092461}
+  - component: {fileID: 8811079745042333323}
   m_Layer: 5
   m_Name: Close
   m_TagString: Untagged
@@ -68,9 +68,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 558f6eb6a67f47a4b8eb040cae96957a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -122,9 +122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7954207734383092461}
-        m_TargetAssemblyTypeName: QLogButton, Assembly-CSharp
-        m_MethodName: ClosePanel
+      - m_Target: {fileID: 8811079745042333323}
+        m_TargetAssemblyTypeName: AcceptQuestNaMochila, Assembly-CSharp
+        m_MethodName: clickIt
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7954207734383092461
+--- !u!114 &8811079745042333323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,12 +143,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1728138832070708145}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5b2ef2c0c6e70570a25729f0847873e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e78ac4405e28d75fae23624c0de47b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   questID: 0
-  questTitle: {fileID: 0}
-  AcceptButton: {fileID: 0}
 --- !u!1 &5237251141840071024
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -215,16 +213,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: b962b3ac63f4ef24ea65c8a8baec3e93, type: 3}
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 200
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: X
+  m_Text: Iniciar quest!

@@ -94,7 +94,9 @@ public class QuestUIManager : MonoBehaviour
         qButtons.Clear();
 
         questLogPanelActive = true;
+        Debug.Log(questLogPanelActive);
         questLogPanel.SetActive(true);
+
         if (questLogPanelActive){
             foreach (Quest availableQuest in availableQuests){
                 GameObject questButton = Instantiate(qLogButton);
@@ -103,6 +105,7 @@ public class QuestUIManager : MonoBehaviour
                 qBScript.questID = availableQuest.id;
                 qBScript.questTitle.text = availableQuest.name;
                 questButton.transform.SetParent(qButtonSpacerLogAvailable, false);
+                questButton.SetActive(true);
                 qButtons.Add(questButton);
             }
 
@@ -112,6 +115,7 @@ public class QuestUIManager : MonoBehaviour
                 qBScript.questID = activeQuest.id;
                 qBScript.questTitle.text = activeQuest.name;
                 questButton.transform.SetParent(qButtonSpacerLogAvailable, false);
+                questButton.SetActive(true);
                 qButtons.Add(questButton);
             }
             /*foreach(Quest curQuest in QuestManager.questManager.currentQuestList){
@@ -148,6 +152,7 @@ public class QuestUIManager : MonoBehaviour
         } else if(activeQuest.progress == Quest.QuestProgress.AVAILABLE){
             questLogDescription.text = activeQuest.description;
             questLogSummary.text = activeQuest.questObjective + " : " + activeQuest.questObjectiveCount + " / " + activeQuest.questObjectiveRequirements;
+            Debug.Log(activeQuest.id + "closebutton");
             closeButton.GetComponent<AcceptQuestNaMochila>().questID = activeQuest.id;
             closeButton.SetActive(true);
         }

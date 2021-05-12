@@ -8,6 +8,7 @@ public class AcceptQuestNaMochila : MonoBehaviour
     public int questID;
 
     public void clickIt(){
+        Debug.Log("Accept " + questID);
         QuestManager.questManager.AcceptQuest(questID);
         QuestUIManager.uiManager.ShowQuestLogPanel();
     }
