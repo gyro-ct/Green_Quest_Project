@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
     	//	Time.fixedDeltaTime is the amount of time elapsed since last function [FixedUpdate] call. It ensures that the speed is always the same
     	playerRBody.MovePosition(playerRBody.position + movement*moveSpeed*Time.fixedDeltaTime); // get the player to a new position based on preset variables
     }
-   public void setBounds(Vector3 botLeft, Vector3 topRight)
+    public void setBounds(Vector3 botLeft, Vector3 topRight)
     {
         bottomLeftLimit = botLeft + new Vector3(0.5f,0.5f,0f);
         topRightLimit = topRight + new Vector3(-0.5f,0.5f,0f);

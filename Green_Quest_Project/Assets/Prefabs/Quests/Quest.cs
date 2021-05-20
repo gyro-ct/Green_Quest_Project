@@ -30,4 +30,18 @@ public class Quest
     public float expReward;
     public float staminaUsed;
 
+    public void EndQuestTriggers(){
+        Debug.Log("alguém me chamou 2 "+id);
+        if (id==1){
+            PortaManager.portaManager.AtivarPorta(1);
+        }
+    }
+
+    public void StartQuestTriggers(){
+        Debug.Log("alguém me chamou 2 "+id);
+        if (id==3){
+            QuestManager.questManager.quest3Trigger = true;
+        }
+    }
+
 }

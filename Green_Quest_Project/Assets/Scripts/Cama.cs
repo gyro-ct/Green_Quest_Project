@@ -12,6 +12,13 @@ public class Cama : MonoBehaviour
 
     void Update(){
         if(isTriggered && Input.GetKeyDown(KeyCode.Space)){
+
+            if (QuestManager.questManager.quest3Trigger){
+                QuestManager.questManager.AddQuestItem("Dormir", 1);
+                QuestManager.questManager.mother = true;
+                QuestManager.questManager.quest3Trigger = false;
+            }
+
             waitToFade = true;
             UIFade.instance.fadeToBlack();
             PlayerController.instance.Stamina = 100f;

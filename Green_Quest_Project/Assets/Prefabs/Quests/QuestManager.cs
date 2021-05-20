@@ -10,6 +10,9 @@ public class QuestManager : MonoBehaviour
     // Can call from any other class
     public static QuestManager questManager;
 
+    public bool quest3Trigger = false;
+    public bool mother = false;
+
     public List <Quest> questList = new List<Quest>(); // Lista mestre de quests
     public List <Quest> currentQuestList = new List<Quest>(); // Lista de quests em andamento
 
@@ -84,6 +87,19 @@ public class QuestManager : MonoBehaviour
         return false;
     }
 
+    public void UniqueAddQuestItem(string questObject){
+        Debug.Log("lol " + questObject);
+        for (int i=0; i<currentQuestList.Count; i++){
+            if(currentQuestList[i].questObjective == questObject && currentQuestList[i].progress == Quest.QuestProgress.ACCEPTED){
+                currentQuestList[i].questObjectiveCount += 1;
+            }
+
+            if(currentQuestList[i].questObjectiveCount >= currentQuestList[i].questObjectiveRequirements && currentQuestList[i].progress == Quest.QuestProgress.ACCEPTED){
+                currentQuestList[i].progress = Quest.QuestProgress.COMPLETED;
+            }
+        }
+    }
+
     // Adicionar item objetivo para as quests
     public void AddQuestItem(string questObject, int itemAmount){
         for (int i=0; i<currentQuestList.Count; i++){
@@ -153,6 +169,7 @@ public class QuestManager : MonoBehaviour
                     //targetProgress = 
                     bar.GetComponent<ProgressBar>().targetProgress = slider.value + numToSum;
                 }
+                questList[i].StartQuestTriggers();
             }
         }
     }
@@ -161,6 +178,7 @@ public class QuestManager : MonoBehaviour
 
     // Completar uma quest
     public void CompleteQuest(int questID){
+        Debug.Log("alguém me chamou");
         for(int i=0; i<currentQuestList.Count; i++){
             if (currentQuestList[i].id == questID && currentQuestList[i].progress == Quest.QuestProgress.COMPLETED){
                 currentQuestList[i].progress = Quest.QuestProgress.DONE;
@@ -181,6 +199,9 @@ public class QuestManager : MonoBehaviour
                     PlayerController.instance.Experience = PlayerController.instance.Experience + questList[i].expReward;
                 }
                 MyObj.GetComponent<ProgressBar>().targetProgress = slider.value + num;
+
+                currentQuestList[i].EndQuestTriggers();
+
                 //slider.GetComponent<ProgressBar>().IncrementProgress(num);
 
                 //TODO Canvas Quest quando termina
@@ -200,8 +221,10 @@ public class QuestManager : MonoBehaviour
         if (num > 0){
             for(int i=0; i<questList.Count; i++){
                 if (questList[i].id == num && questList[i].progress == Quest.QuestProgress.NOT_AVAILABLE){
-                    questList[i].progress = Quest.QuestProgress.AVAILABLE;
+                    questList[i].progress = Quest.QuestProgress.ACCEPTED;//AVAILABLE;
+                    currentQuestList.Add(questList[i]);
                     //TODO Canvas Quest quando aceita
+                    questList[i].StartQuestTriggers();
                 }
             }
         }

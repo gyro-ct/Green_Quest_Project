@@ -12413,9 +12413,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
+        type: 3}
+      propertyPath: porta.id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
+        type: 3}
+      propertyPath: porta.ativada
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
+        type: 3}
       propertyPath: areaTransitionName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
+        type: 3}
+      propertyPath: porta.conversaPassiva
+      value: 
+      objectReference: {fileID: 2079217893}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c92e4075a8206749abde162bfe33ead, type: 3}
 --- !u!20 &2073007964 stripped
@@ -12424,6 +12444,18 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 1280688900}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2079217893 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2307650253267483102, guid: fa62145a7028f6268935a49f4959f88d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1500689448}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2133511055
 GameObject:
   m_ObjectHideFlags: 0
