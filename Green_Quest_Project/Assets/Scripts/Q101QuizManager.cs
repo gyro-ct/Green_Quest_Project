@@ -39,7 +39,7 @@ public class Q101QuizManager : MonoBehaviour
             }
             
         }
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     void Update(){
@@ -47,14 +47,14 @@ public class Q101QuizManager : MonoBehaviour
 
     public void getR(){
         Debug.Log("KKK");
-        r1 = ConversationManager.Instance.GetInt("R1");
+        r1 = ConversationManager2.Instance2.GetInt("R1");
         Debug.Log("LLL");
         Debug.Log("KKK" + r1);
-        r21 = ConversationManager.Instance.GetInt("R21");
-        r22 = ConversationManager.Instance.GetInt("R22");
-        r23 = ConversationManager.Instance.GetInt("R23");
-        r3 = ConversationManager.Instance.GetInt("R3");
-        r4 = ConversationManager.Instance.GetInt("R4");
+        r21 = ConversationManager2.Instance2.GetInt("R21");
+        r22 = ConversationManager2.Instance2.GetInt("R22");
+        r23 = ConversationManager2.Instance2.GetInt("R23");
+        r3 = ConversationManager2.Instance2.GetInt("R3");
+        r4 = ConversationManager2.Instance2.GetInt("R4");
         encerrar();
         calcularNota();
     }

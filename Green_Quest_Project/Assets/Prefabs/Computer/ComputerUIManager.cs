@@ -15,7 +15,6 @@ public class ComputerUIManager : MonoBehaviour
     public GameObject HUD;
 
     void Awake(){
-        Debug.Log("AWAKE");
         if (computerManager == null){
             computerManager = this;
         } else if (computerManager != this) {
@@ -44,7 +43,9 @@ public class ComputerUIManager : MonoBehaviour
         Animation.SetActive(false);
         MainPanelConversation.SetActive(true);
         Debug.Log("Conversation");
-        ConversationManager.Instance.StartConversation(myConversation);
-        Debug.Log("ConversationPast");
+        ConversationManager2.Instance2.StartConversation(myConversation);
+        //Debug.Log("ConversationPast");
     }
+
+    
 }

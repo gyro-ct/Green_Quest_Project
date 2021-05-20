@@ -8,6 +8,6 @@ public class HUD : MonoBehaviour
     void Start()
     {
         instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 }
