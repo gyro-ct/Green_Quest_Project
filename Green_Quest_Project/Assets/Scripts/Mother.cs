@@ -17,6 +17,7 @@ public class Mother : MonoBehaviour
                 QuestManager.questManager.mother = false;
             } else {
                 Debug.Log("CONV");
+                Debug.Log("CC "+QuestManager.questManager.currentQuestList.Count);
                 ConversationManager.Instance.StartConversation(conversation);
             }
             
@@ -25,6 +26,7 @@ public class Mother : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col){
         if (col.tag == "Player"){
+            Debug.Log("PLAYERMOTHER");
             motherOfAllBools = true;
         }
     }

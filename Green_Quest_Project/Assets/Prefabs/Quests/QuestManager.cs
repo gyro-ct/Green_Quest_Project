@@ -89,13 +89,19 @@ public class QuestManager : MonoBehaviour
 
     public void UniqueAddQuestItem(string questObject){
         Debug.Log("lol " + questObject);
-        for (int i=0; i<currentQuestList.Count; i++){
-            if(currentQuestList[i].questObjective == questObject && currentQuestList[i].progress == Quest.QuestProgress.ACCEPTED){
-                currentQuestList[i].questObjectiveCount += 1;
+        List<Quest> CC = QuestManager.questManager.currentQuestList;
+        Debug.Log("BL " + CC.Count);
+        for (int i=0; i<CC.Count; i++){
+            Debug.Log("lol1 " + CC[i].questObjective);
+            if(CC[i].questObjective == questObject && CC[i].progress == Quest.QuestProgress.ACCEPTED){
+                CC[i].questObjectiveCount += 1;
             }
 
-            if(currentQuestList[i].questObjectiveCount >= currentQuestList[i].questObjectiveRequirements && currentQuestList[i].progress == Quest.QuestProgress.ACCEPTED){
-                currentQuestList[i].progress = Quest.QuestProgress.COMPLETED;
+            if(CC[i].questObjectiveCount >= CC[i].questObjectiveRequirements && CC[i].progress == Quest.QuestProgress.ACCEPTED){
+                CC[i].progress = Quest.QuestProgress.COMPLETED;
+                if(CC[i].completeToDone){
+                    QuestManager.questManager.CompleteQuest(CC[i].id);
+                }
             }
         }
     }
@@ -109,6 +115,9 @@ public class QuestManager : MonoBehaviour
 
             if(currentQuestList[i].questObjectiveCount >= currentQuestList[i].questObjectiveRequirements && currentQuestList[i].progress == Quest.QuestProgress.ACCEPTED){
                 currentQuestList[i].progress = Quest.QuestProgress.COMPLETED;
+                if(currentQuestList[i].completeToDone){
+                    CompleteQuest(currentQuestList[i].id);
+                }
             }
         }
     }
@@ -180,9 +189,12 @@ public class QuestManager : MonoBehaviour
     public void CompleteQuest(int questID){
         Debug.Log("alguém me chamou");
         for(int i=0; i<currentQuestList.Count; i++){
+            Debug.Log("al " + currentQuestList[i]);
             if (currentQuestList[i].id == questID && currentQuestList[i].progress == Quest.QuestProgress.COMPLETED){
                 currentQuestList[i].progress = Quest.QuestProgress.DONE;
+                currentQuestList[i].EndQuestTriggers();
                 currentQuestList.Remove(currentQuestList[i]);
+                Debug.Log("al2 " + currentQuestList);
 
                 GameObject MyObj = ProgressBarManager.ProgressBarInstance.getObjectsXP();
                 Slider slider = MyObj.GetComponent<Slider>();
@@ -200,13 +212,14 @@ public class QuestManager : MonoBehaviour
                 }
                 MyObj.GetComponent<ProgressBar>().targetProgress = slider.value + num;
 
-                currentQuestList[i].EndQuestTriggers();
+                
 
                 //slider.GetComponent<ProgressBar>().IncrementProgress(num);
 
                 //TODO Canvas Quest quando termina
             }
         }
+        Debug.Log(currentQuestList[0].id);
         CheckChainQuest(questID);
     }
 

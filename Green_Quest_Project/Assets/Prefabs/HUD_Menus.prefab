@@ -1804,6 +1804,7 @@ MonoBehaviour:
     questObjectiveRequirements: 1
     expReward: 50
     staminaUsed: 50
+    completeToDone: 0
   - name: Falar com a mae
     id: 2
     progress: 0
@@ -1816,6 +1817,7 @@ MonoBehaviour:
     questObjectiveRequirements: 1
     expReward: 50
     staminaUsed: 50
+    completeToDone: 1
   - name: Dormir
     id: 3
     progress: 0
@@ -1828,6 +1830,7 @@ MonoBehaviour:
     questObjectiveRequirements: 1
     expReward: 50
     staminaUsed: 50
+    completeToDone: 1
   - name: Falar de novo com a mae
     id: 4
     progress: 0
@@ -1840,6 +1843,7 @@ MonoBehaviour:
     questObjectiveRequirements: 1
     expReward: 50
     staminaUsed: 50
+    completeToDone: 1
   currentQuestList: []
   questProvisoryPanel: {fileID: 5062030504306450503}
   AcceptButton: {fileID: 5062030506367013396}
@@ -8763,6 +8767,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -16.062
       objectReference: {fileID: 0}
+    - target: {fileID: 2234861674222406591, guid: 7b855e30b43148813b76dcd02044c319,
+        type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3938082560620348397}
+    - target: {fileID: 2234861674222406591, guid: 7b855e30b43148813b76dcd02044c319,
+        type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 3681083544690305905}
     - target: {fileID: 2340788999689975040, guid: 7b855e30b43148813b76dcd02044c319,
         type: 3}
       propertyPath: m_Name
@@ -8928,6 +8942,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4462367171163956917, guid: 7b855e30b43148813b76dcd02044c319,
+        type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3681083544690305905}
     - target: {fileID: 7482374348480288888, guid: 7b855e30b43148813b76dcd02044c319,
         type: 3}
       propertyPath: m_IsActive

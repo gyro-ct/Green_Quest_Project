@@ -29,11 +29,16 @@ public class Quest
 
     public float expReward;
     public float staminaUsed;
+    public bool completeToDone;
 
     public void EndQuestTriggers(){
         Debug.Log("alguém me chamou 2 "+id);
         if (id==1){
             PortaManager.portaManager.AtivarPorta(1);
+        }
+        else if (id==4){
+            Debug.Log("MEEH");
+            PortaManager.portaManager.AtivarPorta(2);
         }
     }
 
