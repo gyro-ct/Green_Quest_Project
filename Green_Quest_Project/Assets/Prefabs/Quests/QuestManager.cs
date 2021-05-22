@@ -267,4 +267,39 @@ public class QuestManager : MonoBehaviour
         }
     }
 
+    public void AtivarAbaItens()
+    {
+        Debug.Log("Ativou a tab itens!");
+        GameObject ActiveItem0 = GameObject.Find("HUD_Menus(Clone)").transform.Find("CanvasMenus").transform.Find("Mochila").transform.Find("Painel mestre").transform.Find("Tab Itens").gameObject;
+        ActiveItem0.SetActive(true);
+    }
+
+     public void AtivarAviso()
+    {
+        GameObject ActiveAviso = GameObject.Find("AvisoTabItens").transform.Find("AvisoPanel").gameObject;
+        GameObject botao = GameObject.Find("AvisoTabItens").transform.Find("AvisoPanel").transform.Find("Button").gameObject;
+        GameObject description1 = GameObject.Find("AvisoTabItens").transform.Find("AvisoPanel").transform.Find("Description1").gameObject;
+        GameObject botaotexto = GameObject.Find("AvisoTabItens").transform.Find("AvisoPanel").transform.Find("Button").transform.Find("Text (TMP)").gameObject;
+        GameObject description2 = GameObject.Find("AvisoTabItens").transform.Find("AvisoPanel").transform.Find("Description2").gameObject;
+        SetColorA(ActiveAviso);
+        SetColorA(botao);
+        SetColorB(botaotexto);
+        SetColorB(description1);
+        SetColorB(description2);
+
+
+    }
+    public void SetColorA(GameObject obj)
+    {
+        Color tmp = obj.GetComponent<Image>().color;
+        tmp.a = 255f;
+        obj.GetComponent<Image>().color = tmp;
+    }
+    public void SetColorB(GameObject obj)
+    {
+        Color tmp = obj.GetComponent<TMP_Text>().color;
+        tmp.a = 255f;
+        obj.GetComponent<TMP_Text>().color = tmp;
+    }
+
 }
