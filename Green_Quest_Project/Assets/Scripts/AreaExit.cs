@@ -70,7 +70,6 @@ public class AreaExit : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            
             porta.ativarConversaPassiva = false;
         }
     }
