@@ -53,15 +53,16 @@ public class AreaExit : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            Debug.Log("és um player?");
             //SceneManager.LoadScene(areaToLoad);
-            if (porta.ativada){
-                porta.ativarConversaPassiva = false;
-                shoudLoadAfterFade = true;
-                UIFade.instance.fadeToBlack();
-                PlayerController.instance.areaTransitionName = areaTransitionName;
-            } else {
-                porta.ativarConversaPassiva = true;
-            }
+            //if (porta.ativada){
+            Debug.Log("és um ativada?");
+            porta.ativarConversaPassiva = false;
+            shoudLoadAfterFade = true;
+            UIFade.instance.fadeToBlack();
+            PlayerController.instance.areaTransitionName = areaTransitionName;
+            //} else {
+            porta.ativarConversaPassiva = true;
         }
     }
 

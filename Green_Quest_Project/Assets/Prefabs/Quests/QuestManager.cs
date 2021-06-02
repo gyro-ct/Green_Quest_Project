@@ -287,7 +287,7 @@ public class QuestManager : MonoBehaviour
         ActiveItem0.SetActive(true);
     }
 
-     public void AtivarAviso()
+    public void AtivarAviso()
     {
         GameObject ActiveAviso = GameObject.Find("AvisoTabItens").transform.Find("AvisoPanel").gameObject;
         GameObject botao = GameObject.Find("AvisoTabItens").transform.Find("AvisoPanel").transform.Find("Button").gameObject;
@@ -313,6 +313,13 @@ public class QuestManager : MonoBehaviour
         Color tmp = obj.GetComponent<TMP_Text>().color;
         tmp.a = 255f;
         obj.GetComponent<TMP_Text>().color = tmp;
+    }
+
+    public void AtivarAreaExit()
+    {
+        GameObject ActiveExit = GameObject.Find("Area_Exit2").gameObject;
+        Debug.Log("Olha ai rapaz " + ActiveExit);
+        ActiveExit.SetActive(true);
     }
 
 }
