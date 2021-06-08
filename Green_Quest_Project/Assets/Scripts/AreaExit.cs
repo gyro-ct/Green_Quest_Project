@@ -62,7 +62,7 @@ public class AreaExit : MonoBehaviour
             UIFade.instance.fadeToBlack();
             PlayerController.instance.areaTransitionName = areaTransitionName;
             //} else {
-            porta.ativarConversaPassiva = true;
+            //porta.ativarConversaPassiva = true;
         }
     }
 

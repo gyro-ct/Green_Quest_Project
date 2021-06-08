@@ -1871,6 +1871,11 @@ MonoBehaviour:
     ativarConversaPassiva: 0
     conversaPassiva: {fileID: 1998477833800332142, guid: 7002712628aa6a440b63dfae76b11833,
       type: 3}
+  - id: 3
+    ativada: 0
+    ativarConversaPassiva: 0
+    conversaPassiva: {fileID: 1998477833800332142, guid: 7002712628aa6a440b63dfae76b11833,
+      type: 3}
 --- !u!1 &1467840762956352447
 GameObject:
   m_ObjectHideFlags: 0
@@ -8943,6 +8948,11 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4462367171163956917, guid: 7b855e30b43148813b76dcd02044c319,
+        type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3681083544690305905}
+    - target: {fileID: 4462367172334386473, guid: 7b855e30b43148813b76dcd02044c319,
         type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
