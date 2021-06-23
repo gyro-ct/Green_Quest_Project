@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     public string areaTransitionName;
     public bool canMove;
     public bool GotFish;
-    
+
     void Awake()
     {
     	canMove = true;
@@ -35,10 +35,10 @@ public class PlayerController : MonoBehaviour
         Stamina = 100f;
         Experience = 0f;
         Level = 0;
-        if (instance == null)
-        {
+        if (instance == null){
             instance = this;
-        } else
+        }
+        else
         {
             if(instance != this)
             {
