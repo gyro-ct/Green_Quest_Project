@@ -13,6 +13,7 @@ public class AreaExit : MonoBehaviour
     public AreaEntrance theEntrance;
     public float waitToLoad = 1f;
     private bool shoudLoadAfterFade;
+    private bool boolean1 = false;
     private Porte porta;
     public int id;
     
@@ -25,18 +26,30 @@ public class AreaExit : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("AreaT1: Entrance recebe: " + areaTransitionName);
         theEntrance.transitionName = areaTransitionName;
-
+        boolean1 = false;
     }
 
     void Update()
     {
-        if(shoudLoadAfterFade)
+
+        if (shoudLoadAfterFade && Input.GetKeyDown(KeyCode.Space)){
+            boolean1 = true;
+        }
+
+        if(boolean1)
         {
+            UIFade.instance.fadeToBlack();
+            Debug.Log("AreaT2: Player recebe: " + areaTransitionName);
+            PlayerController.instance.areaTransitionName = areaTransitionName;
+            
             waitToLoad -= Time.deltaTime;
             if(waitToLoad <= 0)
             {
+                Debug.Log("AreaT1: Passar cena");
                 shoudLoadAfterFade = false;
+                boolean1 = false;
                 SceneManager.LoadScene(areaToLoad);
             }
         }
@@ -59,8 +72,6 @@ public class AreaExit : MonoBehaviour
             Debug.Log("és um ativada?");
             porta.ativarConversaPassiva = false;
             shoudLoadAfterFade = true;
-            UIFade.instance.fadeToBlack();
-            PlayerController.instance.areaTransitionName = areaTransitionName;
             //} else {
             //porta.ativarConversaPassiva = true;
         }
