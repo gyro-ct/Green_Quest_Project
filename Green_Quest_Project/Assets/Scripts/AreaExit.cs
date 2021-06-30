@@ -36,14 +36,14 @@ public class AreaExit : MonoBehaviour
 
         if (shoudLoadAfterFade && Input.GetKeyDown(KeyCode.Space)){
             boolean1 = true;
+            UIFade.instance.fadeToBlack();
+            Debug.Log("AreaT2: Player recebe: " + areaTransitionName);
+            PlayerController.instance.areaTransitionName = areaTransitionName;
         }
 
         if(boolean1)
         {
-            UIFade.instance.fadeToBlack();
-            Debug.Log("AreaT2: Player recebe: " + areaTransitionName);
-            PlayerController.instance.areaTransitionName = areaTransitionName;
-            
+                        
             waitToLoad -= Time.deltaTime;
             if(waitToLoad <= 0)
             {
@@ -82,6 +82,7 @@ public class AreaExit : MonoBehaviour
         if(other.tag == "Player")
         {
             porta.ativarConversaPassiva = false;
+            shoudLoadAfterFade = false;
         }
     }
 }
