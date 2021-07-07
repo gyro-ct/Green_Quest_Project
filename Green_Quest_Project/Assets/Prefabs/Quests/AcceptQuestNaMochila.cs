@@ -11,5 +11,6 @@ public class AcceptQuestNaMochila : MonoBehaviour
         Debug.Log("Accept " + questID);
         QuestManager.questManager.AcceptQuest(questID);
         QuestUIManager.uiManager.ShowQuestLogPanel();
+        
     }
 }

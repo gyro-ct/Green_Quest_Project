@@ -14,12 +14,14 @@ public class QuestProvisoryPanel : MonoBehaviour
     public int questID;
     
     public void AcceptTheQuest(){
+        PlayerController.instance.canMove = true;
         QuestManager.questManager.AcceptQuest(questID);
-        Destroy(gameObject);
     }
 
     public void AcceptTheQuestLater(){
-        Destroy(gameObject);
+        PlayerController.instance.canMove = true;
+        gameObject.SetActive(false);
+        // Destroy(gameObject);
     }
 
 }

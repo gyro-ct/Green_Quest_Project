@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     Vector2 movement; // Input movement from keyboard
     public static PlayerController instance;
     private Vector3 bottomLeftLimit;
+    private Vector3 pos = Vector3.zero;
     private Vector3 topRightLimit;
     public float Stamina;
     public float Experience;
@@ -69,32 +70,39 @@ public class PlayerController : MonoBehaviour
         // Input
         if (canMove)
         {
-		movement.x = Input.GetAxisRaw("Horizontal"); // value from -1 to 1 based on the input of left and right keys of keyboard
-		movement.y = Input.GetAxisRaw("Vertical"); // same for up and down keys
-		
-		// Player Idle position based on last Input
-		if(movement.x == 1 || movement.x == -1 || movement.y == 1 || movement.y == -1)
-		{
-			animator.SetFloat("Last_Horizontal", movement.x);
-			animator.SetFloat("Last_Vertical", movement.y);
-		}
-		
-		
-		
-		if(movement.x > 0.1 || movement.y > 0.1 || movement.x < -0.1 || movement.y < -0.1)
-		{
-			animator.SetBool("IsRunning", true);
-		} else {
-			animator.SetBool("IsRunning", false);
-		}
-		
-		
-		// Set animation using input
-		animator.SetFloat("Horizontal", movement.x); // set declared blend parameter "Horizontal" as input from keyboard
-		animator.SetFloat("Vertical", movement.y); // same set but vertical
-		animator.SetFloat("Speed", movement.sqrMagnitude); // set Speed as the magnitude of the movement vector (sqr for it to be always positive)
-		transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
-	}
+
+            movement.x = Input.GetAxisRaw("Horizontal"); // value from -1 to 1 based on the input of left and right keys of keyboard
+            movement.y = Input.GetAxisRaw("Vertical"); // same for up and down keys
+            // Debug.Log(movement.x + " " + movement.y);
+
+        } else {
+            movement.x = 0.0f;
+            movement.y = 0.0f;
+        }
+
+        // Player Idle position based on last Input
+        if(movement.x == 1 || movement.x == -1 || movement.y == 1 || movement.y == -1)
+        {
+            animator.SetFloat("Last_Horizontal", movement.x);
+            animator.SetFloat("Last_Vertical", movement.y);
+        }
+        
+        
+        
+        if(movement.x > 0.1 || movement.y > 0.1 || movement.x < -0.1 || movement.y < -0.1)
+        {
+            animator.SetBool("IsRunning", true);
+        } else {
+            animator.SetBool("IsRunning", false);
+        }
+        
+        
+        // Set animation using input
+        animator.SetFloat("Horizontal", movement.x); // set declared blend parameter "Horizontal" as input from keyboard
+        animator.SetFloat("Vertical", movement.y); // same set but vertical
+        animator.SetFloat("Speed", movement.sqrMagnitude); // set Speed as the magnitude of the movement vector (sqr for it to be always positive)
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
+
     }
     
     public void startCo(float time){
@@ -188,5 +196,4 @@ public class PlayerController : MonoBehaviour
         
         canMove = true;
     }
-    
 }
