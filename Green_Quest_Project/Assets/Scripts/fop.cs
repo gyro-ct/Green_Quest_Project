@@ -6,6 +6,8 @@ using UnityEngine.Tilemaps;
 public class fop : MonoBehaviour
 {
     private string LAYER_NAME;
+    public int sortingOrder_Back;
+    public int sortingOrder_PGT;
     private int sortingOrder;
     private TilemapRenderer sprite;
 
@@ -29,11 +31,11 @@ public class fop : MonoBehaviour
         {
             change = true;
             Debug.Log("ENTERED FOP");
-            sortingOrder = 2;
+            sortingOrder = sortingOrder_Back;
             LAYER_NAME = "Background";
         } else if (PlayerController.instance.transform.position.y >= height && LAYER_NAME == "Background") {
             change = true;
-            sortingOrder = 2;
+            sortingOrder = sortingOrder_PGT;
             LAYER_NAME = "Player";
         }
 
