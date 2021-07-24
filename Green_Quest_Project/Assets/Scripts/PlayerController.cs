@@ -196,4 +196,16 @@ public class PlayerController : MonoBehaviour
         
         canMove = true;
     }
+
+    public void CantMoveMenu()
+    {
+        movement.x = 0.0f;
+        movement.y = 0.0f;
+    }
+
+    public void CanMoveMenu()
+    {
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+    }
 }
