@@ -38,9 +38,15 @@ public class Quest
             PortaManager.portaManager.AtivarPorta(1);
             QuestManager.questManager.ConversationMainTrigger = 1;
         }
+        else if (id == 2){
+            QuestManager.questManager.ConversationMainTrigger = 2;
+        }
+        else if (id == 3){
+            QuestManager.questManager.ConversationMainTrigger = 3;
+            PortaManager.portaManager.AtivarPorta(2);
+        }
         else if (id==4){
             Debug.Log("MEEH");
-            PortaManager.portaManager.AtivarPorta(2);
         }
     }
 

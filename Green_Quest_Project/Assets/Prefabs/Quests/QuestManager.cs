@@ -27,6 +27,12 @@ public class QuestManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public GameObject CanvasMae;
+
+    public GameObject getCanvasMae(){
+        return CanvasMae;
+    }
+
     // Funções booleanas
     public bool RequestAvailableQuest(int questID){
         for (int i=0; i<questList.Count; i++){

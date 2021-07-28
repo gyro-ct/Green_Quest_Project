@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     public string areaTransitionName;
     public bool canMove;
     public bool GotFish;
+    public bool FoiContratado;
 
     void Awake()
     {

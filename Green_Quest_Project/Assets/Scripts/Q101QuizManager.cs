@@ -14,11 +14,10 @@ public class Q101QuizManager : MonoBehaviour
     public int r4;
 
     public int r;
-    public bool FoiContratado;
+    public bool FoiContratado = false;
 
     public bool TriggerforDormir = false;
 
-    public NPCConversation theConv;
     public NPCConversation myConversationGood;
     public NPCConversation myConversationFail;
 
@@ -30,6 +29,7 @@ public class Q101QuizManager : MonoBehaviour
 
     }
     void Start(){
+        Debug.Log("START AGAIN");
         if (q101 == null)
         {
             q101 = this;
@@ -39,9 +39,8 @@ public class Q101QuizManager : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            
         }
-        //DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
     }
 
     void Update(){
@@ -70,7 +69,7 @@ public class Q101QuizManager : MonoBehaviour
     public void calcularNota(){
         Debug.Log("Nota");
         r = r1 + r21 + r22 + r23 + r3 + r4;
-        //Debug.Log("RR" + r);
+        Debug.Log("RR" + r);
         if (r>=5){
             FoiContratado = true;
             Debug.Log("FC "+ FoiContratado);
@@ -78,13 +77,12 @@ public class Q101QuizManager : MonoBehaviour
             FoiContratado = false;
         }
         Debug.Log("FC3 "+ FoiContratado);
-        
-        
+        PlayerController.instance.FoiContratado = FoiContratado;
     }
 
     public void Ligacao(){
-        Debug.Log("FC2 "+ FoiContratado);
-        TriggerforDormir =true;
+        Debug.Log("FC2 "+ FoiContratado + " " + r);
+        TriggerforDormir = true;
         StartCoroutine(EC(5.0f));
     }
 
@@ -105,7 +103,7 @@ public class Q101QuizManager : MonoBehaviour
     public void Ligacao2(){
         Debug.Log("FC2AAAAAAAAAAA");
 
-        if (FoiContratado){
+        if (PlayerController.instance.FoiContratado){
             Debug.Log("Conversa2");
             QuestManager.questManager.AddQuestItem("Mexer no Computador", 1);
             QuestManager.questManager.CompleteQuest(1);

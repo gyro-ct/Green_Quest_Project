@@ -17,12 +17,13 @@ public class Pickup : MonoBehaviour
     [UnityEngine.TextArea]
     public string Descrição2;
     
-
+    private bool IsAccepted;
 
 
     private void Start()
     {
         Thisitem = new Item();
+        IsAccepted = true;
         //inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         //Debug.Log(inventory);
         
@@ -35,16 +36,24 @@ public class Pickup : MonoBehaviour
         Debug.Log(other);
         if (other.CompareTag("Player"))
         {
-            
-            
-            Thisitem.itemName = NomeDoItem;
-            Thisitem.description1 = Descrição1;
-            Thisitem.description2 = Descrição2;
-            Thisitem.value = IDDoItem;
-            Thisitem.itemSprite = ImagemDoItem;
-            ItemManager.itemmanager.ListItem.Add(Thisitem);
-            Destroy(gameObject);
-            
+            if (NomeDoItem == "Mensagem de sua mãe" && 
+            QuestManager.questManager.ConversationMainTrigger < 2){
+                Debug.Log("Não Passou");
+                IsAccepted = false;
+            } else {
+                IsAccepted = true;
+            }
+
+
+            if (IsAccepted){
+                Thisitem.itemName = NomeDoItem;
+                Thisitem.description1 = Descrição1;
+                Thisitem.description2 = Descrição2;
+                Thisitem.value = IDDoItem;
+                Thisitem.itemSprite = ImagemDoItem;
+                ItemManager.itemmanager.ListItem.Add(Thisitem);
+                Destroy(gameObject);
+            }
             
 
         }

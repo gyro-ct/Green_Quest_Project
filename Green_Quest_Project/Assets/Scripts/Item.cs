@@ -20,6 +20,9 @@ public class Item
     public GameObject Menu;
     public GameObject BotaoCloseMochila;
 
+
+    public GameObject CanvasCartaMae;
+
     public void UseButton(){
         if (itemName == "Vara de Pesca"){
             Debug.Log("função vara de pesca");
@@ -38,6 +41,18 @@ public class Item
             } else {
                 Debug.Log("Não há peixes por aqui");
             }
+        }
+
+        if (itemName == "Mensagem de sua mãe"){
+            Debug.Log("função mensagem");
+
+            if (QuestManager.questManager.ConversationMainTrigger == 2){
+                Debug.Log("função mensagem222");
+                QuestManager.questManager.AddQuestItem("Ler Carta", 1);
+            }
+
+            CanvasCartaMae = QuestManager.questManager.getCanvasMae();
+            CanvasCartaMae.SetActive(true);
         }
     }
 

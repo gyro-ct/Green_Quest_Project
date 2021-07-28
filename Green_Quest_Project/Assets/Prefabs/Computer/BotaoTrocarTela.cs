@@ -28,6 +28,7 @@ public class BotaoTrocarTela : MonoBehaviour
         } else if (TAG == "Contact"){
             Debug.Log("CONTACT");
             theContactPanel.SetActive(true);
+            ComputerUIManager.computerManager.BBBB();
         }
         
     }
@@ -37,6 +38,7 @@ public class BotaoTrocarTela : MonoBehaviour
             thePanel.SetActive(false);
         } else if (TAG == "Contact"){
             theContactPanel.SetActive(false);
+            ComputerUIManager.computerManager.AAAA();
         }
     }
 
@@ -46,6 +48,7 @@ public class BotaoTrocarTela : MonoBehaviour
         thePanel.SetActive(false);
         theContactPanel.SetActive(false);
         theBigPanel.SetActive(false);
+        ComputerUIManager.computerManager.AAAA();
         HUD = ComputerUIManager.computerManager.HUD;
         HUD.SetActive(true);
     }

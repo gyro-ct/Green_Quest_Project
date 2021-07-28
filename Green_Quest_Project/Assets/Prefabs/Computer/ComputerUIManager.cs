@@ -47,5 +47,13 @@ public class ComputerUIManager : MonoBehaviour
         //Debug.Log("ConversationPast");
     }
 
+    public void BBBB(){
+        Animation.SetActive(true);
+    }
+
+    public void AAAA(){
+        Animation.SetActive(false);
+    }
+
     
 }
