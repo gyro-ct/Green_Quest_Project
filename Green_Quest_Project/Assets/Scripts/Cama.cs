@@ -13,10 +13,8 @@ public class Cama : MonoBehaviour
     void Update(){
         if(isTriggered && Input.GetKeyDown(KeyCode.Space)){
 
-            if (QuestManager.questManager.quest3Trigger){
-                QuestManager.questManager.AddQuestItem("Dormir", 1);
-                QuestManager.questManager.mother = true;
-                QuestManager.questManager.quest3Trigger = false;
+            if (!Q101QuizManager.q101.TriggerforDormir){
+                Q101QuizManager.q101.Ligacao();
             }
 
             waitToFade = true;

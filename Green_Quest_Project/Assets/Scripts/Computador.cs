@@ -7,6 +7,16 @@ public class Computador : MonoBehaviour
     public bool isTriggered;
     public bool isAccepted = false;
 
+    public int markerId;
+
+    void Start(){
+        if (QuestMarkerManager.questMarkerManager.questMarkerList[markerId].isEnabled){
+            QuestMarkerManager.questMarkerManager.questMarkerList[markerId].showQuestMarker(gameObject);
+        } else {
+            QuestMarkerManager.questMarkerManager.questMarkerList[markerId].hideQuestMarker(gameObject);
+        }
+    }
+
     void Update(){
 
         if(isTriggered && Input.GetKeyDown(KeyCode.Space) && isAccepted){
@@ -33,6 +43,8 @@ public class Computador : MonoBehaviour
         {
             isTriggered = true;
             if (!isAccepted){
+                QuestMarkerManager.questMarkerManager.questMarkerList[markerId].isEnabled = false;
+                QuestMarkerManager.questMarkerManager.questMarkerList[markerId].hideQuestMarker(gameObject);
                 QuestManager.questManager.ShowQuestProvisoryCanvas(1);
             }
             

@@ -18,6 +18,7 @@ public class QuestProvisoryPanel : MonoBehaviour
         QuestManager.questManager.AcceptQuest(questID);
     }
 
+
     public void AcceptTheQuestLater(){
         PlayerController.instance.canMove = true;
         gameObject.SetActive(false);

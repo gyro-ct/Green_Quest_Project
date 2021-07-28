@@ -11,8 +11,7 @@ public class QuestManager : MonoBehaviour
     // Can call from any other class
     public static QuestManager questManager;
 
-    public bool quest3Trigger = false;
-    public bool mother = false;
+    public int ConversationMainTrigger = 0;
 
     public List <Quest> questList = new List<Quest>(); // Lista mestre de quests
     public List <Quest> currentQuestList = new List<Quest>(); // Lista de quests em andamento
@@ -123,6 +122,7 @@ public class QuestManager : MonoBehaviour
             }
         }
     }
+
 
     public GameObject questProvisoryPanel;
     public GameObject AcceptButton;

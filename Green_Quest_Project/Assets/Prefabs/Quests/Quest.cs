@@ -34,7 +34,9 @@ public class Quest
     public void EndQuestTriggers(){
         Debug.Log("alguém me chamou 2 "+id);
         if (id==1){
+            // 3-1-2-1-1-2
             PortaManager.portaManager.AtivarPorta(1);
+            QuestManager.questManager.ConversationMainTrigger = 1;
         }
         else if (id==4){
             Debug.Log("MEEH");
@@ -44,9 +46,6 @@ public class Quest
 
     public void StartQuestTriggers(){
         Debug.Log("alguém me chamou 2 "+id);
-        if (id==3){
-            QuestManager.questManager.quest3Trigger = true;
-        }
     }
 
 }

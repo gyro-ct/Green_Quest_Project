@@ -16,6 +16,8 @@ public class Q101QuizManager : MonoBehaviour
     public int r;
     public bool FoiContratado;
 
+    public bool TriggerforDormir = false;
+
     public NPCConversation theConv;
     public NPCConversation myConversationGood;
     public NPCConversation myConversationFail;
@@ -75,17 +77,37 @@ public class Q101QuizManager : MonoBehaviour
         } else {
             FoiContratado = false;
         }
-        PlayerController.instance.startCo(2.0f);
         Debug.Log("FC3 "+ FoiContratado);
         
-        Ligacao();
+        
     }
 
     public void Ligacao(){
         Debug.Log("FC2 "+ FoiContratado);
+        TriggerforDormir =true;
+        StartCoroutine(EC(5.0f));
+    }
+
+    IEnumerator EC(float time)
+    {
+        //Print the time of when the function is first called.
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(time);
+
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+
+        Ligacao2();
+    }
+
+    public void Ligacao2(){
+        Debug.Log("FC2AAAAAAAAAAA");
+
         if (FoiContratado){
             Debug.Log("Conversa2");
-            QuestManager.questManager.AddQuestItem("MexerNoComputador", 1);
+            QuestManager.questManager.AddQuestItem("Mexer no Computador", 1);
             QuestManager.questManager.CompleteQuest(1);
             ConversationManager.Instance.StartConversation(myConversationGood);
         } else {

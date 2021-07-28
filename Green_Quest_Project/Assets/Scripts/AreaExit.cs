@@ -68,12 +68,13 @@ public class AreaExit : MonoBehaviour
         {
             Debug.Log("és um player?");
             //SceneManager.LoadScene(areaToLoad);
-            //if (porta.ativada){
-            Debug.Log("és um ativada?");
-            porta.ativarConversaPassiva = false;
-            shoudLoadAfterFade = true;
-            //} else {
-            //porta.ativarConversaPassiva = true;
+            if (porta.ativada){
+                Debug.Log("és um ativada?");
+                porta.ativarConversaPassiva = false;
+                shoudLoadAfterFade = true;
+            } else {
+                porta.ativarConversaPassiva = true;
+            }
         }
     }
 

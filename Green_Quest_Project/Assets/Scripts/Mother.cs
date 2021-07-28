@@ -7,18 +7,16 @@ public class Mother : MonoBehaviour
 {
     public bool motherOfAllBools;
     public NPCConversation conversation;
-    public NPCConversation conversation2;
+
     void Update()
     {
         if(motherOfAllBools && Input.GetKeyDown(KeyCode.Space)){
-            if (QuestManager.questManager.mother){
-                Debug.Log("CONV2");
-                ConversationManager.Instance.StartConversation(conversation2);
-                QuestManager.questManager.mother = false;
-            } else {
-                Debug.Log("CONV");
+            
+            if (QuestManager.questManager.ConversationMainTrigger == 1){
                 Debug.Log("CC "+QuestManager.questManager.currentQuestList.Count);
+                QuestManager.questManager.AddQuestItem("Conversar com Mae", 1);
                 ConversationManager.Instance.StartConversation(conversation);
+
             }
             
         }
