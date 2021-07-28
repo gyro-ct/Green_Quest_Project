@@ -154,7 +154,7 @@ public class QuestManager : MonoBehaviour
                         AcceptButton.SetActive(true);
                         myPanel.nome.text = questList[i].name;
                         myPanel.desc.text = questList[i].description;
-                        myPanel.HINT.text = questList[i].hint;
+                        myPanel.HINT.text = "Dica: " + questList[i].hint;
                         myPanel.questID = questList[i].id;
                     } else {
                         AcceptButton.SetActive(false);

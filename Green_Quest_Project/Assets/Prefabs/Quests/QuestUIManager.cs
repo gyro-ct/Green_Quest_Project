@@ -43,10 +43,13 @@ public class QuestUIManager : MonoBehaviour
     public Text questTitle;
     public Text questDescription;
     public Text questSummary;
+    public TMP_Text questHint;
 
     public Text questLogTitle;
     public Text questLogDescription;
     public Text questLogSummary;
+    public Text questLogHint;
+
 
     void Awake(){
         if (uiManager == null){
@@ -152,6 +155,7 @@ public class QuestUIManager : MonoBehaviour
         } else if(activeQuest.progress == Quest.QuestProgress.AVAILABLE){
             questLogDescription.text = activeQuest.description;
             questLogSummary.text = activeQuest.questObjective + " : " + activeQuest.questObjectiveCount + " / " + activeQuest.questObjectiveRequirements;
+            questLogHint.text = activeQuest.hint;
             Debug.Log(activeQuest.id + "closebutton");
             closeButton.GetComponent<AcceptQuestNaMochila>().questID = activeQuest.id;
             closeButton.SetActive(true);

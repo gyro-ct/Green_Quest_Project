@@ -55,6 +55,11 @@ public class PlayerController : MonoBehaviour
         // As Update is dependent on frame rate, it is better to use FixedUpdate for movement and Update for input handling
         // Debug.Log(Stamina);
         // Player click space button for item picking
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            animator.SetBool("EsUmaEmpilhadeira", true);
+        }
+    
         if(Input.GetKeyDown(KeyCode.Space))
         {
         	animator.SetTrigger("IsGrabbing");
