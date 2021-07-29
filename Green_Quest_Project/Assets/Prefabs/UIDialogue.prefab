@@ -148,7 +148,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &6020500032438406911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,6 +896,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 0_C_Fail
+      objectReference: {fileID: 0}
+    - target: {fileID: 6080838752294933625, guid: dbca726f09ad01cdfa592023d74acc71,
+        type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbca726f09ad01cdfa592023d74acc71, type: 3}
@@ -1746,6 +1751,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 0_C_InitialMae
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717661035147374362, guid: 8a70e4c5ee75de494a390dde62374eb9,
+        type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2556080086990639490, guid: 8a70e4c5ee75de494a390dde62374eb9,
         type: 3}

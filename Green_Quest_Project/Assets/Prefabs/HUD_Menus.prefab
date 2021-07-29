@@ -1627,7 +1627,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2056904899
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: -5
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1905,6 +1905,46 @@ MonoBehaviour:
     congratulation: Parabens!
     nextQuest: 4
     questObjective: Ler Carta
+    questObjectiveCount: 0
+    questObjectiveRequirements: 1
+    expReward: 10
+    staminaUsed: 5
+    completeToDone: 1
+  - name: Ir para a empresa
+    id: 4
+    progress: 0
+    description: "V\xE1 para a empresa e converse com a sua mentora, Calenwen!"
+    hint: "V\xE1 at\xE9 a recep\xE7\xE3o da empresa Disp Plays"
+    congratulation: Parabens!
+    nextQuest: 5
+    questObjective: Conversar com Calenwen
+    questObjectiveCount: 0
+    questObjectiveRequirements: 1
+    expReward: 10
+    staminaUsed: 5
+    completeToDone: 1
+  - name: "Conhe\xE7a a empresa com Calenwen"
+    id: 5
+    progress: 0
+    description: "Siga Calenwen para conhe\xE7er a empresa Disp Plays!"
+    hint: Siga a personagem Calenwen!
+    congratulation: Parabens!
+    nextQuest: 6
+    questObjective: Conhecer a empresa
+    questObjectiveCount: 0
+    questObjectiveRequirements: 1
+    expReward: 10
+    staminaUsed: 5
+    completeToDone: 1
+  - name: "Pegue um caf\xE9 para Calenwen"
+    id: 6
+    progress: 0
+    description: "V\xE1 at\xE9 a m\xE1quina de caf\xE9 mais pr\xF3xima para pegar
+      um caf\xE9 quentinho para Calenwen e salve o jogo!"
+    hint: "V\xE1 at\xE9 a m\xE1quina de caf\xE9 para obter um caf\xE9 para Calenwen!"
+    congratulation: Parabens!
+    nextQuest: 7
+    questObjective: "Levar caf\xE9"
     questObjectiveCount: 0
     questObjectiveRequirements: 1
     expReward: 10
@@ -6712,7 +6752,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2056904899
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: -5
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -27,12 +27,15 @@ public class PlayerController : MonoBehaviour
     public int Level;
     public string areaTransitionName;
     public bool canMove;
+    public bool canInteract;
     public bool GotFish;
     public bool FoiContratado;
+    public bool conversaComEva = false;
 
     void Awake()
     {
     	canMove = true;
+        canInteract = true;
         GotFish = false;
         Stamina = 100f;
         Experience = 0f;
@@ -61,7 +64,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("EsUmaEmpilhadeira", true);
         }
     
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && canMove && canInteract)
         {
         	animator.SetTrigger("IsGrabbing");
         	animator.SetBool("IsRunning", false);
@@ -201,6 +204,24 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
         
         canMove = true;
+    }
+
+    public void C2(){
+        StartCoroutine(ExampleCoroutinef(0.5f));
+    }
+
+    IEnumerator ExampleCoroutinef(float time)
+    {
+        //Print the time of when the function is first called.
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(time);
+
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        
+        canMove = false;
     }
 
     public void CantMoveMenu()

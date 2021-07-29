@@ -17,6 +17,7 @@ public class QuestManager : MonoBehaviour
     public List <Quest> currentQuestList = new List<Quest>(); // Lista de quests em andamento
     public List <int> currentQuestProvisoryPanelsList = new List<int>(); // Lista de quests em andamento
 
+
     // Inicialização e verificação se não há duplicatas
     void Awake(){
         if(questManager == null){

@@ -54,7 +54,8 @@ public class AreaExit : MonoBehaviour
             }
         }
 
-        if(porta.ativarConversaPassiva && Input.GetKeyDown(KeyCode.Space)){
+        if(porta.ativarConversaPassiva && Input.GetKeyDown(KeyCode.Space) &&
+            PlayerController.instance.canInteract){
             // Ativar alguma conversa passiva
             Debug.Log("LOLZ");
             ConversationManager.Instance.StartConversation(porta.conversaPassiva);
@@ -74,6 +75,13 @@ public class AreaExit : MonoBehaviour
                 shoudLoadAfterFade = true;
             } else {
                 porta.ativarConversaPassiva = true;
+            }
+        }
+
+        else if (other.tag == "Eva"){
+            Debug.Log("Keep ma baby");
+            if (porta.ativada){
+                EvaController.instance.deactivate();
             }
         }
     }

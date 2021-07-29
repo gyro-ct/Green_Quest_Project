@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DialogueEditor;
 
 [System.Serializable]
 public class Item 
@@ -53,6 +54,27 @@ public class Item
 
             CanvasCartaMae = QuestManager.questManager.getCanvasMae();
             CanvasCartaMae.SetActive(true);
+        }
+
+        if (itemName == "Xícara de Café"){
+            Debug.Log("função café");
+            
+            if (EvaController.instance.PlayerNear){
+                Debug.Log("função mensagem333");
+                QuestManager.questManager.AddQuestItem("Levar café", 1);
+                for (int i = 0; i < ItemManager.itemmanager.ListItem.Count; i++){
+                    if (ItemManager.itemmanager.ListItem[i].itemName == itemName){
+
+                        Debug.Log("item" + ItemManager.itemmanager.ListItem[i].itemName);
+
+                        ItemManager.itemmanager.ListItem.RemoveAt(i);
+                        
+                        break;
+                    }
+                }
+                EvaController.instance.walk();
+                atvConv.instance.ativarConversa(3);
+            }
         }
     }
 

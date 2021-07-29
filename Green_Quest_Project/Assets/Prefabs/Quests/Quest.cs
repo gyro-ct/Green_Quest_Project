@@ -44,10 +44,15 @@ public class Quest
         else if (id == 3){
             QuestManager.questManager.ConversationMainTrigger = 3;
             PortaManager.portaManager.AtivarPorta(2);
+            PortaManager.portaManager.AtivarPorta(3);
         }
         else if (id==4){
-            Debug.Log("MEEH");
+            QuestManager.questManager.ConversationMainTrigger = 4;
         }
+        else if (id==5){
+            QuestManager.questManager.ConversationMainTrigger = 5;
+        }
+
     }
 
     public void StartQuestTriggers(){
