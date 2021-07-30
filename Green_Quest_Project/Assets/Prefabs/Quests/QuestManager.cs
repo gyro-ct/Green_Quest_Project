@@ -53,6 +53,22 @@ public class QuestManager : MonoBehaviour
         return false;
     }
 
+    public GameObject fumaca;
+    public bool IsFActive = false;
+
+    public void ativafumaca(){
+        fumaca.SetActive(true);
+        IsFActive = true;
+    }
+    public void desativarFumaca(){
+        fumaca.SetActive(false);
+        IsFActive = false;
+    }
+    public bool isActive(){
+        return IsFActive;
+    }
+
+
     public bool RequestCompleteQuest(int questID){
         for (int i=0; i<questList.Count; i++){
             if (questList[i].id == questID && questList[i].progress == Quest.QuestProgress.COMPLETED){
@@ -116,6 +132,7 @@ public class QuestManager : MonoBehaviour
 
     // Adicionar item objetivo para as quests
     public void AddQuestItem(string questObject, int itemAmount){
+        Debug.Log("OLA");
         for (int i=0; i<currentQuestList.Count; i++){
             if(currentQuestList[i].questObjective == questObject && currentQuestList[i].progress == Quest.QuestProgress.ACCEPTED){
                 currentQuestList[i].questObjectiveCount += itemAmount;

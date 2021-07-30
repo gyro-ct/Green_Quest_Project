@@ -22,7 +22,6 @@ public class EssentialsLoader : MonoBehaviour
         {
             Instantiate(Hud);
         }
-        
     }
 
 }

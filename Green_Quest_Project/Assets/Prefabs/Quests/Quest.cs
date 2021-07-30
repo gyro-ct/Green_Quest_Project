@@ -47,10 +47,16 @@ public class Quest
             PortaManager.portaManager.AtivarPorta(3);
         }
         else if (id==4){
+            Debug.Log("alguém me chamou 4 ");
             QuestManager.questManager.ConversationMainTrigger = 4;
         }
         else if (id==5){
+            Debug.Log("alguém me chamou 5 ");
             QuestManager.questManager.ConversationMainTrigger = 5;
+        }
+        else if (id==6){
+            Debug.Log("alguém me chamou 6 ");
+            QuestManager.questManager.ConversationMainTrigger = 6;
         }
 
     }
