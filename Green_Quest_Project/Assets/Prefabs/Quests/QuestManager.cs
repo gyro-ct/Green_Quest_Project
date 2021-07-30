@@ -55,19 +55,40 @@ public class QuestManager : MonoBehaviour
 
     public GameObject fumaca;
     public bool IsFActive = false;
+    public bool IsOver = false;
 
     public void ativafumaca(){
-        fumaca.SetActive(true);
-        IsFActive = true;
+        if (!IsOver){
+            fumaca.SetActive(true);
+            IsFActive = true;
+        }
     }
     public void desativarFumaca(){
-        fumaca.SetActive(false);
-        IsFActive = false;
+        if (!IsOver){
+            fumaca.SetActive(false);
+            IsFActive = false;
+        }
     }
     public bool isActive(){
         return IsFActive;
     }
 
+
+    public List<GameObject> PrgInstances = new List<GameObject>();
+
+    public void deactivatePrg(GameObject maintain){
+        for (int i = 0; i<PrgInstances.Count; i++){
+            if (PrgInstances[i] != maintain){
+                PrgInstances[i].SetActive(false);
+            }
+        }
+    }
+
+    public void deactivatePrg2(){
+        for (int i = 0; i<PrgInstances.Count; i++){
+            PrgInstances[i].SetActive(false);
+        }
+    }
 
     public bool RequestCompleteQuest(int questID){
         for (int i=0; i<questList.Count; i++){

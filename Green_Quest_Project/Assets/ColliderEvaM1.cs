@@ -26,6 +26,29 @@ public class ColliderEvaM1 : MonoBehaviour
         PortaManager.portaManager.AtivarPorta(8);
     }
 
+    // public GameObject colliderComp;
+    public void ativarPorta7(){
+        PortaManager.portaManager.AtivarPorta(7);
+        ativarPC.instance.podeSerAtivado = false;
+    }
+
+    public void ativarPorta9(){
+        PortaManager.portaManager.AtivarPorta(9);
+    }
+
+    public void ativarPorta5(){
+        PortaManager.portaManager.AtivarPorta(5);
+    }
+
+    public void ativarPorta17(){
+        Debug.Log("FUNCIONAL");
+        PortaManager.portaManager.AtivarPorta(17);
+    }
+
+    public void maisUmDiretor(){
+        DiretorInstance.instance.aumentarValor();
+    }
+
     public void next(){
         EvaController.instance.nextMove(true);
     }

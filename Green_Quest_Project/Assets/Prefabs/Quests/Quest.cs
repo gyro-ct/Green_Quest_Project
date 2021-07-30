@@ -58,6 +58,22 @@ public class Quest
             Debug.Log("alguém me chamou 6 ");
             QuestManager.questManager.ConversationMainTrigger = 6;
         }
+        else if (id == 7){
+            Debug.Log("alguém me chamou 7 ");
+            QuestManager.questManager.ConversationMainTrigger = 7;
+        }
+        else if (id==8){
+            Debug.Log("alguém me chamou 8 ");
+            QuestManager.questManager.ConversationMainTrigger = 8;
+        }
+        else if (id==9){
+            Debug.Log("alguém me chamou 9 ");
+            QuestManager.questManager.ConversationMainTrigger = 9;
+        }
+        else if (id==10){
+            Debug.Log("alguém me chamou 10 ");
+            QuestManager.questManager.ConversationMainTrigger = 10;
+        }
 
     }
 

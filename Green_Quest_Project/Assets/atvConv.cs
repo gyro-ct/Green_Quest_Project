@@ -19,6 +19,7 @@ public class atvConv : MonoBehaviour
     public NPCConversation conv1;
     public NPCConversation conv2;
     public NPCConversation conv3;
+    public NPCConversation conv4;
 
     public void ativarConversa(int cnv){
         if (cnv == 1){
@@ -27,6 +28,8 @@ public class atvConv : MonoBehaviour
             ConversationManager.Instance.StartConversation(conv2);
         } else if (cnv == 3){
             ConversationManager.Instance.StartConversation(conv3);
+        } else if (cnv == 4){
+            ConversationManager.Instance.StartConversation(conv4);
         }
     }
 }

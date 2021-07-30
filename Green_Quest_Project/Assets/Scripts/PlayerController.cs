@@ -30,12 +30,14 @@ public class PlayerController : MonoBehaviour
     public bool canInteract;
     public bool GotFish;
     public bool FoiContratado;
+    public bool FiltroAtivado;
     public bool conversaComEva = false;
 
     void Awake()
     {
     	canMove = true;
         canInteract = true;
+        FiltroAtivado = false;
         GotFish = false;
         Stamina = 100f;
         Experience = 0f;

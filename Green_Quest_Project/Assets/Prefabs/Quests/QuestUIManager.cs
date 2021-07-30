@@ -50,7 +50,6 @@ public class QuestUIManager : MonoBehaviour
     public Text questLogSummary;
     public Text questLogHint;
 
-
     void Awake(){
         if (uiManager == null){
             uiManager = this;

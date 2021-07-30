@@ -51,12 +51,14 @@ public class EvaController : MonoBehaviour
     public bool change = false;
 
     public bool ativarConversa = true;
+    
     void Awake(){
         if(instance == null){
             instance = this;
         } else if (instance != this){
             Destroy(gameObject);
         }
+        QuestManager.questManager.PrgInstances.Add(gameObject);
         DontDestroyOnLoad(gameObject);
     }
 
@@ -140,6 +142,11 @@ public class EvaController : MonoBehaviour
 
         if (modeWalk == 31 && PlayerNear && Input.GetKeyDown(KeyCode.Space)){
             atvConv.instance.ativarConversa(2);
+            //ConversationManager.Instance.StartConversation(conv2);
+        }
+
+        if (modeWalk == 32 && PlayerNear && Input.GetKeyDown(KeyCode.Space)){
+            atvConv.instance.ativarConversa(4);
             //ConversationManager.Instance.StartConversation(conv2);
         }
 

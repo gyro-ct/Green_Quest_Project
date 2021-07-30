@@ -20,8 +20,6 @@ public class Item
     public GameObject Player;
     public GameObject Menu;
     public GameObject BotaoCloseMochila;
-
-
     public GameObject CanvasCartaMae;
 
     public void UseButton(){
@@ -62,6 +60,8 @@ public class Item
             if (EvaController.instance.PlayerNear){
                 Debug.Log("função mensagem333");
                 QuestManager.questManager.AddQuestItem("Levar café", 1);
+                PortaManager.portaManager.AtivarPorta(11);
+                PortaManager.portaManager.AtivarPorta(12);
                 for (int i = 0; i < ItemManager.itemmanager.ListItem.Count; i++){
                     if (ItemManager.itemmanager.ListItem[i].itemName == itemName){
 
@@ -72,9 +72,30 @@ public class Item
                         break;
                     }
                 }
-                EvaController.instance.walk();
+                EvaController.instance.nextMove(false);
                 atvConv.instance.ativarConversa(3);
             }
+        }
+
+        if (itemName == "Filtro"){
+            if (PlayerController.instance.FiltroAtivado){
+                QuestManager.questManager.AddQuestItem("Colocar filtro", 1);
+
+                for (int i = 0; i < ItemManager.itemmanager.ListItem.Count; i++){
+                    if (ItemManager.itemmanager.ListItem[i].itemName == itemName){
+
+                        Debug.Log("item" + ItemManager.itemmanager.ListItem[i].itemName);
+
+                        ItemManager.itemmanager.ListItem.RemoveAt(i);
+                        
+                        break;
+                    }
+                }
+            }
+
+            QuestManager.questManager.desativarFumaca();
+            QuestManager.questManager.IsOver = true;
+            ArahController.instance.valor = 5;
         }
     }
 
