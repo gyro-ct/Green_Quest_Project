@@ -2039,6 +2039,10 @@ MonoBehaviour:
     ativada: 0
     ativarConversaPassiva: 0
     conversaPassiva: {fileID: 4626889775843895477}
+  - id: 17
+    ativada: 0
+    ativarConversaPassiva: 0
+    conversaPassiva: {fileID: 4626889775843895477}
 --- !u!114 &1833063295439499831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10941,6 +10945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2343063159007095277, guid: 7b855e30b43148813b76dcd02044c319,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -83
       objectReference: {fileID: 0}
     - target: {fileID: 3465980887809481013, guid: 7b855e30b43148813b76dcd02044c319,
         type: 3}
