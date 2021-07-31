@@ -43,6 +43,10 @@ public class ColliderEvaM1 : MonoBehaviour
         PortaManager.portaManager.AtivarPorta(9);
     }
 
+    public void ativarPorta14(){
+        PortaManager.portaManager.AtivarPorta(14);
+    }
+
     public void ativarPorta5(){
         PortaManager.portaManager.AtivarPorta(5);
     }

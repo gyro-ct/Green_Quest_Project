@@ -11,9 +11,12 @@ public class UIFade : MonoBehaviour
     public bool shouldFadeToBlack;
     public bool shouldFadeFromBlack;
 
-    void Start()
-    {
-        instance = this;
+    void Awake(){
+        if(instance == null){
+            instance = this;
+        } else if (instance != this){
+            Destroy(gameObject);
+        }
         DontDestroyOnLoad(gameObject);
     }
 
@@ -27,7 +30,7 @@ public class UIFade : MonoBehaviour
                 shouldFadeToBlack = false;
             }
         }
-
+ 
         if (shouldFadeFromBlack)
         {
             fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 0f, fadeSpeed * Time.deltaTime));

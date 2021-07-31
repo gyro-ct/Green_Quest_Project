@@ -40,7 +40,7 @@ public class AreaExit : MonoBehaviour
             Debug.Log("AreaT2: Player recebe: " + areaTransitionName);
             PlayerController.instance.areaTransitionName = areaTransitionName;
         }
-
+ 
         if(boolean1)
         {
                         
