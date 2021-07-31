@@ -22,7 +22,50 @@ public class Item
     public GameObject BotaoCloseMochila;
     public GameObject CanvasCartaMae;
 
+    
+
     public void UseButton(){
+
+        if (itemName == "Relógio do Sr. Kano"){
+            Debug.Log("função relógio Sr. Kano");
+            if(KanoController.instance.ativada){
+                KanoController.instance.valor = 3;
+                KanoController.instance.ativarConversa();
+                for (int i = 0; i < ItemManager.itemmanager.ListItem.Count; i++){
+                    if (ItemManager.itemmanager.ListItem[i].itemName == itemName){
+
+                        Debug.Log("item" + ItemManager.itemmanager.ListItem[i].itemName);
+
+                        ItemManager.itemmanager.ListItem.RemoveAt(i);
+                        
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (itemName == "Relatório ambiental"){
+            Debug.Log("função Relatório ambiental");
+            if(BrenesController.instance.ativada){
+                BrenesController.instance.valor = 3;
+                BrenesController.instance.ativarConversa();
+                for (int i = 0; i < ItemManager.itemmanager.ListItem.Count; i++){
+                    if (ItemManager.itemmanager.ListItem[i].itemName == itemName){
+
+                        Debug.Log("item" + ItemManager.itemmanager.ListItem[i].itemName);
+
+                        ItemManager.itemmanager.ListItem.RemoveAt(i);
+                        
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (itemName == "Cópia do relatório ambiental"){
+            //
+        }
+
         if (itemName == "Vara de Pesca"){
             Debug.Log("função vara de pesca");
             if(PlayerController.instance.GotFish){
@@ -74,6 +117,24 @@ public class Item
                 }
                 EvaController.instance.nextMove(false);
                 atvConv.instance.ativarConversa(3);
+            }
+        }
+
+        if (itemName == "Papéis para mover"){
+            if (NibilaController.instance.ativada){
+                NibilaController.instance.addQuest2Item();
+                NibilaController.instance.ativarcaixa();
+                
+                for (int i = 0; i < ItemManager.itemmanager.ListItem.Count; i++){
+                    if (ItemManager.itemmanager.ListItem[i].itemName == itemName){
+
+                        Debug.Log("item" + ItemManager.itemmanager.ListItem[i].itemName);
+
+                        ItemManager.itemmanager.ListItem.RemoveAt(i);
+                        
+                        break;
+                    }
+                }
             }
         }
 

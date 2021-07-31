@@ -25,6 +25,13 @@ public class ColliderEvaM1 : MonoBehaviour
     public void ativarPorta8(){
         PortaManager.portaManager.AtivarPorta(8);
     }
+    public void ativarPorta6(){
+        PortaManager.portaManager.AtivarPorta(6);
+    }
+
+    public void ativarPorta13(){
+        PortaManager.portaManager.AtivarPorta(13);
+    }
 
     // public GameObject colliderComp;
     public void ativarPorta7(){

@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour
     public bool FiltroAtivado;
     public bool conversaComEva = false;
 
+    public float lastHorizontal;
+    public float lastVertical;
+
     void Awake()
     {
     	canMove = true;
@@ -95,7 +98,15 @@ public class PlayerController : MonoBehaviour
         if(movement.x == 1 || movement.x == -1 || movement.y == 1 || movement.y == -1)
         {
             animator.SetFloat("Last_Horizontal", movement.x);
+            if(movement.x == 1 || movement.x == -1){
+                lastHorizontal = movement.x;
+                lastVertical = 0.0f;
+            }
             animator.SetFloat("Last_Vertical", movement.y);
+            if(movement.y == 1 || movement.y == -1){
+                lastHorizontal = 0.0f;
+                lastVertical = movement.y;
+            }
         }
         
         
@@ -118,6 +129,9 @@ public class PlayerController : MonoBehaviour
     
     public void startCo(float time){
         StartCoroutine(ExampleCoroutine2(time));
+    }
+    public void startCo2(float time){
+        StartCoroutine(ExampleCoroutine(time));
     }
 
     // Update executed in a fixed timer (always 15 times a sec)

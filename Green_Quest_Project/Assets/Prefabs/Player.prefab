@@ -204,7 +204,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2056904899
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 4553746745260134834, guid: 710f02ccb985916499d45929e07c9801,
     type: 3}
@@ -259,7 +259,13 @@ MonoBehaviour:
   Level: 0
   areaTransitionName: 
   canMove: 0
+  canInteract: 0
   GotFish: 0
+  FoiContratado: 0
+  FiltroAtivado: 0
+  conversaComEva: 0
+  lastHorizontal: 0
+  lastVertical: 0
 --- !u!95 &8190571221998339871
 Animator:
   serializedVersion: 3
@@ -292,7 +298,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.006553918, y: -0.27979118}
+  m_Offset: {x: 0, y: -0.35}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -303,7 +309,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.245896, y: 0.46717334}
+  m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
 --- !u!114 &1748116230533645878
 MonoBehaviour:
