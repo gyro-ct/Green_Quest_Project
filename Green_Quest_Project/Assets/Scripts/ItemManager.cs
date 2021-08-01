@@ -67,8 +67,16 @@ public class ItemManager : MonoBehaviour
 
     public void hideInformation()
     {
+        for (int i = 0; i < ListButtons.Count; i++)
+            {
+                Destroy(ListButtons[i]);
+            }
 
-        if(ItemTabAction)
+            ListButtons.Clear();
+            ItemTabAction = false;
+        
+        
+        /*if(ItemTabAction)
         {
             for (int i = 0; i < ListButtons.Count; i++)
             {
@@ -77,7 +85,7 @@ public class ItemManager : MonoBehaviour
 
             ListButtons.Clear();
             ItemTabAction = false;
-        }
+        }*/
 
     }
 

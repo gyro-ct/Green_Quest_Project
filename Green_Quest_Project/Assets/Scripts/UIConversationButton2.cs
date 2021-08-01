@@ -191,11 +191,11 @@ namespace DialogueEditor
                     break;
 
                 case eButtonType.Speech:
-                    TextMesh.text = "Continue.";
+                    TextMesh.text = "Continuar";
                     break;
 
                 case eButtonType.None:
-                    TextMesh.text = "End.";
+                    TextMesh.text = "Fechar";
                     break;
             }
         }

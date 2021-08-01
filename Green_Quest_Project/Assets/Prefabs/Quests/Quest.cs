@@ -18,6 +18,7 @@ public class Quest
     public string name; // Nome da quest
     public int id; // Identificação da quest
     public QuestProgress progress; // Progresso da quest [ver enum]
+    [TextArea]
     public string description; // Descrição da quest
     public string hint; // Hint quando quest está sendo feita
     public string congratulation; // Mensagem quando completa
