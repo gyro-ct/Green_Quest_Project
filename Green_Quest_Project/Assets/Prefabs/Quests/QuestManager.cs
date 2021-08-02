@@ -28,35 +28,16 @@ public class QuestManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    // Pegar o canvas do item da carta da mãe
     public GameObject CanvasMae;
-
     public GameObject getCanvasMae(){
         return CanvasMae;
     }
 
-    // Funções booleanas
-    public bool RequestAvailableQuest(int questID){
-        for (int i=0; i<questList.Count; i++){
-            if (questList[i].id == questID && questList[i].progress == Quest.QuestProgress.AVAILABLE){
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public bool RequestAcceptedQuest(int questID){
-        for (int i=0; i<questList.Count; i++){
-            if (questList[i].id == questID && questList[i].progress == Quest.QuestProgress.ACCEPTED){
-                return true;
-            }
-        }
-        return false;
-    }
-
+    // Ativar e Desativar o Canvas da fumaça
     public GameObject fumaca;
     public bool IsFActive = false;
     public bool IsOver = false;
-
     public void ativafumaca(){
         if (!IsOver){
             fumaca.SetActive(true);
@@ -73,9 +54,8 @@ public class QuestManager : MonoBehaviour
         return IsFActive;
     }
 
-
+    // Lidar com a lista de instâncias dos personagens
     public List<GameObject> PrgInstances = new List<GameObject>();
-
     public void deactivatePrg(GameObject maintain){
         for (int i = 0; i<PrgInstances.Count; i++){
             if (PrgInstances[i] != maintain){
@@ -83,172 +63,61 @@ public class QuestManager : MonoBehaviour
             }
         }
     }
-
     public void deactivatePrg2(){
         for (int i = 0; i<PrgInstances.Count; i++){
             PrgInstances[i].SetActive(false);
         }
     }
 
-    public bool RequestCompleteQuest(int questID){
-        for (int i=0; i<questList.Count; i++){
-            if (questList[i].id == questID && questList[i].progress == Quest.QuestProgress.COMPLETED){
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public bool CheckAvailableQuests(QuestObject NPCQuest){
-        for(int i = 0; i<questList.Count; i++){
-            for(int j = 0; j<NPCQuest.availableQuestIDs.Count; j++){
-                if(questList[i].id == NPCQuest.availableQuestIDs[j] && questList[i].progress == Quest.QuestProgress.AVAILABLE){
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    public bool CheckAcceptedQuests(QuestObject NPCQuest){
-        for(int i = 0; i<questList.Count; i++){
-            for(int j = 0; j<NPCQuest.receivableQuestIDs.Count; j++){
-                if(questList[i].id == NPCQuest.receivableQuestIDs[j] && questList[i].progress == Quest.QuestProgress.ACCEPTED){
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    public bool CheckCompleteQuests(QuestObject NPCQuest){
-        for(int i = 0; i<questList.Count; i++){
-            for(int j = 0; j<NPCQuest.receivableQuestIDs.Count; j++){
-                if(questList[i].id == NPCQuest.receivableQuestIDs[j] && questList[i].progress == Quest.QuestProgress.COMPLETED){
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    public void UniqueAddQuestItem(string questObject){
-        Debug.Log("lol " + questObject);
-        List<Quest> CC = QuestManager.questManager.currentQuestList;
-        Debug.Log("BL " + CC.Count);
-        for (int i=0; i<CC.Count; i++){
-            Debug.Log("lol1 " + CC[i].questObjective);
-            if(CC[i].questObjective == questObject && CC[i].progress == Quest.QuestProgress.ACCEPTED){
-                CC[i].questObjectiveCount += 1;
-            }
-
-            if(CC[i].questObjectiveCount >= CC[i].questObjectiveRequirements && CC[i].progress == Quest.QuestProgress.ACCEPTED){
-                CC[i].progress = Quest.QuestProgress.COMPLETED;
-                if(CC[i].completeToDone){
-                    QuestManager.questManager.CompleteQuest(CC[i].id);
-                }
-            }
-        }
-    }
-
-    // Adicionar item objetivo para as quests
-    public void AddQuestItem(string questObject, int itemAmount){
-        Debug.Log("OLA");
-        for (int i=0; i<currentQuestList.Count; i++){
-            if(currentQuestList[i].questObjective == questObject && currentQuestList[i].progress == Quest.QuestProgress.ACCEPTED){
-                currentQuestList[i].questObjectiveCount += itemAmount;
-            }
-
-            if(currentQuestList[i].questObjectiveCount >= currentQuestList[i].questObjectiveRequirements && currentQuestList[i].progress == Quest.QuestProgress.ACCEPTED){
-                currentQuestList[i].progress = Quest.QuestProgress.COMPLETED;
-                if(currentQuestList[i].completeToDone){
-                    CompleteQuest(currentQuestList[i].id);
-                }
-            }
-        }
-    }
-
-
+    // MAIN QUEST FUNCTIONS
     public GameObject questProvisoryPanel;
     public GameObject AcceptButton;
     public NPCConversation defaultConversation;
 
-    public void ShowQuestProvisoryCanvas(int questID){
+    // Quests go from NOT_AVAILABLE to AVAILABLE only if the player has to accept the quest (main quests) on MakeQuestAvailable
+    public void MakeQuestAvailable(int questID){
 
-        if(!currentQuestProvisoryPanelsList.Contains(questID)){
-            currentQuestProvisoryPanelsList.Add(questID);
+        Debug.Log("Made available: " + questID);
 
-            PlayerController.instance.canMove = false;
-        
-            questProvisoryPanel.SetActive(true);
-            Debug.Log("ShowIf");
-            QuestProvisoryPanel myPanel = questProvisoryPanel.GetComponent<QuestProvisoryPanel>();
-            for(int i=0; i<questList.Count; i++){
-                if (questList[i].id == questID){
-                    Debug.Log("ShowIf2");
-                    for(int j=0; j<currentQuestList.Count;j++){
-                        if (currentQuestList[j].id == questID){
-                            return;
-                        }
-                    }
-                    questList[i].progress = Quest.QuestProgress.AVAILABLE;
-                    currentQuestList.Add(questList[i]);
-                    QuestUIManager.uiManager.availableQuests.Add(questList[i]);
-                
-                    if (questList[i].staminaUsed <= PlayerController.instance.Stamina){
-                        AcceptButton.SetActive(true);
-                        myPanel.nome.text = questList[i].name;
-                        myPanel.desc.text = questList[i].description;
-                        myPanel.HINT.text = "Dica: " + questList[i].hint;
-                        myPanel.questID = questList[i].id;
-                    } else {
-                        AcceptButton.SetActive(false);
-                        myPanel.nome.text = questList[i].name;
-                        myPanel.desc.text = "Aumente sua stamina para liberar a quest!, esta quest precisa de " + questList[i].staminaUsed + " de stamina";
-                        // myPanel.HINT.text = questList[i].hint;
-                        myPanel.questID = questList[i].id;
-                    }
-                }
+        for(int i=0; i<questList.Count; i++){
+
+            if (questList[i].id == questID && questList[i].progress == Quest.QuestProgress.NOT_AVAILABLE){
+                questList[i].progress = Quest.QuestProgress.AVAILABLE;
+                QuestUIManager.uiManager.availableQuests.Add(questList[i]);
             }
-        } else {
 
-            // PlayerController.instance.canMove = false;
-            ConversationManager.Instance.StartConversation(defaultConversation);
-            // TODO: Fazer a conversa caso a quest ja tenha sido aceita
         }
     }
 
-    // Aceitar uma quest (//TODO)
+    // Quests go from NOT_AVAILABLE to ACCEPTED or from AVAILABLE to ACCEPTED on AcceptQuest
     public void AcceptQuest(int questID){
-        Debug.Log("Accept " + questID);
+
+        Debug.Log("Accepted: " + questID);
 
         questProvisoryPanel.SetActive(false);
 
         for(int i=0; i<questList.Count; i++){
+
             if (questList[i].id == questID && questList[i].progress == Quest.QuestProgress.AVAILABLE){
+
                 currentQuestList.Add(questList[i]);
                 questList[i].progress = Quest.QuestProgress.ACCEPTED;
+
                 QuestUIManager.uiManager.availableQuests.Remove(questList[i]);
                 QuestUIManager.uiManager.activeQuests.Add(questList[i]);
-                 
-                Debug.Log(questList[i].id);
                 
                 PlayerController.instance.Stamina = PlayerController.instance.Stamina - questList[i].staminaUsed;
-                Debug.Log("PS"+PlayerController.instance.Stamina);
                 List<GameObject> MyList = ProgressBarManager.ProgressBarInstance.getObjects();
-                Debug.Log("PS3"+MyList.Count);
+
                 foreach (GameObject bar in MyList){
                     Slider slider = bar.GetComponent<Slider>();
-                    Debug.Log("PS4"+slider.value);
                     float numToSum = -questList[i].staminaUsed;
-                    Debug.Log("PS2"+numToSum);
-                    //bar.GetComponent<ProgressBar>().IncrementProgress(numToSum);
-                    //targetProgress = 
                     bar.GetComponent<ProgressBar>().targetProgress = slider.value + numToSum;
                 }
 
                 if(!PlayerController.instance.canMove){
                     PlayerController.instance.canMove = true;
+                    PlayerController.instance.canInteract = true;
                 }
 
                 questList[i].StartQuestTriggers();
@@ -256,24 +125,48 @@ public class QuestManager : MonoBehaviour
         }
     }
 
-    public TMP_Text level;
+    // Quests are completed only if the items required are equal to the required amount, done in AddQuestItem
+    
+    public void AddQuestItem(string questObject, int itemAmount){
 
-    // Completar uma quest
+        Debug.Log("Added "+itemAmount+" to "+questObject);
+        
+        for (int i=0; i<currentQuestList.Count; i++){
+
+            if(currentQuestList[i].questObjective == questObject && currentQuestList[i].progress == Quest.QuestProgress.ACCEPTED){
+                currentQuestList[i].questObjectiveCount += itemAmount;
+            }
+
+            if(currentQuestList[i].questObjectiveCount >= currentQuestList[i].questObjectiveRequirements && currentQuestList[i].progress == Quest.QuestProgress.ACCEPTED){
+                currentQuestList[i].progress = Quest.QuestProgress.COMPLETED;
+                CompleteQuest(currentQuestList[i].id);
+            }
+
+        }
+    }
+
+    // Quest goes from ACCEPTED to COMPLETED only by a call from AddQuestItem using CompleteQuest
+    public TMP_Text level;
     public void CompleteQuest(int questID){
-        Debug.Log("alguém me chamou");
+
+        Debug.Log("Completed Quest: " + questID);
+
         for(int i=0; i<currentQuestList.Count; i++){
-            Debug.Log("al " + currentQuestList[i]);
+
             if (currentQuestList[i].id == questID && currentQuestList[i].progress == Quest.QuestProgress.COMPLETED){
+
                 currentQuestList[i].progress = Quest.QuestProgress.DONE;
+                ConversationMainTrigger++;
                 currentQuestList[i].EndQuestTriggers();
                 currentQuestList.Remove(currentQuestList[i]);
-                Debug.Log("al2 " + currentQuestList);
+
+                QuestUIManager.uiManager.activeQuests.Remove(currentQuestList[i]);
 
                 GameObject MyObj = ProgressBarManager.ProgressBarInstance.getObjectsXP();
                 Slider slider = MyObj.GetComponent<Slider>();
                 float num = 0f;
 
-                // Passar de level
+                // Pass a level
                 if (slider.value + questList[i].expReward >= 100f){
                     PlayerController.instance.Level = PlayerController.instance.Level + 1;
                     level.text = "Level: " + PlayerController.instance.Level.ToString();
@@ -283,76 +176,92 @@ public class QuestManager : MonoBehaviour
                     num = questList[i].expReward;
                     PlayerController.instance.Experience = PlayerController.instance.Experience + questList[i].expReward;
                 }
+
                 MyObj.GetComponent<ProgressBar>().targetProgress = slider.value + num;
 
-                
-
-                //slider.GetComponent<ProgressBar>().IncrementProgress(num);
-
-                //TODO Canvas Quest quando termina
+                CheckChainQuest(questID);
             }
+
         }
-        Debug.Log(currentQuestList[0].id);
-        CheckChainQuest(questID);
+
     }
 
-    // Ver se há quests em sequência
+    // The next Quest is made available only through CheckChainQuest when called from CompleteQuest
     void CheckChainQuest(int questID){
+
         int num = 0;
         for (int i=0; i<questList.Count; i++){
             if(questList[i].id == questID && questList[i].nextQuest > 0){
                 num = questList[i].nextQuest;
             }
         }
+
         if (num > 0){
             for(int i=0; i<questList.Count; i++){
-                if (questList[i].id == num && questList[i].progress == Quest.QuestProgress.NOT_AVAILABLE){
-                    questList[i].progress = Quest.QuestProgress.ACCEPTED;//AVAILABLE;
-                    currentQuestList.Add(questList[i]);
-                    //TODO Canvas Quest quando aceita
-                    questList[i].StartQuestTriggers();
-                }
-            }
-        }
-    }
 
-    // Aceitar uma quest de um NPC (alguma que já esteja disponível)
-    public void QuestRequest(QuestObject NPCQuest){
-        if(NPCQuest.availableQuestIDs.Count > 0){
-            for(int i = 0; i<questList.Count; i++){
-                for(int j = 0; j<NPCQuest.availableQuestIDs.Count; j++){
-                    if(questList[i].id == NPCQuest.availableQuestIDs[j] && questList[i].progress == Quest.QuestProgress.AVAILABLE){
-                        Debug.Log("Quest ID: " + NPCQuest.availableQuestIDs[j] + " " + questList[i].progress);
-                        // AcceptQuest(NPCQuest.availableQuestIDs[j]);
-                        // UI
-                        QuestUIManager.uiManager.questAvailable = true;
+                if (questList[i].id == num && questList[i].progress == Quest.QuestProgress.NOT_AVAILABLE){
+
+                    if (questList[i].completeToDone){
+                        questList[i].progress = Quest.QuestProgress.ACCEPTED;
+                        currentQuestList.Add(questList[i]);
+                        QuestUIManager.uiManager.activeQuests.Add(questList[i]);
+                        questList[i].StartQuestTriggers();
+                    } else {
+                        questList[i].progress = Quest.QuestProgress.AVAILABLE;
                         QuestUIManager.uiManager.availableQuests.Add(questList[i]);
                     }
+                    
                 }
+
             }
         }
 
-        for(int i = 0; i<currentQuestList.Count; i++){
-            for(int j = 0; j<NPCQuest.receivableQuestIDs.Count; j++){
-                if (currentQuestList[i].id == NPCQuest.receivableQuestIDs[j] && currentQuestList[i].progress == Quest.QuestProgress.ACCEPTED || currentQuestList[i].progress == Quest.QuestProgress.COMPLETED){
-                    Debug.Log("Quest ID: " + NPCQuest.receivableQuestIDs[j] + " " + currentQuestList[i].progress);
-                    // CompleteQuest(NPCQuest.receivableQuestIDs[j]);
-                    // UI
-                    QuestUIManager.uiManager.questRunning = true;
-                    QuestUIManager.uiManager.activeQuests.Add(questList[i]);
+    }
+
+    // Show canvas controlled by the quest manager. Has to be shown when a quest is to be accepted from the panel
+    public void ShowQuestProvisoryCanvas(int questID){
+
+        if(!currentQuestProvisoryPanelsList.Contains(questID)){
+
+            currentQuestProvisoryPanelsList.Add(questID);
+
+            PlayerController.instance.canMove = false;
+        
+            questProvisoryPanel.SetActive(true);
+            
+            QuestProvisoryPanel myPanel = questProvisoryPanel.GetComponent<QuestProvisoryPanel>();
+            
+            for(int i=0; i<questList.Count; i++){
+
+                if (questList[i].id == questID && questList[i].progress == Quest.QuestProgress.NOT_AVAILABLE){
+
+                    MakeQuestAvailable(questID);
+
+                    myPanel.nome.text = questList[i].name;
+                    myPanel.questID = questList[i].id;
+                
+                    if (questList[i].staminaUsed <= PlayerController.instance.Stamina){
+                        AcceptButton.SetActive(true);
+                        myPanel.desc.text = questList[i].description;  
+                        myPanel.HINT.text = "Dica: " + questList[i].hint;
+                    } else {
+                        AcceptButton.SetActive(false);
+                        myPanel.desc.text = "Aumente sua stamina para liberar a quest!, esta quest precisa de " + questList[i].staminaUsed + " de stamina";
+                        // myPanel.HINT.text = questList[i].hint;
+                    }
                 }
+
             }
+
+        } else {
+
+            ConversationManager.Instance.StartConversation(defaultConversation);
+
         }
     }
 
-    public void ShowQuestLog(int questID){
-        for(int i=0; i<currentQuestList.Count; i++){
-            if(currentQuestList[i].id == questID){
-                QuestUIManager.uiManager.ShowQuestLog(currentQuestList[i]);
-            }
-        }
-    }
 
+    // Other stuff
     public void AtivarAbaItens()
     {
         Debug.Log("Ativou a tab itens!");

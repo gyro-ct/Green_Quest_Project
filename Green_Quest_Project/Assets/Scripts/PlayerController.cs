@@ -32,13 +32,14 @@ public class PlayerController : MonoBehaviour
     public bool FoiContratado;
     public bool FiltroAtivado;
     public bool conversaComEva = false;
-
+    public bool endGame;
     public float lastHorizontal;
     public float lastVertical;
 
     void Awake()
     {
     	canMove = true;
+        endGame = false;
         canInteract = true;
         FiltroAtivado = false;
         GotFish = false;
@@ -238,6 +239,17 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
         
         canMove = false;
+    }
+
+    public void C3(){
+        StartCoroutine(ExampleCoroutineEV(17.0f));
+    }
+    IEnumerator ExampleCoroutineEV(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        destroyeverything.instance.DestroyEveryInstance();
+        
     }
 
     public void CantMoveMenu()

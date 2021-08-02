@@ -33,53 +33,18 @@ public class Quest
     public bool completeToDone;
 
     public void EndQuestTriggers(){
-        Debug.Log("alguém me chamou 2 "+id);
         if (id==1){
             // 3-1-2-1-1-2
             PortaManager.portaManager.AtivarPorta(1);
-            QuestManager.questManager.ConversationMainTrigger = 1;
-        }
-        else if (id == 2){
-            QuestManager.questManager.ConversationMainTrigger = 2;
         }
         else if (id == 3){
-            QuestManager.questManager.ConversationMainTrigger = 3;
             PortaManager.portaManager.AtivarPorta(2);
             PortaManager.portaManager.AtivarPorta(3);
-        }
-        else if (id==4){
-            Debug.Log("alguém me chamou 4 ");
-            QuestManager.questManager.ConversationMainTrigger = 4;
-        }
-        else if (id==5){
-            Debug.Log("alguém me chamou 5 ");
-            QuestManager.questManager.ConversationMainTrigger = 5;
-        }
-        else if (id==6){
-            Debug.Log("alguém me chamou 6 ");
-            QuestManager.questManager.ConversationMainTrigger = 6;
-        }
-        else if (id == 7){
-            Debug.Log("alguém me chamou 7 ");
-            QuestManager.questManager.ConversationMainTrigger = 7;
-        }
-        else if (id==8){
-            Debug.Log("alguém me chamou 8 ");
-            QuestManager.questManager.ConversationMainTrigger = 8;
-        }
-        else if (id==9){
-            Debug.Log("alguém me chamou 9 ");
-            QuestManager.questManager.ConversationMainTrigger = 9;
-        }
-        else if (id==10){
-            Debug.Log("alguém me chamou 10 ");
-            QuestManager.questManager.ConversationMainTrigger = 10;
         }
 
     }
 
     public void StartQuestTriggers(){
-        Debug.Log("alguém me chamou 2 "+id);
     }
 
 }

@@ -5,17 +5,15 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {   
-    public Transform ButtonPanel;
- 
     public static ItemManager itemmanager;
-
     public List <Item> ListItem = new List<Item>();
+    private List <GameObject> ListButtons = new List<GameObject>();
 
     public GameObject button;
+    public Transform ButtonPanel;
+    public GameObject PanelItem;
 
     public bool ItemTabAction = false; 
-
-    private List <GameObject> ListButtons = new List<GameObject>();
 
     
     void Awake()
@@ -31,15 +29,12 @@ public class ItemManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    
-    void Update()
-    {
-        
-    }
-
     public void FillItemButtons ()
     {   
         Debug.Log(ItemTabAction);
+
+        PanelItem.SetActive(true);
+
         if(!ItemTabAction)
         {
             foreach (Item item in ListItem)
@@ -72,20 +67,9 @@ public class ItemManager : MonoBehaviour
                 Destroy(ListButtons[i]);
             }
 
-            ListButtons.Clear();
-            ItemTabAction = false;
-        
-        
-        /*if(ItemTabAction)
-        {
-            for (int i = 0; i < ListButtons.Count; i++)
-            {
-                Destroy(ListButtons[i]);
-            }
-
-            ListButtons.Clear();
-            ItemTabAction = false;
-        }*/
+        ListButtons.Clear();
+        ItemTabAction = false;
+        PanelItem.SetActive(false);
 
     }
 

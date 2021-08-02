@@ -4,26 +4,12 @@ using UnityEngine;
 
 public class OpenSavePanel : MonoBehaviour
 {
-    public static OpenSavePanel opensavepanel;
     public GameObject painelSave;
-
-    void Awake()
-        {
-            if(opensavepanel == null)
-            {
-                opensavepanel = this;
-
-            }else if (opensavepanel != this)
-            {
-                Destroy(gameObject);
-            }
-            DontDestroyOnLoad(gameObject);
-        }
-
         void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Player"))
             {
+                Debug.Log("Café");
                 painelSave.SetActive(true);
             }
         }

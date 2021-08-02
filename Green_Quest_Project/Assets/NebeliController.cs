@@ -65,6 +65,7 @@ public class NebeliController : MonoBehaviour
             PlayerController.instance.canInteract = false;
             ConversationManager.Instance.StartConversation(C2);
             valor = 4;
+            PlayerController.instance.endGame = true;
         } else if (valor == 4){
             ConversationManager.Instance.StartConversation(CDefault);
         }

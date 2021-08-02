@@ -13,7 +13,6 @@ public class ButtonSlot : MonoBehaviour
     public Image Icone;
     public int ID;
     public GameObject Use;
-    public GameObject Discard;
     public GameObject DescPanel;
     
     public string nome;
@@ -21,24 +20,12 @@ public class ButtonSlot : MonoBehaviour
     public string descricao2;
     public Item myItem;
 
-   void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
-    }
-
     public void fillInformation()
     {
         Nome.text = nome;
         Descricao1.text = descricao1;
         Descricao2.text = descricao2;
         Use.SetActive(true);
-        Discard.SetActive(true);
         DescPanel.SetActive(true);
         UseButton Usebutton = Use.GetComponent<UseButton>();
         Usebutton.myItem = myItem;

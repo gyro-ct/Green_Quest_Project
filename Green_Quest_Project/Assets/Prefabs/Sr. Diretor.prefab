@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 381225604369885691}
   - component: {fileID: 381225604369885690}
   - component: {fileID: 381225604369885669}
+  - component: {fileID: 5192900585856745353}
   m_Layer: 0
   m_Name: Sr. Diretor
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 2056904899
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4391311643054534473, guid: b714f4ca51a6860559411d87470d866c,
+  m_Sprite: {fileID: -5475448502249213167, guid: c35fd32817f3b4683b34d0348a3678f5,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -104,7 +105,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.4880002, y: 3.1944816}
+    oldSize: {x: 2.44, y: 3.89}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -130,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.4880002, y: 3.1944816}
+    oldSize: {x: 2.44, y: 3.89}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -177,3 +178,22 @@ MonoBehaviour:
   C2: {fileID: 7195821701845335781, guid: c62056e51eedfdb91af7fda6f621f14f, type: 3}
   valor: 1
   ativada: 0
+--- !u!95 &5192900585856745353
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381225604369885668}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 562cbfbb49d09e5fd9274b0e65e27e86, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
