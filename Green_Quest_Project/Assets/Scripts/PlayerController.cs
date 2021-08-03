@@ -263,4 +263,9 @@ public class PlayerController : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
     }
+
+    public void JustCanMove()
+    {
+        canMove = true;
+    }
 }
