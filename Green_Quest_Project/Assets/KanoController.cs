@@ -13,8 +13,9 @@ public class KanoController : MonoBehaviour
         } else if (instance != this){
             Destroy(gameObject);
         }
-        QuestManager.questManager.PrgInstances.Add(gameObject);
         DontDestroyOnLoad(gameObject);
+        QuestManager.questManager.PrgInstances.Add(gameObject);
+        
     }
 
     public bool activeTrigger = true;
@@ -22,24 +23,31 @@ public class KanoController : MonoBehaviour
     public NPCConversation C1;
     public NPCConversation C2;
     public NPCConversation C3;
-    public NPCConversation CDefault;
-
+    public NPCConversation C4;
     public int valor;
+    public bool v1 = true;
+    public bool v3 = true;
+    public bool achouFiltro = false;
+
+    public void ChangeValor(){
+        KanoController.instance.valor++;
+    }
 
     public void ativarConversa(){
-        if (valor == 1){
+        if (valor == 1 && v1){
+            v1 = false;
             PlayerController.instance.C2();
             PlayerController.instance.canInteract = false;
             ConversationManager.Instance.StartConversation(C1);
         } else if (valor == 2){
             ConversationManager.Instance.StartConversation(C2);
-        } else if (valor == 3){
+        } else if (valor == 3 && v3){
+            v3 = false; // Conversa
             PlayerController.instance.C2();
             PlayerController.instance.canInteract = false;
             ConversationManager.Instance.StartConversation(C3);
-            valor = 4;
         } else if (valor == 4){
-            ConversationManager.Instance.StartConversation(CDefault);
+            ConversationManager.Instance.StartConversation(C4);
         }
     }
 

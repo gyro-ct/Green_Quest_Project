@@ -13,7 +13,7 @@ public class Cama : MonoBehaviour
     void Update(){
         if(isTriggered && Input.GetKeyDown(KeyCode.Space)){
 
-            if (!Q101QuizManager.q101.TriggerforDormir){
+            if (PlayerController.instance.YAbool && !PlayerController.instance.YAbool1){
                 Q101QuizManager.q101.Ligacao();
             }
 

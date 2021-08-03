@@ -49,8 +49,7 @@ public class EvaController : MonoBehaviour
 
     public bool PlayerNear = false;
     public bool change = false;
-
-    public bool ativarConversa = true;
+    public bool passouFase5 = false;
     
     void Awake(){
         if(instance == null){
@@ -58,8 +57,9 @@ public class EvaController : MonoBehaviour
         } else if (instance != this){
             Destroy(gameObject);
         }
-        QuestManager.questManager.PrgInstances.Add(gameObject);
         DontDestroyOnLoad(gameObject);
+        QuestManager.questManager.PrgInstances.Add(gameObject);
+        
     }
 
     void Start() {
@@ -91,8 +91,74 @@ public class EvaController : MonoBehaviour
 
     }
 
-    void Update() {        
+    public NPCConversation conv0;
+    public NPCConversation conv1;
+    public NPCConversation conv2;
+    public NPCConversation conv3;
+    public NPCConversation conv4;
+    public NPCConversation conv5;
 
+    public int valor = 1;
+
+    public void ChangeValor(){
+        Debug.Log(EvaController.instance.valor);
+        EvaController.instance.valor++;
+        Debug.Log(EvaController.instance.valor);
+    }
+    public bool v2 = true;
+    public bool v4 = true;
+    public void ativarConversa(){
+        if (valor == 1 && PlayerController.instance.conversaComEva){
+            PlayerController.instance.conversaComEva = false;
+            QuestManager.questManager.AddQuestItem("Conversar com Calenwen", 1);
+            PlayerController.instance.C2();
+            PortaManager.portaManager.AtivarPorta(4);
+            PortaManager.portaManager.AtivarPorta(15);
+            PortaManager.portaManager.AtivarPorta(16);
+            PlayerController.instance.canInteract = false;
+            PlayerController.instance.conversaComEva = false;
+            ConversationManager.Instance.StartConversation(conv0);
+        } else if (valor == 2 && v2){
+            v2 = false;
+            QuestManager.questManager.AddQuestItem("Conhecer a empresa", 1);
+            PlayerController.instance.C2();
+            PlayerController.instance.canInteract = false;
+            coffeMachineActivated = true;
+            ConversationManager.Instance.StartConversation(conv1);
+        } else if (valor == 3){
+            ConversationManager.Instance.StartConversation(conv2);
+        } else if (valor == 4 && v4){
+            v4 = false;
+            ConversationManager.Instance.StartConversation(conv3);
+        } else if (valor == 5){
+            // Adicionar trigger na Arah
+            ConversationManager.Instance.StartConversation(conv4);
+        } else if (valor == 6){
+            ConversationManager.Instance.StartConversation(conv5);
+        }
+    }
+
+    public bool oneActivation = true;
+    public bool isOnSGA = false;
+    public bool isColliderActive = true;
+    public bool coffeMachineActivated = false;
+    public bool active31 = true;
+    public bool active32 = true;
+    public bool active33 = true;
+    void Update() {
+
+        if (valor == 1){
+            for (int i=0; i<QuestManager.questManager.currentQuestList.Count; i++){
+                if (QuestManager.questManager.currentQuestList[i].id == 5 && oneActivation){
+                    oneActivation = false;
+                    PlayerController.instance.conversaComEva = true;
+                }
+            }
+        }
+
+        if (PlayerNear && Input.GetKeyDown(KeyCode.Space)){
+            ativarConversa();
+        }
 
         //1 Direção, modeWalk, mudar direção na parada?, para qual?
         if (modeWalk == 1 && start){start=false;walk();}
@@ -122,32 +188,29 @@ public class EvaController : MonoBehaviour
 
         if (modeWalk == 25 && transform.position == target121.position){stopMovement("L", 26, false, "");}
         if (modeWalk == 26 && transform.position == target122.position){stopMovement("D", 27, false, "");}
-        if (modeWalk == 27 && transform.position == target123.position){stopMovement("L", 28, false, "");}
+        if (modeWalk == 27 && transform.position == target123.position){stopMovement("L", 28, false, "");passouFase5=true;isOnSGA=true;}
         if (modeWalk == 28 && transform.position == target124.position){stopMovement("D", 29, true, "D");}
 
-        if (modeWalk == 28 && walking == 0 && PlayerNear && Input.GetKeyDown(KeyCode.Space) && ativarConversa){
-            QuestManager.questManager.AddQuestItem("Conhecer a empresa", 1);
-            ativarConversa = false;
-            PlayerController.instance.C2();
-            PlayerController.instance.canInteract = false;
-            Debug.Log("Antes da conversa");
-            atvConv.instance.ativarConversa(1);
-            //ConversationManager.Instance.StartConversation(conv1);
-            Debug.Log("Depois da conversa");
-            // Apróxima é ativada ao se usar o item café
+        if (modeWalk == 28 && walking == 0){
+            valor = 2;
         }
 
-        if (modeWalk == 29 && transform.position == targetA1.position){stopMovement("D", 30, false, "");}
+        if (modeWalk == 29 && transform.position == targetA1.position){stopMovement("D", 30, false, "");isOnSGA=false;}
         if (modeWalk == 30 && transform.position == targetA2.position){stopMovement("L", 31, true, "D");}
 
-        if (modeWalk == 31 && PlayerNear && Input.GetKeyDown(KeyCode.Space)){
-            atvConv.instance.ativarConversa(2);
-            //ConversationManager.Instance.StartConversation(conv2);
+        if (modeWalk == 31 && active31){
+            active31 = false;
+            valor = 3;
         }
 
-        if (modeWalk == 32 && PlayerNear && Input.GetKeyDown(KeyCode.Space)){
-            atvConv.instance.ativarConversa(4);
-            //ConversationManager.Instance.StartConversation(conv2);
+        if (valor == 4 && active32){
+            active32 = false;
+            ativarConversa();
+        }
+
+        if (modeWalk == 32 && active33){
+            active33 = false;
+            valor = 5;
         }
 
         //3 if (walk value) Target to go

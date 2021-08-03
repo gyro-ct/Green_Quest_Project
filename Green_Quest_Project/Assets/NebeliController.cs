@@ -14,9 +14,9 @@ public class NebeliController : MonoBehaviour
         } else if (instance != this){
             Destroy(gameObject);
         }
+        DontDestroyOnLoad(gameObject);
         QuestManager.questManager.PrgInstances.Add(gameObject);
         count = 0;
-        DontDestroyOnLoad(gameObject);
     }
 
     public bool isC1Activated = false; // Ativar caixa 1
@@ -41,33 +41,42 @@ public class NebeliController : MonoBehaviour
     public void soltarCaixa(){
         PlayerController.instance.animator.SetBool("EsUmaEmpilhadeira2", false);
         count++;
+        QuestManager.questManager.AddQuestItem("Caixas entregues", 1);
         if(count == 2){
             ativarEmpilhadeira2();
         }
     }
 
     public NPCConversation C1;
-    public NPCConversation CD1;
     public NPCConversation C2;
-    public NPCConversation CDefault;
+    public NPCConversation C3;
+    public NPCConversation C4;
 
     public int valor = 1;
+    public bool v1 = true;
+    public bool v3 = true;
 
+    public void ChangeValor(){
+        NebeliController.instance.valor++;
+    }
     public void ativarConversa(){
-        if (valor == 1){
+        if (valor == 1 && v1){
+            v1 = false;
             PlayerController.instance.C2();
             PlayerController.instance.canInteract = false;
+            QuestManager.questManager.AddQuestItem("Conversar com Nebeli", 1);
             ConversationManager.Instance.StartConversation(C1);
         } else if (valor == 2){
-            ConversationManager.Instance.StartConversation(CD1);
-        } else if (valor == 3){
+            ConversationManager.Instance.StartConversation(C2);
+        } else if (valor == 3 && v3){
+            v3 = false; //
             PlayerController.instance.C2();
             PlayerController.instance.canInteract = false;
-            ConversationManager.Instance.StartConversation(C2);
-            valor = 4;
+            QuestManager.questManager.AddQuestItem("Conversar com Nebeli novamente", 1);
+            ConversationManager.Instance.StartConversation(C3);
             PlayerController.instance.endGame = true;
         } else if (valor == 4){
-            ConversationManager.Instance.StartConversation(CDefault);
+            ConversationManager.Instance.StartConversation(C4);
         }
     }
 

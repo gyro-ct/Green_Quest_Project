@@ -210,6 +210,79 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6233647}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &285405042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 285405043}
+  - component: {fileID: 285405045}
+  - component: {fileID: 285405044}
+  m_Layer: 0
+  m_Name: ColliderQuest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &285405043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285405042}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.92, y: 4.53, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 818142298}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &285405044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285405042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba723421cd7508cf87df07ddffd59e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
+  onceActive: 1
+  questID: 12
+--- !u!61 &285405045
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285405042}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -7.9648457}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 16.929691}
+  m_EdgeRadius: 0
 --- !u!1001 &301302343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2757,6 +2830,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7240739283076061251, guid: 5699d83affb85036190d69da8d6861e1,
+          type: 3}
+        m_TargetAssemblyTypeName: PersulaController, Assembly-CSharp
+        m_MethodName: ChangeValorToTwo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 3
   TMPFont: {fileID: 0}
   Icon: {fileID: 21300000, guid: c5f0dff25b4f33f2583d4d008a57a397, type: 3}
@@ -4727,7 +4813,7 @@ GameObject:
   - component: {fileID: 400943611}
   - component: {fileID: 400943612}
   m_Layer: 0
-  m_Name: ConversaInicial
+  m_Name: ConversationPersulaC1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4761,16 +4847,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 8
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":299.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bom
-    dia Player!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":541,\"yPos\":23},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bom
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":279.5,\"yPos\":2},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bom
+    dia Player!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":521,\"yPos\":3},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bom
     dia P\xE9rsula! O diretor falou para vir aqui ajudar na compra dos novos filtros
-    da empresa!\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Player\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":537,\"yPos\":148},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ah,
-    sim sim, ele me ligou e disse que isso era de extrema urg\xEAncia rsrs\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":295,\"yPos\":145},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ele
-    fez quest\xE3o de falar o mesmo para mim haha\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Player\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":43,\"yPos\":144},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bom,
-    ent\xE3o sente no computador da direita na sala que este vai ser seu treinamento...\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":32,\"yPos\":271},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Traga
+    da empresa!\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Player\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":517,\"yPos\":128},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ah,
+    sim sim, ele me ligou e disse que isso era de extrema urg\xEAncia rsrs\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":275,\"yPos\":125},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ele
+    fez quest\xE3o de falar o mesmo para mim haha\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Player\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":23,\"yPos\":124},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bom,
+    ent\xE3o sente no computador da direita na sala que este vai ser seu treinamento...\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":12,\"yPos\":251},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Traga
     um relat\xF3rio para mim com uma escolha de filtro G3 e outra de filtro F7 a
-    partir dos fornecedores dispon\xEDveis...\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":297,\"yPos\":266},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Vou
-    avaliar suas escolhas para ver se est\xE3o boas!\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":530,\"yPos\":267},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Okay!\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Player\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+    partir dos fornecedores dispon\xEDveis...\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":277,\"yPos\":246},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Vou
+    avaliar suas escolhas para ver se est\xE3o boas!\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":510,\"yPos\":247},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Okay!\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Player\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: "P\xE9rsula"
   DefaultSprite: {fileID: 0}
@@ -4786,20 +4872,7 @@ MonoBehaviour:
   - {fileID: 1112746889}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8045763109113120762, guid: 851e18255db10d980b7fade4e03bdaa8,
-          type: 3}
-        m_TargetAssemblyTypeName: AtivarConversa, Assembly-CSharp
-        m_MethodName: canMoveAgain
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &441394403
 GameObject:
   m_ObjectHideFlags: 0
@@ -6280,6 +6353,75 @@ CompositeCollider2D:
       - {x: -15.049973, y: -31.550001}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!1001 &529564250
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7240739283076061250, guid: 5699d83affb85036190d69da8d6861e1,
+        type: 3}
+      propertyPath: m_Name
+      value: Persula
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5699d83affb85036190d69da8d6861e1, type: 3}
 --- !u!1 &577618274
 GameObject:
   m_ObjectHideFlags: 0
@@ -6291,7 +6433,7 @@ GameObject:
   - component: {fileID: 577618275}
   - component: {fileID: 577618276}
   m_Layer: 0
-  m_Name: ConversaD1
+  m_Name: ConversationPersulaC2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6325,7 +6467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":294.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Voc\xEA
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":231.5,\"yPos\":82},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Voc\xEA
     tem que fazer o relat\xF3rio com os fornecedores no computador da direita...\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: 
@@ -83514,18 +83656,126 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32f7ae0f8551d98468b843acd9d7a607, type: 3}
+--- !u!1 &756896882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 756896883}
+  - component: {fileID: 756896884}
+  m_Layer: 0
+  m_Name: ConversationPersulaC6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &756896883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756896882}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1941099756}
+  m_Father: {fileID: 922406277}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &756896884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756896882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentIDCounter: 1
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":293.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Voc\xEA
+    leva jeito pra compras!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+  saveVersion: 110
+  DefaultName: 
+  DefaultSprite: {fileID: 0}
+  DefaultFont: {fileID: 0}
+  NodeSerializedDataList:
+  - {fileID: 1941099757}
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &770923830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1655437708599110959, guid: bc3999f07aecdd74c844ea5c2c75ba94,
     type: 3}
   m_PrefabInstance: {fileID: 1655437708000325657}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &780639831 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8784602106999452923, guid: 785440e7df042bc3a97035de4c25c778,
-    type: 3}
-  m_PrefabInstance: {fileID: 8784602107763108524}
+--- !u!1 &780639830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 780639831}
+  - component: {fileID: 780639832}
+  m_Layer: 0
+  m_Name: ConversationPersulaC4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &780639831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780639830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 922406277}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &780639832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780639830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentIDCounter: 5
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[]}'
+  saveVersion: 110
+  DefaultName: "P\xE9rsula"
+  DefaultSprite: {fileID: 21300000, guid: c5f0dff25b4f33f2583d4d008a57a397, type: 3}
+  DefaultFont: {fileID: 0}
+  NodeSerializedDataList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &818142297
 GameObject:
   m_ObjectHideFlags: 0
@@ -83554,6 +83804,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 770923830}
+  - {fileID: 285405043}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -95276,6 +95527,7 @@ Transform:
   - {fileID: 1901948966}
   - {fileID: 780639831}
   - {fileID: 1773470021}
+  - {fileID: 756896883}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -95311,7 +95563,7 @@ Transform:
   - {fileID: 6233648}
   - {fileID: 301302344}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &977581462
 PrefabInstance:
@@ -95333,12 +95585,12 @@ PrefabInstance:
     - target: {fileID: 945932036035465725, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.17
+      value: -14.94
       objectReference: {fileID: 0}
     - target: {fileID: 945932036035465725, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.32
+      value: -17.3
       objectReference: {fileID: 0}
     - target: {fileID: 945932036035465725, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
@@ -95380,6 +95632,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 945932036035465726, guid: 8c92e4075a8206749abde162bfe33ead,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.6081514
+      objectReference: {fileID: 0}
+    - target: {fileID: 945932036035465726, guid: 8c92e4075a8206749abde162bfe33ead,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -1.4672236
+      objectReference: {fileID: 0}
     - target: {fileID: 945932036579252462, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -95394,6 +95656,11 @@ PrefabInstance:
         type: 3}
       propertyPath: id
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
+        type: 3}
+      propertyPath: direction
+      value: compras
       objectReference: {fileID: 0}
     - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
@@ -97655,6 +97922,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7240739283076061251, guid: 5699d83affb85036190d69da8d6861e1,
+          type: 3}
+        m_TargetAssemblyTypeName: PersulaController, Assembly-CSharp
+        m_MethodName: ChangeValor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 7
   TMPFont: {fileID: 0}
   Icon: {fileID: 21300000, guid: 3a041985d092e5747a8fcb9a6cbe0caa, type: 3}
@@ -98128,7 +98408,7 @@ GameObject:
   - component: {fileID: 1773470021}
   - component: {fileID: 1773470022}
   m_Layer: 0
-  m_Name: ConversaDfinal
+  m_Name: ConversationPersulaC5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98162,7 +98442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":294.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":293.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
     pr\xF3xima etapa do treinamento \xE9 na sala de comunica\xE7\xE3o e marketing!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: 
@@ -98184,7 +98464,7 @@ GameObject:
   - component: {fileID: 1901948966}
   - component: {fileID: 1901948967}
   m_Layer: 0
-  m_Name: ConversaRejeitado
+  m_Name: ConversationPersulaC3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98218,11 +98498,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 4
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":294.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Olha...\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":295,\"yPos\":125},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Este
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":247.5,\"yPos\":-44},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Olha...\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":248,\"yPos\":59},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Este
     desempenho dos produtos n\xE3o est\xE1 bom ainda, voc\xEA tem que pensar que
-    tem que ter um equil\xEDbrio...\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":297,\"yPos\":238},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"O
+    tem que ter um equil\xEDbrio...\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":250,\"yPos\":172},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"O
     desempenho ambiental tem que ser alto e o pre\xE7o tem que ser poss\xEDvel de
-    pagar!\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":296,\"yPos\":337},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Refa\xE7a
+    pagar!\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":249,\"yPos\":271},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Refa\xE7a
     o relat\xF3rio!\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"P\xE9rsula\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: "P\xE9rsula"
@@ -98235,7 +98515,83 @@ MonoBehaviour:
   - {fileID: 345243642}
   Event:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8045763109113120762, guid: 851e18255db10d980b7fade4e03bdaa8,
+          type: 3}
+        m_TargetAssemblyTypeName: AtivarConversa, Assembly-CSharp
+        m_MethodName: canMoveAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7240739283076061251, guid: 5699d83affb85036190d69da8d6861e1,
+          type: 3}
+        m_TargetAssemblyTypeName: PersulaController, Assembly-CSharp
+        m_MethodName: ChangeValorToTwo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &1941099755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1941099756}
+  - component: {fileID: 1941099757}
+  m_Layer: 0
+  m_Name: ConversationEventInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1941099756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941099755}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.182248, y: 13.346532, z: 0.4976163}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 756896883}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1941099757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941099755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
       m_Calls: []
+  NodeID: 0
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 21300000, guid: c5f0dff25b4f33f2583d4d008a57a397, type: 3}
+  Audio: {fileID: 0}
 --- !u!1001 &2002251072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101245,75 +101601,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1001 &2133978342
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7240739283076061250, guid: 5699d83affb85036190d69da8d6861e1,
-        type: 3}
-      propertyPath: m_Name
-      value: Persula
-      objectReference: {fileID: 0}
-    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 14.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7240739283076061276, guid: 5699d83affb85036190d69da8d6861e1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5699d83affb85036190d69da8d6861e1, type: 3}
 --- !u!1001 &1655437708000325657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101918,72 +102205,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc76ba3962c63aa13afdcaa09561e487, type: 3}
---- !u!1001 &8784602107763108524
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 922406277}
-    m_Modifications:
-    - target: {fileID: 8784602106999452922, guid: 785440e7df042bc3a97035de4c25c778,
-        type: 3}
-      propertyPath: m_Name
-      value: ConversaAceito
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784602106999452923, guid: 785440e7df042bc3a97035de4c25c778,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784602106999452923, guid: 785440e7df042bc3a97035de4c25c778,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784602106999452923, guid: 785440e7df042bc3a97035de4c25c778,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784602106999452923, guid: 785440e7df042bc3a97035de4c25c778,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784602106999452923, guid: 785440e7df042bc3a97035de4c25c778,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784602106999452923, guid: 785440e7df042bc3a97035de4c25c778,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784602106999452923, guid: 785440e7df042bc3a97035de4c25c778,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784602106999452923, guid: 785440e7df042bc3a97035de4c25c778,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784602106999452923, guid: 785440e7df042bc3a97035de4c25c778,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784602106999452923, guid: 785440e7df042bc3a97035de4c25c778,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784602106999452923, guid: 785440e7df042bc3a97035de4c25c778,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 785440e7df042bc3a97035de4c25c778, type: 3}

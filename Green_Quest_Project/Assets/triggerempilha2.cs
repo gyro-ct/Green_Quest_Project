@@ -37,6 +37,7 @@ public class triggerempilha2 : MonoBehaviour
                 TileColliderPlayer.SetActive(true);
                 TileColliderEmpilhadeira.SetActive(false);
                 NebeliController.instance.valor = 3;
+                QuestManager.questManager.AddQuestItem("Empilhadeira desativada", 1);
                 bool2 = true;
                 bool1 = false;
             }

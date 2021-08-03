@@ -16,6 +16,7 @@ public class AreaExit : MonoBehaviour
     private bool boolean1 = false;
     private Porte porta;
     public int id;
+    public string direction;
     
     void Awake(){
 
@@ -28,6 +29,7 @@ public class AreaExit : MonoBehaviour
     {
         Debug.Log("AreaT1: Entrance recebe: " + areaTransitionName);
         theEntrance.transitionName = areaTransitionName;
+        theEntrance.direction = direction;
         boolean1 = false;
     }
 
@@ -81,7 +83,9 @@ public class AreaExit : MonoBehaviour
         else if (other.tag == "Eva"){
             Debug.Log("Keep ma baby");
             if (porta.ativada){
-                EvaController.instance.deactivate();
+                if(!(areaTransitionName == "corredor_bathroom" || areaTransitionName == "corredor_coffee")){
+                    EvaController.instance.deactivate();
+                }
             }
         }
     }

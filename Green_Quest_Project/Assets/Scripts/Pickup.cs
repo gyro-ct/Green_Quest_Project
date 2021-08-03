@@ -52,6 +52,16 @@ public class Pickup : MonoBehaviour
                 Thisitem.value = IDDoItem;
                 Thisitem.itemSprite = ImagemDoItem;
                 ItemManager.itemmanager.ListItem.Add(Thisitem);
+                if (NomeDoItem == "Relógio do Sr. Kano"){
+                    NibilaController.instance.achouRelogio = true;
+                } else if (NomeDoItem == "Filtro"){
+                    KanoController.instance.achouFiltro = true;
+                    KanoController.instance.valor = 2;
+                    QuestManager.questManager.AddQuestItem("Achar filtro G3", 1);
+                    ArahController.instance.valor = 3;
+                } else if (NomeDoItem == "Relatório ambiental"){
+                    BrenesController.instance.foundReport = true;
+                }
                 Destroy(gameObject);
             }
             

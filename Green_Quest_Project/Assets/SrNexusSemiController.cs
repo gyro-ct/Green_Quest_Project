@@ -8,12 +8,14 @@ public class SrNexusSemiController : MonoBehaviour
 
     private void Update() {
         if (ativada && Input.GetKeyDown(KeyCode.Space)){
-            if (NibilaController.instance.valorSrNexus == 1){
+            if (NibilaController.instance.valorSrNexus == 1 && NibilaController.instance.vn1){
+                NibilaController.instance.vn1 = false; //
                 PlayerController.instance.C2();
                 PlayerController.instance.canInteract = false;
-                NibilaController.instance.valorSrNexus = 2;
+                QuestManager.questManager.AddQuestItem("Conversar com o Sr. Nexus", 1);
                 NibilaController.instance.ativarConvNexus1();
-            } else {
+            } else if (NibilaController.instance.valorSrNexus == 2 && NibilaController.instance.vn2) {
+                NibilaController.instance.vn2 = false;
                 PlayerController.instance.C2();
                 PlayerController.instance.canInteract = false;
                 NibilaController.instance.ativarConvNexus2();

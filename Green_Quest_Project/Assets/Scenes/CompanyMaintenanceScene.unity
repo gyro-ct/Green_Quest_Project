@@ -123,6 +123,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &78080140
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2671435552019648279, guid: 14369c907c3e908258ce547e692d733e,
+        type: 3}
+      propertyPath: m_Name
+      value: Sr.Kano
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 14369c907c3e908258ce547e692d733e, type: 3}
 --- !u!1 &87610058
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +685,7 @@ GameObject:
   - component: {fileID: 225949573}
   - component: {fileID: 225949574}
   m_Layer: 0
-  m_Name: ConversaSrKano
+  m_Name: ConversationKanoC1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -650,10 +719,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 3
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":294.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bom
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":293.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bom
     dia Player! Est\xE1 com cara que perdeu alguma coisa!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sr.
-    Kano\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":299,\"yPos\":151},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Preciso
-    achar o filtro para produ\xE7\xE3o! A Arah me mandou aqui para procurar ele!\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Player\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":295,\"yPos\":278},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Boa
+    Kano\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":298,\"yPos\":151},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Preciso
+    achar o filtro para produ\xE7\xE3o! A Arah me mandou aqui para procurar ele!\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Player\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":294,\"yPos\":278},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Boa
     sorte, eu ainda n\xE3o consegui achar mesmo tendo procurado dentro de todos os
     arm\xE1rios! \",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sr.
     Kano\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
@@ -11408,6 +11477,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
+      propertyPath: direction
+      value: manutencao
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
+        type: 3}
       propertyPath: areaToLoad
       value: Corredor
       objectReference: {fileID: 0}
@@ -11620,6 +11694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conv: {fileID: 1623071671}
+  oneTimer: 1
 --- !u!1 &1396638987
 GameObject:
   m_ObjectHideFlags: 0
@@ -11631,7 +11706,7 @@ GameObject:
   - component: {fileID: 1396638988}
   - component: {fileID: 1396638989}
   m_Layer: 0
-  m_Name: ConversaSrKanoD1
+  m_Name: ConversationKanoC2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11665,7 +11740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":294.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Que
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":293.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Que
     bom que voce achou o filtro! Leve pra Arah imediatamente!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Sr.
     Kano","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -40227,7 +40302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":294.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Achei
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":293.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Achei
     um filtro G3!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Player","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
@@ -40646,8 +40721,7 @@ Transform:
   - {fileID: 225949573}
   - {fileID: 1623071670}
   - {fileID: 1396638988}
-  - {fileID: 5533220096418787597}
-  - {fileID: 7017044231039092754}
+  - {fileID: 4067375165337395009}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43362,227 +43436,110 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2133582224}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2671435552205944015
-PrefabInstance:
+--- !u!1 &1041609101232306002
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -10.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -10.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671435552019648275, guid: 14369c907c3e908258ce547e692d733e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671435552019648277, guid: 14369c907c3e908258ce547e692d733e,
-        type: 3}
-      propertyPath: C1
-      value: 
-      objectReference: {fileID: 225949574}
-    - target: {fileID: 2671435552019648279, guid: 14369c907c3e908258ce547e692d733e,
-        type: 3}
-      propertyPath: m_Name
-      value: Sr.Kano
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 14369c907c3e908258ce547e692d733e, type: 3}
---- !u!1001 &5533220096418787596
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1917105454}
-    m_Modifications:
-    - target: {fileID: 3293641141946112979, guid: 06f680ea82c26ccfb835902d014bc049,
-        type: 3}
-      propertyPath: m_Name
-      value: ConversaSrKanoD1 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861688684636374741, guid: 06f680ea82c26ccfb835902d014bc049,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861688684636374741, guid: 06f680ea82c26ccfb835902d014bc049,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861688684636374741, guid: 06f680ea82c26ccfb835902d014bc049,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861688684636374741, guid: 06f680ea82c26ccfb835902d014bc049,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861688684636374741, guid: 06f680ea82c26ccfb835902d014bc049,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861688684636374741, guid: 06f680ea82c26ccfb835902d014bc049,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861688684636374741, guid: 06f680ea82c26ccfb835902d014bc049,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861688684636374741, guid: 06f680ea82c26ccfb835902d014bc049,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861688684636374741, guid: 06f680ea82c26ccfb835902d014bc049,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861688684636374741, guid: 06f680ea82c26ccfb835902d014bc049,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861688684636374741, guid: 06f680ea82c26ccfb835902d014bc049,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 06f680ea82c26ccfb835902d014bc049, type: 3}
---- !u!4 &5533220096418787597 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4861688684636374741, guid: 06f680ea82c26ccfb835902d014bc049,
-    type: 3}
-  m_PrefabInstance: {fileID: 5533220096418787596}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &7017044231039092753
-PrefabInstance:
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4067375165337395009}
+  - component: {fileID: 4646629202732134590}
+  m_Layer: 0
+  m_Name: ConversationKanoC4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &3720040197687130616
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1917105454}
-    m_Modifications:
-    - target: {fileID: 6418672516413544272, guid: d1aef1cf06b69242c9f6a1c0529a3b33,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6418672516413544272, guid: d1aef1cf06b69242c9f6a1c0529a3b33,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6418672516413544272, guid: d1aef1cf06b69242c9f6a1c0529a3b33,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6418672516413544272, guid: d1aef1cf06b69242c9f6a1c0529a3b33,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6418672516413544272, guid: d1aef1cf06b69242c9f6a1c0529a3b33,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6418672516413544272, guid: d1aef1cf06b69242c9f6a1c0529a3b33,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6418672516413544272, guid: d1aef1cf06b69242c9f6a1c0529a3b33,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6418672516413544272, guid: d1aef1cf06b69242c9f6a1c0529a3b33,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6418672516413544272, guid: d1aef1cf06b69242c9f6a1c0529a3b33,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6418672516413544272, guid: d1aef1cf06b69242c9f6a1c0529a3b33,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6418672516413544272, guid: d1aef1cf06b69242c9f6a1c0529a3b33,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8004309932747390787, guid: d1aef1cf06b69242c9f6a1c0529a3b33,
-        type: 3}
-      propertyPath: m_Name
-      value: ConversaSrKanoD1 (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d1aef1cf06b69242c9f6a1c0529a3b33, type: 3}
---- !u!4 &7017044231039092754 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6418672516413544272, guid: d1aef1cf06b69242c9f6a1c0529a3b33,
-    type: 3}
-  m_PrefabInstance: {fileID: 7017044231039092753}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7932958158369463198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 0
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 21300000, guid: bb3da0c6f35e6c48d8fa2afb73c8003c, type: 3}
+  Audio: {fileID: 0}
+--- !u!4 &4067375165337395009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041609101232306002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7358093158650853155}
+  m_Father: {fileID: 1917105454}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4646629202732134590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041609101232306002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentIDCounter: 1
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":293.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"(Distra\xEDdo)
+    No dia em que eu sai de casa...\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sr.
+    Kano\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+  saveVersion: 110
+  DefaultName: 
+  DefaultSprite: {fileID: 0}
+  DefaultFont: {fileID: 0}
+  NodeSerializedDataList:
+  - {fileID: 3720040197687130616}
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &7358093158650853155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7932958158369463198}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.8104777, y: 3.6239808, z: 2.3403392}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4067375165337395009}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7932958158369463198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7358093158650853155}
+  - component: {fileID: 3720040197687130616}
+  m_Layer: 0
+  m_Name: ConversationEventInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1

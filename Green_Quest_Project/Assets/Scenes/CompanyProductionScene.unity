@@ -123,6 +123,79 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &43263091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 43263093}
+  - component: {fileID: 43263092}
+  - component: {fileID: 43263094}
+  m_Layer: 0
+  m_Name: ColliderQuestLogPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &43263092
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43263091}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.5321681, y: -1.1112432}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0643363, y: 3.2224865}
+  m_EdgeRadius: 0
+--- !u!4 &43263093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43263091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.74, y: -8.28, z: -4.030409}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &43263094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43263091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba723421cd7508cf87df07ddffd59e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
+  onceActive: 1
+  questID: 7
 --- !u!1 &53346977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,7 +1296,7 @@ GameObject:
   - component: {fileID: 151839934}
   - component: {fileID: 151839935}
   m_Layer: 0
-  m_Name: ConversaFinalD3
+  m_Name: ConversationArahC6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1257,7 +1330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":294.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Muito
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":293.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Muito
     obrigado Player! Agora a cidade pode respirar melhor. V\xE1 falar com o Sr. Diretor
     sobre o filtro novo!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -1815,7 +1888,7 @@ GameObject:
   - component: {fileID: 266122349}
   - component: {fileID: 266122350}
   m_Layer: 0
-  m_Name: ConversaFinal
+  m_Name: ConversationArahC5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1849,15 +1922,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 7
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":294.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Parab\xE9ns
-    Player!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":512,\"yPos\":26},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Acho
-    que as atividades por aqui j\xE1 est\xE3o completas para seu trainee...\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":744,\"yPos\":24},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mas
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":293.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Parab\xE9ns
+    Player!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":511,\"yPos\":26},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Acho
+    que as atividades por aqui j\xE1 est\xE3o completas para seu trainee...\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":743,\"yPos\":24},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mas
     acho que voc\xEA, como membro da gest\xE3o ambiental daqui, deveria conversar
-    com o Sr. Diretor sobre o sistema de filtros para a chamin\xE9...\\n\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":963,\"yPos\":27},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ele
+    com o Sr. Diretor sobre o sistema de filtros para a chamin\xE9...\\n\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":962,\"yPos\":27},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ele
     est\xE1 querendo muito exportar e precisa do certificado ambiental, ent\xE3o
-    se voc\xEA conversar com ele talvez ele mude de ideia quanto aos filtros\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":846,\"yPos\":154},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Afinal,
-    a o SGA tem que estar ligado com as lideran\xE7as da empresa n\xE9!\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":599,\"yPos\":150},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Boa
-    sorte! V\xE1 conversar com o Sr. Diretor\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":349,\"yPos\":150},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Est\xE1
+    se voc\xEA conversar com ele talvez ele mude de ideia quanto aos filtros\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":845,\"yPos\":154},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Afinal,
+    a o SGA tem que estar ligado com as lideran\xE7as da empresa n\xE9!\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":598,\"yPos\":150},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Boa
+    sorte! V\xE1 conversar com o Sr. Diretor\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":348,\"yPos\":150},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Est\xE1
     bem!\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Player\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: Arah
@@ -1873,33 +1946,7 @@ MonoBehaviour:
   - {fileID: 493839898}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8045763109113120762, guid: 851e18255db10d980b7fade4e03bdaa8,
-          type: 3}
-        m_TargetAssemblyTypeName: AtivarConversa, Assembly-CSharp
-        m_MethodName: canMoveAgain
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1607196724110971838, guid: dbc0a8d8f46d2cd19bef33537b643bde,
-          type: 3}
-        m_TargetAssemblyTypeName: ColliderEvaM1, Assembly-CSharp
-        m_MethodName: ativarPorta5
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1001 &280727576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2821,7 +2868,7 @@ GameObject:
   - component: {fileID: 366940818}
   - component: {fileID: 366940819}
   m_Layer: 0
-  m_Name: ConversaParaColocarFiltroD2
+  m_Name: ConversationArahC4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2855,7 +2902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":294.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xD3timo
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":293.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xD3timo
     Player, agora voc\xEA precisa colocar o filtro no sistema de filtragem onde h\xE1
     um \\\"F\\\"!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -3441,6 +3488,19 @@ MonoBehaviour:
           type: 3}
         m_TargetAssemblyTypeName: ColliderEvaM1, Assembly-CSharp
         m_MethodName: ativarPorta5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6028199949612379153, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
+          type: 3}
+        m_TargetAssemblyTypeName: ArahController, Assembly-CSharp
+        m_MethodName: ChangeValor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4969,7 +5029,6 @@ Transform:
   m_LocalPosition: {x: 9.23584, y: -18.755718, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2022636865}
   - {fileID: 1811035015}
   - {fileID: 1388195223}
   - {fileID: 318215927}
@@ -6495,7 +6554,7 @@ GameObject:
   - component: {fileID: 856710523}
   - component: {fileID: 856710524}
   m_Layer: 0
-  m_Name: ConversaInicialD1
+  m_Name: ConversationArahC2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6529,7 +6588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":294.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Voc\xEA
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":293.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Voc\xEA
     precisa ir na manuten\xE7\xE3o procurar o filtro G3 urgentemente!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: 
@@ -6933,6 +6992,131 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &961298154
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028199949612379625, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
+        type: 3}
+      propertyPath: m_Name
+      value: Arah
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c39ce09208bf4c00186af1d0fa0eaa3b, type: 3}
+--- !u!1 &1141127322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1141127323}
+  - component: {fileID: 1141127324}
+  m_Layer: 0
+  m_Name: ConversationArahC7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1141127323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141127322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1500543225}
+  m_Father: {fileID: 1159444424}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1141127324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141127322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentIDCounter: 1
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":293.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Boa
+    sorte na \xE1rea de gest\xE3o ambiental! Voc\xEA leva jeito!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+  saveVersion: 110
+  DefaultName: 
+  DefaultSprite: {fileID: 0}
+  DefaultFont: {fileID: 0}
+  NodeSerializedDataList:
+  - {fileID: 1500543226}
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1159444423
 GameObject:
   m_ObjectHideFlags: 0
@@ -6966,6 +7150,7 @@ Transform:
   - {fileID: 366940818}
   - {fileID: 266122349}
   - {fileID: 151839934}
+  - {fileID: 1141127323}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51615,6 +51800,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6028199949612379153, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
+          type: 3}
+        m_TargetAssemblyTypeName: ArahController, Assembly-CSharp
+        m_MethodName: ChangeValor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 8
   TMPFont: {fileID: 0}
   Icon: {fileID: 21300000, guid: 3a041985d092e5747a8fcb9a6cbe0caa, type: 3}
@@ -51740,6 +51938,56 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481477174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 0
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 7e80da9f0f5e1fa44a1f180e778b7272, type: 3}
+  Audio: {fileID: 0}
+--- !u!1 &1500543224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1500543225}
+  - component: {fileID: 1500543226}
+  m_Layer: 0
+  m_Name: ConversationEventInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1500543225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500543224}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.8104777, y: 3.6239808, z: 2.3403392}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1141127323}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1500543226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500543224}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
@@ -53627,7 +53875,7 @@ GameObject:
   - component: {fileID: 1683382623}
   - component: {fileID: 1683382624}
   m_Layer: 0
-  m_Name: ConversaParaColocarFiltro
+  m_Name: ConversationArahC3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53661,11 +53909,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 4
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":294.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Voc\xEA
-    conseguiu achar!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":526,\"yPos\":23},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Muito
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":293.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Voc\xEA
+    conseguiu achar!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":525,\"yPos\":23},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Muito
     bem Player, agora preciso que voc\xEA v\xE1 no sistema de filtragem l\xE1 fora
-    e coloque este filtro onde tem uma portinhola com a letra \\\"F\\\"!\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":527,\"yPos\":141},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Quando
-    fizer isso a fuma\xE7a vai come\xE7ar a ser filtrada novamente! Conto com voc\xEA!\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":303,\"yPos\":135},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pode
+    e coloque este filtro onde tem uma portinhola com a letra \\\"F\\\"!\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":526,\"yPos\":141},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Quando
+    fizer isso a fuma\xE7a vai come\xE7ar a ser filtrada novamente! Conto com voc\xEA!\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":302,\"yPos\":135},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pode
     deixar!\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Player\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: Arah
@@ -53678,20 +53926,7 @@ MonoBehaviour:
   - {fileID: 1925392430}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8045763109113120762, guid: 851e18255db10d980b7fade4e03bdaa8,
-          type: 3}
-        m_TargetAssemblyTypeName: AtivarConversa, Assembly-CSharp
-        m_MethodName: canMoveAgain
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1687312460
 GameObject:
   m_ObjectHideFlags: 0
@@ -55443,6 +55678,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6028199949612379153, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
+          type: 3}
+        m_TargetAssemblyTypeName: ArahController, Assembly-CSharp
+        m_MethodName: ChangeValor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 3
   TMPFont: {fileID: 0}
   Icon: {fileID: 21300000, guid: 3a041985d092e5747a8fcb9a6cbe0caa, type: 3}
@@ -56383,7 +56631,7 @@ GameObject:
   - component: {fileID: 1955672866}
   - component: {fileID: 1955672867}
   m_Layer: 0
-  m_Name: ConversaInicial
+  m_Name: ConversationArahC1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56417,18 +56665,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 9
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":294.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bom
-    dia Player!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":501,\"yPos\":21},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eu
-    sou a Arah, estamos muito atarefados aqui por causa do filtro da chamin\xE9\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":716,\"yPos\":22},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Aqui
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":293.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bom
+    dia Player!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":500,\"yPos\":21},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eu
+    sou a Arah, estamos muito atarefados aqui por causa do filtro da chamin\xE9\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":715,\"yPos\":22},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Aqui
     fora na porta de cima temos um sistema de filtragem antes de liberarmos a fuma\xE7a
-    para o ambiente, mas o filtro j\xE1 n\xE3o filtrava mais nada!\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":929,\"yPos\":17},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Utilizamos
+    para o ambiente, mas o filtro j\xE1 n\xE3o filtrava mais nada!\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":928,\"yPos\":17},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Utilizamos
     um filtro G3 que faz uma filtragem mais grossa, tivemos que retirar o filtro
-    de filtragem fina tipo F7 pois o Sr. Diretor resolveu cortar os gastos com filtragem\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":933,\"yPos\":123},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"E
+    de filtragem fina tipo F7 pois o Sr. Diretor resolveu cortar os gastos com filtragem\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":932,\"yPos\":123},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"E
     ele ainda quer conseguir certificado ambiental para exporta\xE7\xE3o, veja se
-    pode!\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":713,\"yPos\":122},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mas
+    pode!\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":712,\"yPos\":122},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mas
     voc\xEA pode ajudar por agora, achamos que ainda h\xE1 um \xFAltimo filtro na
-    sala de almoxarifado para ser utilizado\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":494,\"yPos\":123},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"V\xE1
-    na sala de almoxarifado e procure por este filtro urgente!\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":276,\"yPos\":121},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Okay!\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Player\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+    sala de almoxarifado para ser utilizado\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":493,\"yPos\":123},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"V\xE1
+    na sala de almoxarifado e procure por este filtro urgente!\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Arah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":275,\"yPos\":121},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Okay!\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Player\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: Arah
   DefaultSprite: {fileID: 21300000, guid: 7e80da9f0f5e1fa44a1f180e778b7272, type: 3}
@@ -56828,6 +57076,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
+      propertyPath: direction
+      value: producao
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
+        type: 3}
       propertyPath: areaToLoad
       value: Corredor
       objectReference: {fileID: 0}
@@ -56883,7 +57136,7 @@ PrefabInstance:
     - target: {fileID: 7662794290869000409, guid: 06eff0b048b532103b79f086ff492020,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7662794290869000409, guid: 06eff0b048b532103b79f086ff492020,
         type: 3}
@@ -56982,81 +57235,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06eff0b048b532103b79f086ff492020, type: 3}
---- !u!1001 &2022636864
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 634290736}
-    m_Modifications:
-    - target: {fileID: 5576795262611039896, guid: 0b1c23f42f9208a4f9ff567e86a75a9d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576795262611039896, guid: 0b1c23f42f9208a4f9ff567e86a75a9d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576795262611039896, guid: 0b1c23f42f9208a4f9ff567e86a75a9d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -15.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576795262611039896, guid: 0b1c23f42f9208a4f9ff567e86a75a9d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576795262611039896, guid: 0b1c23f42f9208a4f9ff567e86a75a9d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576795262611039896, guid: 0b1c23f42f9208a4f9ff567e86a75a9d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576795262611039896, guid: 0b1c23f42f9208a4f9ff567e86a75a9d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576795262611039896, guid: 0b1c23f42f9208a4f9ff567e86a75a9d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576795262611039896, guid: 0b1c23f42f9208a4f9ff567e86a75a9d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576795262611039896, guid: 0b1c23f42f9208a4f9ff567e86a75a9d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576795262611039896, guid: 0b1c23f42f9208a4f9ff567e86a75a9d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576795262611039901, guid: 0b1c23f42f9208a4f9ff567e86a75a9d,
-        type: 3}
-      propertyPath: m_Name
-      value: NPCGenericoFrente
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0b1c23f42f9208a4f9ff567e86a75a9d, type: 3}
---- !u!4 &2022636865 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5576795262611039896, guid: 0b1c23f42f9208a4f9ff567e86a75a9d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2022636864}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2123869667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57156,6 +57334,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
+      propertyPath: direction
+      value: producao
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
+        type: 3}
       propertyPath: areaToLoad
       value: CompanyGardenOutsideScene
       objectReference: {fileID: 0}
@@ -57241,108 +57424,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2124688970}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &6028199948525858581
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6028199949612379153, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: C1
-      value: 
-      objectReference: {fileID: 6016122030730188401, guid: 29302532744244f768238751c8771969,
-        type: 3}
-    - target: {fileID: 6028199949612379153, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: C2
-      value: 
-      objectReference: {fileID: 2101828615567853800, guid: 9daae0c74ff7c070c838ea17a480ef41,
-        type: 3}
-    - target: {fileID: 6028199949612379153, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: C3
-      value: 
-      objectReference: {fileID: 8331720897252373367, guid: 03d4b515404ddd17bae9fa3887e37db2,
-        type: 3}
-    - target: {fileID: 6028199949612379153, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: C4
-      value: 
-      objectReference: {fileID: 7281314555239996797, guid: cb1ca7ad2ebcb51ef9e148240e683afb,
-        type: 3}
-    - target: {fileID: 6028199949612379153, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: C5
-      value: 
-      objectReference: {fileID: 198446501656107820, guid: e38ce74cb9e34aef4a051fc5154fbd05,
-        type: 3}
-    - target: {fileID: 6028199949612379153, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: C6
-      value: 
-      objectReference: {fileID: 2962019823586277854, guid: 118ca1fdbad882d6fbd34fc2c0c2a535,
-        type: 3}
-    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -12.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6028199949612379157, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6028199949612379625, guid: c39ce09208bf4c00186af1d0fa0eaa3b,
-        type: 3}
-      propertyPath: m_Name
-      value: Arah
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c39ce09208bf4c00186af1d0fa0eaa3b, type: 3}

@@ -13,8 +13,8 @@ public class DiretorInstance : MonoBehaviour
         } else if (instance != this){
             Destroy(gameObject);
         }
-        QuestManager.questManager.PrgInstances.Add(gameObject);
         DontDestroyOnLoad(gameObject);
+        QuestManager.questManager.PrgInstances.Add(gameObject);
     }
 
     public bool activeTrigger = true;
@@ -24,16 +24,19 @@ public class DiretorInstance : MonoBehaviour
 
     public int valor;
 
-    public void aumentarValor(){
-        valor = valor+1;
+    public void ChangeValor(){
+        DiretorInstance.instance.valor++;
     }
 
+    public bool v1 = true;
+
     public void ativarConversa(){
-        if (valor == 1){
+        if (valor == 1 && v1){
+            v1 = false;
             PlayerController.instance.C2();
             PlayerController.instance.canInteract = false;
+            QuestManager.questManager.AddQuestItem("Falar com diretor", 1);
             ConversationManager.Instance.StartConversation(C1);
-            valor = 2;
         } else if (valor == 2){
             ConversationManager.Instance.StartConversation(C2);
         }
@@ -42,7 +45,14 @@ public class DiretorInstance : MonoBehaviour
     public bool ativada = false;
 
     void Update(){
-        if (ativada && Input.GetKeyDown(KeyCode.Space)){
+        if (!activeTrigger){
+            for (int i = 0; i<QuestManager.questManager.currentQuestList.Count; i++){
+                if (QuestManager.questManager.currentQuestList[i].id == 11){
+                    activeTrigger = true;
+                }
+            }
+        }
+        if (ativada && Input.GetKeyDown(KeyCode.Space) && activeTrigger){
             ativarConversa();
         }
     }

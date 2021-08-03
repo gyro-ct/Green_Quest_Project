@@ -47,43 +47,30 @@ public class Item
         if (itemName == "Relatório ambiental"){
             Debug.Log("função Relatório ambiental");
             if(BrenesController.instance.ativada){
-                BrenesController.instance.valor = 3;
-                BrenesController.instance.ativarConversa();
-                for (int i = 0; i < ItemManager.itemmanager.ListItem.Count; i++){
-                    if (ItemManager.itemmanager.ListItem[i].itemName == itemName){
+                if (BrenesController.instance.valor == 2){
+                    BrenesController.instance.valor = 3;
+                    QuestManager.questManager.AddQuestItem("Relatório entregue ao Sr. Brenes", 1);
+                    BrenesController.instance.ativarConversa();
+                } else if (BrenesController.instance.valor == 4){
+                    BrenesController.instance.valor = 5;
+                    QuestManager.questManager.AddQuestItem("Conversar com Sr. Brenes novamente", 1);
+                    BrenesController.instance.ativarConversa();
+                    for (int i = 0; i < ItemManager.itemmanager.ListItem.Count; i++){
+                        if (ItemManager.itemmanager.ListItem[i].itemName == itemName){
 
-                        Debug.Log("item" + ItemManager.itemmanager.ListItem[i].itemName);
+                            Debug.Log("item" + ItemManager.itemmanager.ListItem[i].itemName);
 
-                        ItemManager.itemmanager.ListItem.RemoveAt(i);
-                        
-                        break;
+                            ItemManager.itemmanager.ListItem.RemoveAt(i);
+                            
+                            break;
+                        }
                     }
                 }
+                
             }
         }
 
-        if (itemName == "Cópia do relatório ambiental"){
-            //
-        }
-
-        if (itemName == "Vara de Pesca"){
-            Debug.Log("função vara de pesca");
-            if(PlayerController.instance.GotFish){
-                Debug.Log("Pesca permitida");
-                Player = GameObject.Find("Player(Clone)").gameObject;
-                Menu = GameObject.Find("MenuJogador").transform.Find("CanvasMenus").transform.Find("Mochila").gameObject;
-                BotaoCloseMochila = GameObject.Find("MenuJogador").transform.Find("ButtonCloseMochila").gameObject;
-                //Player.SetActive(false);
-                Color tmp = Player.GetComponent<SpriteRenderer>().color;
-                tmp.a = 0f;
-                Player.GetComponent<SpriteRenderer>().color = tmp;
-                Menu.SetActive(false);
-                BotaoCloseMochila.SetActive(false);
-                SceneManager.LoadScene("Fishing2");
-            } else {
-                Debug.Log("Não há peixes por aqui");
-            }
-        }
+        
 
         if (itemName == "Mensagem de sua mãe"){
             Debug.Log("função mensagem");
@@ -101,10 +88,10 @@ public class Item
             Debug.Log("função café");
             
             if (EvaController.instance.PlayerNear){
-                Debug.Log("função mensagem333");
                 QuestManager.questManager.AddQuestItem("Levar café", 1);
                 PortaManager.portaManager.AtivarPorta(11);
                 PortaManager.portaManager.AtivarPorta(12);
+                EvaController.instance.valor = 4;
                 for (int i = 0; i < ItemManager.itemmanager.ListItem.Count; i++){
                     if (ItemManager.itemmanager.ListItem[i].itemName == itemName){
 
@@ -115,8 +102,6 @@ public class Item
                         break;
                     }
                 }
-                EvaController.instance.nextMove(false);
-                atvConv.instance.ativarConversa(3);
             }
         }
 
@@ -158,6 +143,29 @@ public class Item
             QuestManager.questManager.IsOver = true;
             ArahController.instance.valor = 5;
         }
+
+        /*if (itemName == "Cópia do relatório ambiental"){
+            //
+        }
+
+        if (itemName == "Vara de Pesca"){
+            Debug.Log("função vara de pesca");
+            if(PlayerController.instance.GotFish){
+                Debug.Log("Pesca permitida");
+                Player = GameObject.Find("Player(Clone)").gameObject;
+                Menu = GameObject.Find("MenuJogador").transform.Find("CanvasMenus").transform.Find("Mochila").gameObject;
+                BotaoCloseMochila = GameObject.Find("MenuJogador").transform.Find("ButtonCloseMochila").gameObject;
+                //Player.SetActive(false);
+                Color tmp = Player.GetComponent<SpriteRenderer>().color;
+                tmp.a = 0f;
+                Player.GetComponent<SpriteRenderer>().color = tmp;
+                Menu.SetActive(false);
+                BotaoCloseMochila.SetActive(false);
+                SceneManager.LoadScene("Fishing2");
+            } else {
+                Debug.Log("Não há peixes por aqui");
+            }
+        }*/
     }
 
 }

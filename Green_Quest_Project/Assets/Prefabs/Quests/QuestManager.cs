@@ -28,6 +28,10 @@ public class QuestManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Update() {
+        PrgInstances.RemoveAll( x => !x);
+    }
+
     // Pegar o canvas do item da carta da mãe
     public GameObject CanvasMae;
     public GameObject getCanvasMae(){
@@ -62,11 +66,15 @@ public class QuestManager : MonoBehaviour
                 PrgInstances[i].SetActive(false);
             }
         }
+        PrgInstances.RemoveAll( x => !x);
+        Debug.Log("1: " + PrgInstances);
     }
     public void deactivatePrg2(){
         for (int i = 0; i<PrgInstances.Count; i++){
             PrgInstances[i].SetActive(false);
         }
+        PrgInstances.RemoveAll( x => !x);
+        Debug.Log("2: " + PrgInstances);
     }
 
     // MAIN QUEST FUNCTIONS
@@ -154,13 +162,13 @@ public class QuestManager : MonoBehaviour
         for(int i=0; i<currentQuestList.Count; i++){
 
             if (currentQuestList[i].id == questID && currentQuestList[i].progress == Quest.QuestProgress.COMPLETED){
-
+                
                 currentQuestList[i].progress = Quest.QuestProgress.DONE;
                 ConversationMainTrigger++;
                 currentQuestList[i].EndQuestTriggers();
-                currentQuestList.Remove(currentQuestList[i]);
 
                 QuestUIManager.uiManager.activeQuests.Remove(currentQuestList[i]);
+                currentQuestList.Remove(currentQuestList[i]);
 
                 GameObject MyObj = ProgressBarManager.ProgressBarInstance.getObjectsXP();
                 Slider slider = MyObj.GetComponent<Slider>();
@@ -207,8 +215,9 @@ public class QuestManager : MonoBehaviour
                         QuestUIManager.uiManager.activeQuests.Add(questList[i]);
                         questList[i].StartQuestTriggers();
                     } else {
-                        questList[i].progress = Quest.QuestProgress.AVAILABLE;
-                        QuestUIManager.uiManager.availableQuests.Add(questList[i]);
+                        // Activation by the ShowQuestProvisoryCanvas
+                        // questList[i].progress = Quest.QuestProgress.AVAILABLE;
+                        // QuestUIManager.uiManager.availableQuests.Add(questList[i]);
                     }
                     
                 }
@@ -254,8 +263,13 @@ public class QuestManager : MonoBehaviour
             }
 
         } else {
-
-            ConversationManager.Instance.StartConversation(defaultConversation);
+            
+            for (int i=0; i<questList.Count; i++){
+                if (questList[i].id == questID && questList[i].progress == Quest.QuestProgress.AVAILABLE){
+                    ConversationManager.Instance.StartConversation(defaultConversation);
+                }
+            }
+            
 
         }
     }

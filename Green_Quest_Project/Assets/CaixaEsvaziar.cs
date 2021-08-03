@@ -60,9 +60,9 @@ public class CaixaEsvaziar : MonoBehaviour
         Destroy(gameObject);
     }
     public void activatePapel(){
-        isActivated = true;
+        CaixaEsvaziar.instance.isActivated = true;
     }
     public void deactivatePapel(){
-        isActivated = false;
+        CaixaEsvaziar.instance.isActivated = false;
     }
 }

@@ -35,12 +35,16 @@ public class PlayerController : MonoBehaviour
     public bool endGame;
     public float lastHorizontal;
     public float lastVertical;
+    public bool YAbool;
+    public bool YAbool1;
 
     void Awake()
     {
     	canMove = true;
         endGame = false;
         canInteract = true;
+        YAbool = false;
+        YAbool1 = true;
         FiltroAtivado = false;
         GotFish = false;
         Stamina = 100f;

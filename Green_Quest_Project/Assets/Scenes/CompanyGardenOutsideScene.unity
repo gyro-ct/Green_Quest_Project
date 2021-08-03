@@ -5171,6 +5171,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
+      propertyPath: direction
+      value: garden
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
+        type: 3}
       propertyPath: areaToLoad
       value: CompanyLogisticScene
       objectReference: {fileID: 0}
@@ -5420,9 +5425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f23752b661458036bdb3fb6281eaaae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 8190571221998339856, guid: dd85e0252be0e06feab079f9e4fce207, type: 3}
-  HUD: {fileID: 1445246083472540512, guid: 3613386c800ff79858ff1de073fb035a, type: 3}
-  UIFade: {fileID: 8875652687903005577, guid: 11e41b8bbcfbf4d4494d8d3a86a5ef53, type: 3}
 --- !u!4 &317922165
 Transform:
   m_ObjectHideFlags: 0
@@ -26162,6 +26164,11 @@ PrefabInstance:
         type: 3}
       propertyPath: id
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
+        type: 3}
+      propertyPath: direction
+      value: garden
       objectReference: {fileID: 0}
     - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}

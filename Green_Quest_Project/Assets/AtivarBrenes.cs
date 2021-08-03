@@ -6,7 +6,7 @@ public class AtivarBrenes : MonoBehaviour
 {
 
     private void OnDestroy() {
-        BrenesController.instance.valor = 5;
+        QuestManager.questManager.AddQuestItem("Xerox do relatório", 1);
     }
                 
 }

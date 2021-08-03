@@ -67,12 +67,12 @@ public class Q101QuizManager : MonoBehaviour
     }
 
     public void calcularNota(){
-        Debug.Log("Nota");
         r = r1 + r21 + r22 + r23 + r3 + r4;
+        PlayerController.instance.YAbool = true;
         Debug.Log("RR" + r);
+        Debug.Log("RR2" + PlayerController.instance.YAbool);
         if (r>=5){
             FoiContratado = true;
-            Debug.Log("FC "+ FoiContratado);
         } else {
             FoiContratado = false;
         }
@@ -81,8 +81,11 @@ public class Q101QuizManager : MonoBehaviour
     }
 
     public void Ligacao(){
-        Debug.Log("FC2 "+ FoiContratado + " " + r);
-        TriggerforDormir = true;
+        PlayerController.instance.YAbool = false;
+        if (!PlayerController.instance.FoiContratado){
+            Debug.Log("WTF");
+            PlayerController.instance.YAbool1 = true;
+        }
         StartCoroutine(EC(5.0f));
     }
 
@@ -103,10 +106,11 @@ public class Q101QuizManager : MonoBehaviour
     public void Ligacao2(){
         Debug.Log("FC2AAAAAAAAAAA");
 
+        PlayerController.instance.canMove = false;
+        PlayerController.instance.canInteract = false;
         if (PlayerController.instance.FoiContratado){
             Debug.Log("Conversa2");
             QuestManager.questManager.AddQuestItem("Mexer no Computador", 1);
-            QuestManager.questManager.CompleteQuest(1);
             ConversationManager.Instance.StartConversation(myConversationGood);
         } else {
             Debug.Log("Conversa3");

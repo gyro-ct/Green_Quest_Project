@@ -6,20 +6,18 @@ using DialogueEditor;
 public class MaquinaDeCafe : MonoBehaviour
 {
 
-    public bool isActivated = false;
-
     public bool playerIsNear = false;
     public GameObject coffee;
     public GameObject painelSave;
 
     void Update(){
-        if (isActivated && playerIsNear && Input.GetKeyDown(KeyCode.Space)){
-            if (QuestManager.questManager.ConversationMainTrigger == 5){
-                coffee.SetActive(true);
-                painelSave.SetActive(true);
+        if (EvaController.instance.coffeMachineActivated && playerIsNear && Input.GetKeyDown(KeyCode.Space)){
+            for (int i=0; i<QuestManager.questManager.currentQuestList.Count;i++){
+                if (QuestManager.questManager.currentQuestList[i].id == 6){
+                    coffee.SetActive(true);
+                    painelSave.SetActive(true);
+                }
             }
-            // IMPLEMENTAR
-            // SaveLoadQuitGame.saveLoadQuitGame.Save();
         }
     }
 
@@ -33,13 +31,6 @@ public class MaquinaDeCafe : MonoBehaviour
         if (other.tag == "Player"){
             playerIsNear = false;
         }
-    }
-
-    public void activateCoffeeMachine(){
-        isActivated = true;
-    }
-    public void deactivateCoffeeMachine(){
-        isActivated = false;
     }
 
 }

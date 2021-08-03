@@ -37,6 +37,7 @@ public class TriggerEmpilha : MonoBehaviour
                 TileColliderPlayer.SetActive(false);
                 TileColliderEmpilhadeira.SetActive(true);
                 NebeliController.instance.liberarCaixas();
+                QuestManager.questManager.AddQuestItem("Ativar empilhadeira", 1);
                 bool2 = true;
                 bool1 = false;
             }

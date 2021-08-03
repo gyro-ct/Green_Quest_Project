@@ -9,6 +9,19 @@ public class Mother : MonoBehaviour
 
     public bool conversaFeita = false;
     public NPCConversation conversation;
+    public NPCConversation conversationDefault;
+    public int valor = 1;
+    public static Mother instance;
+
+    void Awake(){
+        if(instance == null){
+            instance = this;
+        } else if (instance != this){
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
+        QuestManager.questManager.PrgInstances.Add(gameObject);
+    }
 
     void Update()
     {
@@ -16,15 +29,22 @@ public class Mother : MonoBehaviour
             
             if (QuestManager.questManager.ConversationMainTrigger == 1 &&
             !conversaFeita){
-                Debug.Log("CC "+QuestManager.questManager.currentQuestList.Count);
                 conversaFeita = true;
                 QuestManager.questManager.AddQuestItem("Conversar com Mae", 1);
-                PlayerController.instance.canMove = false;
+                PlayerController.instance.C2();
+                PlayerController.instance.canInteract = false;
                 ConversationManager.Instance.StartConversation(conversation);
-
+            }
+            else if (valor == 2){
+                ConversationManager.Instance.StartConversation(conversationDefault);
             }
             
         }
+    }
+
+    public void ChangeValor(){
+        Debug.Log("Valor");
+        Mother.instance.valor++;
     }
 
     void OnTriggerEnter2D(Collider2D col){

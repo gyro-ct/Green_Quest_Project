@@ -27,8 +27,10 @@ public class BotaoTrocarTela : MonoBehaviour
             thePanel.SetActive(true);
         } else if (TAG == "Contact"){
             Debug.Log("CONTACT");
-            theContactPanel.SetActive(true);
-            ComputerUIManager.computerManager.BBBB();
+            if (PlayerController.instance.YAbool1){
+                theContactPanel.SetActive(true);
+                ComputerUIManager.computerManager.BBBB();
+            }
         }
         
     }
@@ -40,6 +42,10 @@ public class BotaoTrocarTela : MonoBehaviour
             theContactPanel.SetActive(false);
             ComputerUIManager.computerManager.AAAA();
         }
+    }
+
+    public void DeactivateButton(){
+        PlayerController.instance.YAbool1 = false;
     }
 
     public void CloseAll(){

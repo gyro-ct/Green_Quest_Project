@@ -8,20 +8,23 @@ public class ColliderEvaM1 : MonoBehaviour
 
     public NPCConversation conversation1;
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Player" && !PlayerController.instance.conversaComEva){
-            //next();
-
-            QuestManager.questManager.AddQuestItem("Conversar com Calenwen", 1);
-            // QuestManager.questManager.CompleteQuest(4);
-
-            PlayerController.instance.conversaComEva = true;
-            PortaManager.portaManager.AtivarPorta(4); //Corredor
-            //PortaManager.portaManager.AtivarPorta(8); //SGA
+        if (other.tag == "Player" && EvaController.instance.isColliderActive){
+            EvaController.instance.isColliderActive = false;
+            QuestManager.questManager.ShowQuestProvisoryCanvas(5);
             PlayerController.instance.canMove = false;
-            ConversationManager.Instance.StartConversation(conversation1);
+            PlayerController.instance.canInteract = false;
         }
     }
 
+    public void ativarPorta4(){
+        PortaManager.portaManager.AtivarPorta(4);
+    }
+    public void desativarPorta18(){
+        PortaManager.portaManager.DesativarPorta(18);
+    }
+    public void ativarPorta18(){
+        PortaManager.portaManager.AtivarPorta(18);
+    }
     public void ativarPorta8(){
         PortaManager.portaManager.AtivarPorta(8);
     }
@@ -52,14 +55,8 @@ public class ColliderEvaM1 : MonoBehaviour
     }
 
     public void ativarPorta17(){
-        Debug.Log("FUNCIONAL");
         PortaManager.portaManager.AtivarPorta(17);
     }
-
-    public void maisUmDiretor(){
-        DiretorInstance.instance.aumentarValor();
-    }
-
     public void next(){
         EvaController.instance.nextMove(true);
     }
