@@ -98,7 +98,7 @@ public class PlayFabManager : MonoBehaviour
     }
 
     void callScene(){
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("BedroomScene");
     }
 
     void Start()
