@@ -14,6 +14,7 @@ public class NoticiaManager : MonoBehaviour
 
     public bool NoticiaTabAction = false;
     public GameObject noticiaButton;
+    public GameObject painelDaNoticia;
 
     void Awake(){
         if(noticiaManager == null){
@@ -91,6 +92,7 @@ public class NoticiaManager : MonoBehaviour
                 Destroy(NListButtons[i]);
             }
             NListButtons.Clear();
+            painelDaNoticia.SetActive(false);
             NoticiaTabAction = false;
         }
     }

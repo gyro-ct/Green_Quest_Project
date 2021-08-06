@@ -6563,12 +6563,12 @@ PrefabInstance:
     - target: {fileID: 945932036035465725, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.4
+      value: 3.23
       objectReference: {fileID: 0}
     - target: {fileID: 945932036035465725, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.5
+      value: 8.83
       objectReference: {fileID: 0}
     - target: {fileID: 945932036035465725, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
@@ -6610,15 +6610,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 945932036035465726, guid: 8c92e4075a8206749abde162bfe33ead,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 4.807924
+      objectReference: {fileID: 0}
+    - target: {fileID: 945932036035465726, guid: 8c92e4075a8206749abde162bfe33ead,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 1.3200853
+      objectReference: {fileID: 0}
     - target: {fileID: 945932036579252462, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.23
+      value: 2.32
       objectReference: {fileID: 0}
     - target: {fileID: 945932036579252462, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.7
+      value: -1.65
       objectReference: {fileID: 0}
     - target: {fileID: 1221432202389423671, guid: 8c92e4075a8206749abde162bfe33ead,
         type: 3}
@@ -9882,7 +9892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753367532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.33, y: 3.79, z: 0}
+  m_LocalPosition: {x: 3.33, y: 2.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1508613825}
@@ -47577,6 +47587,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sr. Brenes
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471690095365655423, guid: 165b8fa9474372c85b66f0e352b0aca0,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.0903635
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471690095365655423, guid: 165b8fa9474372c85b66f0e352b0aca0,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -1.3892932
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 165b8fa9474372c85b66f0e352b0aca0, type: 3}

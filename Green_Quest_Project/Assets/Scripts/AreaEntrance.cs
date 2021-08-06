@@ -45,15 +45,17 @@ public class AreaEntrance : MonoBehaviour
                 if (NibilaController.instance.achouRelogio){
                     GameObject.Find("itemtest pickup (4)").gameObject.SetActive(false);
                 }
-                for (int i = 0; i<QuestManager.questManager.currentQuestList.Count; i++){
-                    if(QuestManager.questManager.currentQuestList[i].id >= 16){
+                for (int i = 0; i<QuestManager.questManager.questList.Count; i++){
+                    if(QuestManager.questManager.questList[i].id == 15 &&
+                        QuestManager.questManager.questList[i].progress == Quest.QuestProgress.DONE){
                         GameObject.Find("Caixa1").gameObject.SetActive(false);
                         GameObject.Find("Caixa2").gameObject.SetActive(false);
                         GameObject.Find("Caixa3").gameObject.SetActive(false);
                         GameObject.Find("Caixa4").gameObject.SetActive(false);
                         GameObject.Find("CaixasFalsas").gameObject.SetActive(false);
                     }
-                    if (QuestManager.questManager.currentQuestList[i].id >= 18){
+                    if(QuestManager.questManager.questList[i].id == 17 &&
+                        QuestManager.questManager.questList[i].progress == Quest.QuestProgress.DONE){
                         GameObject.Find("CaixasParaEsvaziar").gameObject.SetActive(false);
                     }
                 }
@@ -68,8 +70,9 @@ public class AreaEntrance : MonoBehaviour
 
             // If para caixas da área logística
             if (direction == "logistica"){
-                for (int i = 0; i<QuestManager.questManager.currentQuestList.Count; i++){
-                    if(QuestManager.questManager.currentQuestList[i].id >= 26){
+                for (int i = 0; i<QuestManager.questManager.questList.Count; i++){
+                    if(QuestManager.questManager.questList[i].id == 25 &&
+                        QuestManager.questManager.questList[i].progress == Quest.QuestProgress.DONE){
                         GameObject.Find("Caixas iterativas Amarela").gameObject.SetActive(false);
                         GameObject.Find("Caixas iterativas Roxa").gameObject.SetActive(false);
                     }

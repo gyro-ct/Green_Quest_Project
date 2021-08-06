@@ -33,6 +33,7 @@ public class TriggerEmpilha : MonoBehaviour
             if(waitToLoad <= 0)
             {
                 PlayerController.instance.animator.SetBool("EsUmaEmpilhadeira", true);
+                PlayerController.instance.canInteract = false;
                 PlayerController.instance.transform.position = colliderEmp2.transform.position;
                 TileColliderPlayer.SetActive(false);
                 TileColliderEmpilhadeira.SetActive(true);

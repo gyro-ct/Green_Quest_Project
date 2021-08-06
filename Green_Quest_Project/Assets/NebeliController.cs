@@ -6,6 +6,7 @@ using DialogueEditor;
 public class NebeliController : MonoBehaviour
 {
     public static NebeliController instance;
+    public bool activeTrigger = false;
     public int count;
 
     void Awake(){
@@ -83,7 +84,14 @@ public class NebeliController : MonoBehaviour
     public bool ativada = false;
 
     void Update(){
-        if (ativada && Input.GetKeyDown(KeyCode.Space)){
+        if (!activeTrigger){
+            for (int i = 0; i<QuestManager.questManager.currentQuestList.Count; i++){
+                if (QuestManager.questManager.currentQuestList[i].id == 23){
+                    activeTrigger = true;
+                }
+            }
+        }
+        if (ativada && Input.GetKeyDown(KeyCode.Space) && activeTrigger){
             ativarConversa();
         }
     }
