@@ -850,6 +850,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &599664947 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4255816261404949948, guid: fa62145a7028f6268935a49f4959f88d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1500689448}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8d993fbc0e1204f8fe214b65b4eef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &916987367
 GameObject:
   m_ObjectHideFlags: 0
@@ -6280,7 +6292,7 @@ PrefabInstance:
     - target: {fileID: 4255816259811020287, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -456
+      value: -496.7
       objectReference: {fileID: 0}
     - target: {fileID: 4255816259859242652, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
@@ -6290,7 +6302,7 @@ PrefabInstance:
     - target: {fileID: 4255816259859242652, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -456
+      value: -496.7
       objectReference: {fileID: 0}
     - target: {fileID: 4255816259939949242, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
@@ -6315,12 +6327,12 @@ PrefabInstance:
     - target: {fileID: 4255816260576635427, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -926.68463
+      value: -1004.9999
       objectReference: {fileID: 0}
     - target: {fileID: 4255816260576635427, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -463.34238
+      value: -502.50006
       objectReference: {fileID: 0}
     - target: {fileID: 4255816260602634915, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
@@ -6335,12 +6347,12 @@ PrefabInstance:
     - target: {fileID: 4255816261044324936, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -926.6846
+      value: -1004.9999
       objectReference: {fileID: 0}
     - target: {fileID: 4255816261044324936, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -463.34238
+      value: -502.50006
       objectReference: {fileID: 0}
     - target: {fileID: 4255816261274164746, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
@@ -6610,7 +6622,7 @@ PrefabInstance:
     - target: {fileID: 7321391600361541123, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -456
+      value: -496.7
       objectReference: {fileID: 0}
     - target: {fileID: 7672834094643824875, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
@@ -6645,7 +6657,7 @@ PrefabInstance:
     - target: {fileID: 8299560079053739475, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -456
+      value: -496.7
       objectReference: {fileID: 0}
     - target: {fileID: 8807612232378469173, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
@@ -6686,7 +6698,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 599664947}
     - target: {fileID: 8807612232378469173, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
@@ -6715,7 +6727,7 @@ PrefabInstance:
     - target: {fileID: 8807612232378469173, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: DeactivateButton
+      value: dsativarBotaoChamada
       objectReference: {fileID: 0}
     - target: {fileID: 8807612232378469173, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
@@ -6730,7 +6742,7 @@ PrefabInstance:
     - target: {fileID: 8807612232378469173, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: BotaoTrocarTela, Assembly-CSharp
+      value: ComputerUIManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8807612232378469173, guid: fa62145a7028f6268935a49f4959f88d,
         type: 3}

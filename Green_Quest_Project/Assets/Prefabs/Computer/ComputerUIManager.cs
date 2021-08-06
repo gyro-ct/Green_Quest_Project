@@ -55,5 +55,9 @@ public class ComputerUIManager : MonoBehaviour
         Animation.SetActive(false);
     }
 
+    public void dsativarBotaoChamada(){
+        PlayerController.instance.YAbool1 = false;
+    }
+
     
 }
