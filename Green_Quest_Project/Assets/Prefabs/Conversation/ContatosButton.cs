@@ -11,6 +11,8 @@ public class ContatosButton : MonoBehaviour
     public string nome;
     public string desc;
     public Conv fazerLigacao;
+    public int ctID;
+    public int cvID;
 
     public TMP_Text nomeBotao;
     public Image imagemPersonagemPainel;
@@ -26,6 +28,8 @@ public class ContatosButton : MonoBehaviour
         descPainel.text = desc;
         botaoLigar.SetActive(true);
         LigarButton LBbutton = botaoLigar.GetComponent<LigarButton>();
+        LBbutton.callID = cvID;
+        LBbutton.contID = ctID;
         LBbutton.conversa = fazerLigacao;
     }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
 public class EmailManager : MonoBehaviour
 {
     public static EmailManager emailManager;
@@ -22,6 +23,14 @@ public class EmailManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start() {
+        for (int i = 0; i < allEmailList.Count; i++){
+            if (allEmailList[i].progress == Email.EmailProgress.AVAILABLE){
+                availableEmailList.Add(allEmailList[i]);
+            }
+        } 
     }
 
     public void FillEmailButtons()
@@ -48,7 +57,7 @@ public class EmailManager : MonoBehaviour
                 }else
                 {
                     EBbutton.lido = false;
-                }
+                } 
                 
                 EButton.transform.SetParent(EButtonPanel,false);
                 EListButtons.Add(EButton);

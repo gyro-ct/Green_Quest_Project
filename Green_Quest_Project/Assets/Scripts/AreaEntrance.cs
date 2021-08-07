@@ -68,6 +68,13 @@ public class AreaEntrance : MonoBehaviour
                 }
             }
 
+            // If para living room
+            if (direction == "sala"){
+                if (Mother.instance.foundMomLetter){
+                    GameObject.Find("itemtest pickup").gameObject.SetActive(false);
+                }
+            }
+
             // If para caixas da área logística
             if (direction == "logistica"){
                 for (int i = 0; i<QuestManager.questManager.questList.Count; i++){

@@ -9,6 +9,7 @@ public class AcarItm2 : MonoBehaviour
     private void OnDestroy() {
         if (BrenesController.instance.foundReport){
             Debug.Log("OnDestroy");
+            Debug.Log(conv);
             ConversationManager.Instance.StartConversation(conv);
         }
     }
