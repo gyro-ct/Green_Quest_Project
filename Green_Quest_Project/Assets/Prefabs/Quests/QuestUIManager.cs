@@ -68,10 +68,10 @@ public class QuestUIManager : MonoBehaviour
     // Show quest log when the button of the quest is clicked
     public GameObject buttonAceitarQuest;
     public GameObject questDescriptionPanel;
-    public Text questLogTitle;
-    public Text questLogDescription;
-    public Text questLogSummary;
-    public Text questLogHint;
+    public TMP_Text questLogTitle;
+    public TMP_Text questLogDescription;
+    public TMP_Text questLogSummary;
+    public TMP_Text questLogHint;
 
     public void ShowQuestLog(int questID){
 

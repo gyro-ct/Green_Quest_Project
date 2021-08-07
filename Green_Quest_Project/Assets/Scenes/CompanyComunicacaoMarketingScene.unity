@@ -14941,7 +14941,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.15, y: 13.51}
+  m_AnchoredPosition: {x: -6.1, y: 13.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1247198644
@@ -43486,6 +43486,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233795846}
     m_Modifications:
+    - target: {fileID: 2624329367504764723, guid: 0b1c23f42f9208a4f9ff567e86a75a9d,
+        type: 3}
+      propertyPath: height
+      value: -18.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4380972282377384148, guid: 0b1c23f42f9208a4f9ff567e86a75a9d,
         type: 3}
       propertyPath: m_Sprite
@@ -44938,6 +44943,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: f4cb7bd3b88f11b498e6b53ccc3dce4e,
         type: 3}
+    - target: {fileID: 3094135285402422707, guid: 39b74be70eb85054795ffe136b40c3b6,
+        type: 3}
+      propertyPath: height
+      value: 1.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167238612177536521, guid: 39b74be70eb85054795ffe136b40c3b6,
+        type: 3}
+      propertyPath: height
+      value: -15.93
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39b74be70eb85054795ffe136b40c3b6, type: 3}
 --- !u!4 &1740092081 stripped
@@ -47447,6 +47462,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 520ba95b8fd5a404aa0932db50163672,
         type: 3}
+    - target: {fileID: 967844395710232922, guid: 194106331232b514fbc378b2460b7009,
+        type: 3}
+      propertyPath: height
+      value: 1.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094119410838563333, guid: 194106331232b514fbc378b2460b7009,
+        type: 3}
+      propertyPath: height
+      value: -6.24
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 194106331232b514fbc378b2460b7009, type: 3}
 --- !u!4 &2090793742 stripped

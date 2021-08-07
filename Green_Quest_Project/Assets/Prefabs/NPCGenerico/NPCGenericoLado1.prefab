@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 798575475799010844}
   - component: {fileID: 798575475799010847}
+  - component: {fileID: 967844395710232922}
   m_Layer: 0
   m_Name: "Cabe\xE7a"
   m_TagString: Untagged
@@ -82,6 +83,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &967844395710232922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798575475799010845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b89a54022d731b1881a6922da277bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrder_Back: 11
+  sortingOrder_PGT: 11
+  height: 0
 --- !u!1 &798575477707637421
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,8 +112,10 @@ GameObject:
   - component: {fileID: 798575477707637423}
   - component: {fileID: 798575477707637420}
   - component: {fileID: 798575477707637587}
+  - component: {fileID: 5094119410838563333}
+  - component: {fileID: 3059061529924414527}
   m_Layer: 0
-  m_Name: NPCGenericoLado2
+  m_Name: NPCGenericoLado1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -189,7 +207,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &798575477707637423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -203,7 +221,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.1605637, y: 1.0155578}
+  m_Offset: {x: -0.1605637, y: 0.14936721}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -214,7 +232,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9511275, y: 2.3255234}
+  m_Size: {x: 1.9511275, y: 1.0262377}
   m_EdgeRadius: 0
 --- !u!61 &798575477707637420
 BoxCollider2D:
@@ -261,3 +279,40 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5094119410838563333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798575477707637421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b89a54022d731b1881a6922da277bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrder_Back: 10
+  sortingOrder_PGT: 10
+  height: 0
+--- !u!114 &3059061529924414527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798575477707637421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentIDCounter: 1
+  json: 
+  saveVersion: 0
+  DefaultName: 
+  DefaultSprite: {fileID: 0}
+  DefaultFont: {fileID: 0}
+  NodeSerializedDataList: []
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
