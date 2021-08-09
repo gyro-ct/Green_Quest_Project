@@ -35,11 +35,15 @@ public class PlayerController : MonoBehaviour
     public bool endGame;
     public float lastHorizontal;
     public float lastVertical;
+    public bool mybool;
+    public bool DesTutorial;
     public bool YAbool;
     public bool YAbool1;
 
     void Awake()
     {
+        mybool = true;
+        DesTutorial = true;
     	canMove = true;
         endGame = false;
         canInteract = true;
@@ -71,7 +75,12 @@ public class PlayerController : MonoBehaviour
         // Player click space button for item picking
         if(Input.GetKeyDown(KeyCode.P))
         {
-            animator.SetBool("EsUmaEmpilhadeira", true);
+            if(animator.GetBool("EsUmaEmpilhadeira")){
+                animator.SetBool("EsUmaEmpilhadeira", false);
+            } else {
+                animator.SetBool("EsUmaEmpilhadeira", true);
+            }
+            
         }
     
         if(Input.GetKeyDown(KeyCode.Space) && canMove && canInteract)
@@ -204,25 +213,25 @@ public class PlayerController : MonoBehaviour
     IEnumerator ExampleCoroutine2(float time)
     {
         //Print the time of when the function is first called.
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+        //Debug.Log("Started Coroutine at timestamp : " + Time.time);
 
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(time);
 
         //After we have waited 5 seconds print the time again.
-        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        //Debug.Log("Finished Coroutine at timestamp : " + Time.time);
     }
 
     IEnumerator ExampleCoroutine(float time)
     {
         //Print the time of when the function is first called.
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+        //Debug.Log("Started Coroutine at timestamp : " + Time.time);
 
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(time);
 
         //After we have waited 5 seconds print the time again.
-        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        //Debug.Log("Finished Coroutine at timestamp : " + Time.time);
         
         canMove = true;
     }
@@ -234,13 +243,13 @@ public class PlayerController : MonoBehaviour
     IEnumerator ExampleCoroutinef(float time)
     {
         //Print the time of when the function is first called.
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+        //Debug.Log("Started Coroutine at timestamp : " + Time.time);
 
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(time);
 
         //After we have waited 5 seconds print the time again.
-        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        //Debug.Log("Finished Coroutine at timestamp : " + Time.time);
         
         canMove = false;
     }

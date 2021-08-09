@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
 public class NoticiaManager : MonoBehaviour
 {
     public static NoticiaManager noticiaManager;
@@ -23,6 +24,14 @@ public class NoticiaManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start() {
+        for (int i = 0; i < allNoticiaList.Count; i++){
+            if (allNoticiaList[i].progress == Noticia.NoticiaProgress.AVAILABLE){
+                availableNoticiaList.Add(allNoticiaList[i]);
+            }
+        } 
     }
 
     public void FillNoticiaButtons()

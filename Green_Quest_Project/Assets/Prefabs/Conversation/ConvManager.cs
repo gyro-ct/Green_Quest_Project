@@ -6,8 +6,10 @@ using DialogueEditor;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class ConvManager : MonoBehaviour
 {
+
     public static ConvManager convManager;
     public GameObject contButton;
     public Transform CButtonPanel;    
@@ -15,6 +17,7 @@ public class ConvManager : MonoBehaviour
 
     public List <Conv> convList = new List<Conv>(); // Lista mestre de Convs
     public List <Contato> contList = new List<Contato>();
+    public List <Contato> contListActive = new List<Contato>();
     private bool ContactTabAction = false;
 
     // Inicialização e verificação se não há duplicatas
@@ -45,11 +48,11 @@ public class ConvManager : MonoBehaviour
 
     public void ActivateReceiveCallCanvas(int callID, int contactID){
         receiveCallCanvas.SetActive(true);
-        for (int i=0; i<contList.Count; i++){
-            if (contList[i].ID == contactID){
-                nomePainel.text = contList[i].nome;
-                imagemPersonagemPainel.sprite = contList[i].imgPersonagem;
-                descPainel.text = contList[i].desc;
+        for (int i=0; i<contListActive.Count; i++){
+            if (contListActive[i].ID == contactID){
+                nomePainel.text = contListActive[i].nome;
+                imagemPersonagemPainel.sprite = contListActive[i].imgPersonagem;
+                descPainel.text = contListActive[i].desc;
                 botaoAtender.SetActive(true);
                 LigarButton LBbutton = botaoAtender.GetComponent<LigarButton>();
 
@@ -67,13 +70,15 @@ public class ConvManager : MonoBehaviour
     {
         if(!ContactTabAction)
         {
-            foreach (Contato contato in contList)
+            foreach (Contato contato in contListActive)
             {
                 GameObject CButton = Instantiate(contButton);
                 ContatosButton CBbutton = CButton.GetComponent<ContatosButton>();
                 CBbutton.imgPersonagem = contato.imgPersonagem;
                 CBbutton.nome = contato.nome;
                 CBbutton.desc = contato.desc;
+                CBbutton.ctID = contato.ID;
+                CBbutton.cvID = contato.ID;
                 CBbutton.fazerLigacao = contato.LigacaoPadrao;
                 CBbutton.nomeBotao.text = contato.nome;
                 CBbutton.descPainel.text = contato.desc;
@@ -96,6 +101,14 @@ public class ConvManager : MonoBehaviour
             }
             CListButtons.Clear();
             ContactTabAction = false;
+        }
+    }
+
+    public void addContact(int contID){
+        for (int i = 0; i < contList.Count; i++){
+            if (contList[i].ID == contID){
+                contListActive.Add(contList[i]);
+            }
         }
     }
 

@@ -6,17 +6,14 @@ using DialogueEditor;
 public class LigarButton : MonoBehaviour
 {
     public Conv conversa;
-    private int callID;
-    private int contID;
+    public int callID;
+    public int contID;
 
     public void FazerLigacao(){
         ConversationManager.Instance.StartConversation(conversa.Conversa);
     }
 
-    public void SetVar1(int var1){callID = var1;}
-    public void SetVar2(int var2){contID = var2;
-    DummyCall();}
-    public void DummyCall(){
+    public void Call(){
         ConvManager.convManager.ActivateReceiveCallCanvas(callID, contID);
     }
 

@@ -8,6 +8,7 @@ public class Mother : MonoBehaviour
     public bool motherOfAllBools;
 
     public bool conversaFeita = false;
+    public bool foundMomLetter = false;
     public NPCConversation conversation;
     public NPCConversation conversationDefault;
     public int valor = 1;

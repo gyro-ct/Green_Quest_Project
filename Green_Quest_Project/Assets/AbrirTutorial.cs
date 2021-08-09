@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class AbrirTutorial : MonoBehaviour
 {
-    public bool DesTutorial = true;
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        if (other.tag == "Player" && DesTutorial)
+        if (other.tag == "Player" && PlayerController.instance.DesTutorial)
         {
             TutorialGame.instance.AbrirTutorial(); 
-            DesTutorial = false; 
+            PlayerController.instance.DesTutorial = false; 
         }
     }
 }
