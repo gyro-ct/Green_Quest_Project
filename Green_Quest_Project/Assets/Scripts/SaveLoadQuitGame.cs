@@ -280,6 +280,11 @@ public class SaveLoadQuitGame : MonoBehaviour
     private Dictionary<string, int> mainIntDict = new Dictionary<string, int>();
     private Dictionary<string, bool> mainBoolDict = new Dictionary<string, bool>();
     public void SaveGameScene(Save s){
+
+        // Initialization
+        mainIntDict = new Dictionary<string, int>();
+        mainBoolDict = new Dictionary<string, bool>();
+
         s.SavingScene = SceneManager.GetActiveScene().name;
         s.position = new List<float> {PlayerController.instance.transform.position.x,
                                       PlayerController.instance.transform.position.y,

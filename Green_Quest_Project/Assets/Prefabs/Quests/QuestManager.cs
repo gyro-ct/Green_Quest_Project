@@ -26,6 +26,7 @@ public class QuestManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+        level.text = "Level: " + PlayerController.instance.Level.ToString();
     }
 
     private void Update() {
@@ -256,7 +257,7 @@ public class QuestManager : MonoBehaviour
                     } else {
                         AcceptButton.SetActive(false);
                         myPanel.desc.text = "Aumente sua stamina para liberar a quest!, esta quest precisa de " + questList[i].staminaUsed + " de stamina";
-                        // myPanel.HINT.text = questList[i].hint;
+                        myPanel.HINT.text = "Dica: Durma em sua cama para recuperar sua stamina!";
                     }
                 }
 

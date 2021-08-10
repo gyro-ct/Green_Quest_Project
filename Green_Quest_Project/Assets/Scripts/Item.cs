@@ -51,22 +51,7 @@ public class Item
                     BrenesController.instance.valor = 3;
                     QuestManager.questManager.AddQuestItem("Relatório entregue ao Sr. Brenes", 1);
                     BrenesController.instance.ativarConversa();
-                } else if (BrenesController.instance.valor == 4){
-                    BrenesController.instance.valor = 5;
-                    QuestManager.questManager.AddQuestItem("Conversar com Sr. Brenes novamente", 1);
-                    BrenesController.instance.ativarConversa();
-                    for (int i = 0; i < ItemManager.itemmanager.ListItem.Count; i++){
-                        if (ItemManager.itemmanager.ListItem[i].itemName == itemName){
-
-                            Debug.Log("item" + ItemManager.itemmanager.ListItem[i].itemName);
-
-                            ItemManager.itemmanager.ListItem.RemoveAt(i);
-                            
-                            break;
-                        }
-                    }
                 }
-                
             }
         }
 
@@ -144,11 +129,23 @@ public class Item
             ArahController.instance.valor = 5;
         }
 
-        /*if (itemName == "Cópia do relatório ambiental"){
-            //
+        if (itemName == "Cópia do relatório ambiental"){
+            if (BrenesController.instance.valor == 4){
+                BrenesController.instance.valor = 5;
+                QuestManager.questManager.AddQuestItem("Conversar com Sr. Brenes novamente", 1);
+                BrenesController.instance.ativarConversa();
+                for (int i = 0; i < ItemManager.itemmanager.ListItem.Count; i++){
+                    if (ItemManager.itemmanager.ListItem[i].itemName == "Relatório ambiental"){
+
+                        ItemManager.itemmanager.ListItem.RemoveAt(i);
+                        
+                        break;
+                    }
+                }
+            }
         }
 
-        if (itemName == "Vara de Pesca"){
+        /*if (itemName == "Vara de Pesca"){
             Debug.Log("função vara de pesca");
             if(PlayerController.instance.GotFish){
                 Debug.Log("Pesca permitida");

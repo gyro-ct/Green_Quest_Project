@@ -115,8 +115,8 @@ public class EvaController : MonoBehaviour
             QuestManager.questManager.AddQuestItem("Conversar com Calenwen", 1);
             PlayerController.instance.C2();
             PortaManager.portaManager.AtivarPorta(4);
-            PortaManager.portaManager.AtivarPorta(15);
-            PortaManager.portaManager.AtivarPorta(16);
+            //PortaManager.portaManager.AtivarPorta(15);
+            //PortaManager.portaManager.AtivarPorta(16);
             PlayerController.instance.canInteract = false;
             PlayerController.instance.conversaComEva = false;
             ConversationManager.Instance.StartConversation(conv0);
@@ -134,6 +134,8 @@ public class EvaController : MonoBehaviour
             ConversationManager.Instance.StartConversation(conv3);
         } else if (valor == 5){
             // Adicionar trigger na Arah
+            PortaManager.portaManager.AtivarPorta(15);
+            PortaManager.portaManager.AtivarPorta(16);
             ConversationManager.Instance.StartConversation(conv4);
         } else if (valor == 6){
             ConversationManager.Instance.StartConversation(conv5);

@@ -111,12 +111,18 @@ public class QuestUIManager : MonoBehaviour
             buttonAceitarQuest.SetActive(false);
 
         } else if(activeQuest.progress == Quest.QuestProgress.AVAILABLE){
-
-            questLogDescription.text = activeQuest.description;
-            questLogSummary.text = activeQuest.questObjective + " : " + activeQuest.questObjectiveCount + " / " + activeQuest.questObjectiveRequirements;
-            questLogHint.text = "Dica: Aperte o botão para começar a quest!";
-            buttonAceitarQuest.GetComponent<AcceptQuestNaMochila>().questID = activeQuest.id;
-            buttonAceitarQuest.SetActive(true);
+            if (activeQuest.staminaUsed <= PlayerController.instance.Stamina){
+                questLogDescription.text = activeQuest.description;
+                questLogSummary.text = activeQuest.questObjective + " : " + activeQuest.questObjectiveCount + " / " + activeQuest.questObjectiveRequirements;
+                questLogHint.text = "Dica: Aperte o botão para começar a quest!";
+                buttonAceitarQuest.GetComponent<AcceptQuestNaMochila>().questID = activeQuest.id;
+                buttonAceitarQuest.SetActive(true);
+            } else {
+                questLogDescription.text = "Aumente sua stamina para liberar a quest!, esta quest precisa de " + activeQuest.staminaUsed + " de stamina";
+                questLogSummary.text = "";
+                questLogHint.text = "Dica: Durma em sua cama para recuperar sua stamina!";
+                buttonAceitarQuest.SetActive(false);
+            }
 
         }
 

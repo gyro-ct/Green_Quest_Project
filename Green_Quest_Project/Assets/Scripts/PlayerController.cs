@@ -40,13 +40,21 @@ public class PlayerController : MonoBehaviour
     public bool YAbool;
     public bool YAbool1;
     public bool andando;
-    AudioSource audioSteps;
+    public bool andando2;
+    public bool andando3;
+    public AudioSource audioSteps;
+    public AudioSource audioEmpilha;
+    public AudioSource audioEmpilha2;
     
     
     void Start()
     {
         audioSteps.Play(0);
         audioSteps.Pause();
+        audioEmpilha.Play(0);
+        audioEmpilha.Pause();
+        audioEmpilha2.Play(0);
+        audioEmpilha2.Pause();
     }
     void Awake()
     {
@@ -73,7 +81,6 @@ public class PlayerController : MonoBehaviour
             }
         }
         DontDestroyOnLoad(gameObject);
-        audioSteps = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -141,11 +148,29 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsRunning", false);          
         }
         andando = animator.GetBool("IsRunning");
+        andando2 = animator.GetBool("EsUmaEmpilhadeira");
+        andando3 = animator.GetBool("EsUmaEmpilhadeira2");
 
         if (andando){
-            audioSteps.UnPause();
+            if (andando2 || andando3){
+                audioEmpilha.UnPause();
+                audioEmpilha2.Pause();
+                audioSteps.Pause();
+            } else {
+                audioSteps.UnPause();
+                audioEmpilha.Pause();
+                audioEmpilha2.Pause();
+            }
         } else {
-            audioSteps.Pause();
+            if (andando2 || andando3){
+                audioEmpilha.Pause();
+                audioEmpilha2.UnPause();
+                audioSteps.Pause();
+            } else {
+                audioSteps.Pause();
+                audioEmpilha2.Pause();
+                audioEmpilha.Pause();
+            }
         }
         
         Debug.Log("andando é = " + andando);
