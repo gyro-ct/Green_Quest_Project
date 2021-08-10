@@ -39,7 +39,15 @@ public class PlayerController : MonoBehaviour
     public bool DesTutorial;
     public bool YAbool;
     public bool YAbool1;
-
+    public bool andando;
+    AudioSource audioSteps;
+    
+    
+    void Start()
+    {
+        audioSteps.Play(0);
+        audioSteps.Pause();
+    }
     void Awake()
     {
         mybool = true;
@@ -65,6 +73,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         DontDestroyOnLoad(gameObject);
+        audioSteps = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -129,15 +138,28 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("IsRunning", true);
         } else {
-            animator.SetBool("IsRunning", false);
+            animator.SetBool("IsRunning", false);          
+        }
+        andando = animator.GetBool("IsRunning");
+
+        if (andando){
+            audioSteps.UnPause();
+        } else {
+            audioSteps.Pause();
         }
         
+        Debug.Log("andando é = " + andando);
+     
         
         // Set animation using input
         animator.SetFloat("Horizontal", movement.x); // set declared blend parameter "Horizontal" as input from keyboard
         animator.SetFloat("Vertical", movement.y); // same set but vertical
         animator.SetFloat("Speed", movement.sqrMagnitude); // set Speed as the magnitude of the movement vector (sqr for it to be always positive)
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
+
+        //public bool andando = animator.SetBool("IsRunning", true)
+        
+        
 
     }
     
