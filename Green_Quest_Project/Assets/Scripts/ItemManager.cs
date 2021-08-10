@@ -6,6 +6,7 @@ using UnityEngine;
 public class ItemManager : MonoBehaviour
 {   
     public static ItemManager itemmanager;
+    public List <Item> ListAllItems = new List<Item>();
     public List <Item> ListItem = new List<Item>();
     private List <GameObject> ListButtons = new List<GameObject>();
 
@@ -53,7 +54,7 @@ public class ItemManager : MonoBehaviour
                 ListButtons.Add(ItemButton);
             }
 
-            ItemTabAction = true;             
+            ItemTabAction = true;            
 
         }
 

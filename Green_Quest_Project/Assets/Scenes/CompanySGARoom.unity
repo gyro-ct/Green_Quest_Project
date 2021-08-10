@@ -1683,6 +1683,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -53.590595
       objectReference: {fileID: 0}
+    - target: {fileID: 3349864628999813195, guid: cd1b98430fa4ddf509e59df39eed8a80,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1283018435}
+    - target: {fileID: 3349864628999813195, guid: cd1b98430fa4ddf509e59df39eed8a80,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 3349864629032489220, guid: cd1b98430fa4ddf509e59df39eed8a80,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -5830,7 +5840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1283018436
 MonoBehaviour:
   m_ObjectHideFlags: 0

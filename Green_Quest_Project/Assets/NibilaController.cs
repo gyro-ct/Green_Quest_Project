@@ -28,6 +28,8 @@ public class NibilaController : MonoBehaviour
         questItem2 = 0;
     }
 
+    public string name = "Nibila";
+
     public bool activeTrigger = true;
     public bool achouRelogio = false;
 

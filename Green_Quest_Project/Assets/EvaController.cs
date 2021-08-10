@@ -7,6 +7,8 @@ public class EvaController : MonoBehaviour
 {
     public static EvaController instance;
 
+    public string name = "Eva";
+
     public int modeWalk = 0;
     public int walking = 0;
     public bool start = true;

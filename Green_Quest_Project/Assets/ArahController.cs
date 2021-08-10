@@ -19,7 +19,7 @@ public class ArahController : MonoBehaviour
         activeTrigger = false;
         
     }
-
+    public string name = "Arah";
 
     public NPCConversation C1;
     public NPCConversation C2;

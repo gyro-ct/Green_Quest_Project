@@ -17,6 +17,8 @@ public class DiretorInstance : MonoBehaviour
         QuestManager.questManager.PrgInstances.Add(gameObject);
     }
 
+    public string name = "Diretor";
+
     public bool activeTrigger = true;
 
     public NPCConversation C1;

@@ -48,6 +48,8 @@ public class NebeliController : MonoBehaviour
         }
     }
 
+    public string name = "Nebeli";
+
     public NPCConversation C1;
     public NPCConversation C2;
     public NPCConversation C3;

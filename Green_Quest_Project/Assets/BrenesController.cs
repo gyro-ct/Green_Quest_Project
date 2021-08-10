@@ -18,6 +18,8 @@ public class BrenesController : MonoBehaviour
         
     }
 
+    public string name = "Brenes";
+
     public bool ativarXerox = false;
     public bool activeTrigger = false;
     public bool foundReport = false;

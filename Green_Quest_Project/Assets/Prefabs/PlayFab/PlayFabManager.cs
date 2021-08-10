@@ -38,7 +38,6 @@ public class PlayFabManager : MonoBehaviour
     }
     void OnRegisterSuccess(RegisterPlayFabUserResult result){
         messageText.text = "Registered and logged in!";
-        SaveDummyFunc();
     }
 
     public void LoginButton(){
@@ -52,7 +51,7 @@ public class PlayFabManager : MonoBehaviour
     void OnLoginSuccess(LoginResult result){
         messageText.text = "Logged In!";
         Debug.Log("Successful login/account create!");
-        SaveDummyFunc();
+        SceneManager.LoadScene("BedroomScene");
     }
 
     public void ResetPasswordButton(){
@@ -65,60 +64,6 @@ public class PlayFabManager : MonoBehaviour
     void OnPasswordReset(SendAccountRecoveryEmailResult result){
         messageText.text = "Password reset mail sent";
     }
-
-    void SaveDummyFunc(){
-
-        // Qatch out for assynchronous call doubled
-        SaveLoadQuitGame.saveLoadQuitGame.Save();
-
-        var request = new UpdateUserDataRequest {
-            Data = new Dictionary<string, string> {
-                {"Nome", RAInput.text}
-            }
-        };
-        PlayFabClientAPI.UpdateUserData(request, OnDataSend, OnError);
-    }
-    void OnDataSend(UpdateUserDataResult result){
-        Debug.Log("Data sent successfuly");
-        LoadDummyFunc();
-    }
-
-    void LoadDummyFunc(){
-        PlayFabClientAPI.GetUserData(new GetUserDataRequest(), OnDataReceived, OnError);
-    }
-    void OnDataReceived(GetUserDataResult result){
-        Debug.Log("Received user data");
-        if (result.Data != null && result.Data.ContainsKey("Nome")){
-            Debug.Log(result.Data["Nome"].Value);
-        } else {
-            Debug.Log("Player data not complete");
-        }
-        // Talvez adicionar animação
-        callScene();
-    }
-
-    void callScene(){
-        SceneManager.LoadScene("BedroomScene");
-    }
-
-    void Start()
-    {
-        // Login();
-    }
-
-    /*void Login()
-    {
-        var request = new LoginWithCustomIDRequest {
-            CustomId = SystemInfo.deviceUniqueIdentifier,
-            CreateAccount = true
-        };
-        PlayFabClientAPI.LoginWithCustomID(request, OnSuccess, OnError);
-    }
-
-    void OnSuccess(LoginResult result){
-        Debug.Log("Success");
-    }*/
-
     void OnError(PlayFabError error){
         Debug.Log("Error");
         Debug.Log(error.GenerateErrorReport());

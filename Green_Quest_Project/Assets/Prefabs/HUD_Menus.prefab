@@ -2281,6 +2281,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64565e4c7baac8a43a09e2cab96cd703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ListAllItems:
+  - itemName: "Mensagem de sua m\xE3e"
+    description1: "Mensagem de sua m\xE3e"
+    description2: Talvez tenha algo importante para eu ler aqui!
+    value: 0
+    itemSprite: {fileID: 21300000, guid: 8174b5d53720d052da6caa04a2da3d9b, type: 3}
+    Player: {fileID: 0}
+    Menu: {fileID: 0}
+    BotaoCloseMochila: {fileID: 0}
+    CanvasCartaMae: {fileID: 0}
+  - itemName: "X\xEDcara de Caf\xE9"
+    description1: "X\xEDcara de Caf\xE9"
+    description2: "Uma x\xEDcara de caf\xE9 quentinho, acho que a Calenwen vai gostar!"
+    value: 1
+    itemSprite: {fileID: 21300000, guid: ed3759e966e3c1f5ca212b5eebe12229, type: 3}
+    Player: {fileID: 0}
+    Menu: {fileID: 0}
+    BotaoCloseMochila: {fileID: 0}
+    CanvasCartaMae: {fileID: 0}
+  - itemName: Filtro
+    description1: "Filtro G3 para a chamin\xE9"
+    description2: "Filtro G3 para filtragem grossa. Acho que d\xE1 pra utilizar ele
+      para colocar na chamin\xE9 e acabar com a polui\xE7\xE3o na cidade!"
+    value: 2
+    itemSprite: {fileID: 21300000, guid: 2b62fafd24cf231b69e70888a1702ec5, type: 3}
+    Player: {fileID: 0}
+    Menu: {fileID: 0}
+    BotaoCloseMochila: {fileID: 0}
+    CanvasCartaMae: {fileID: 0}
+  - itemName: "Rel\xF3gio do Sr. Kano"
+    description1: "Rel\xF3gio que o Sr. Kano est\xE1 procurando"
+    description2: "Tenho que devolver este rel\xF3gio para o Sr. Kano!"
+    value: 3
+    itemSprite: {fileID: 21300000, guid: d8440d14b093c4304bf078214ac8722f, type: 3}
+    Player: {fileID: 0}
+    Menu: {fileID: 0}
+    BotaoCloseMochila: {fileID: 0}
+    CanvasCartaMae: {fileID: 0}
+  - itemName: "Pap\xE9is para mover"
+    description1: "Pilha de pap\xE9is para mover"
+    description2: "Se eu tirar estes pap\xE9is daqui, talvez consiga abrir a porta
+      do diretor!"
+    value: 4
+    itemSprite: {fileID: 21300000, guid: 40cf08d563881987da50b902ac6b1594, type: 3}
+    Player: {fileID: 0}
+    Menu: {fileID: 0}
+    BotaoCloseMochila: {fileID: 0}
+    CanvasCartaMae: {fileID: 0}
+  - itemName: "Relat\xF3rio ambiental"
+    description1: "Relat\xF3rio ambiental"
+    description2: "O Sr. Brenes precisa desse relat\xF3rio ambiental..."
+    value: 5
+    itemSprite: {fileID: 21300000, guid: 8174b5d53720d052da6caa04a2da3d9b, type: 3}
+    Player: {fileID: 0}
+    Menu: {fileID: 0}
+    BotaoCloseMochila: {fileID: 0}
+    CanvasCartaMae: {fileID: 0}
+  - itemName: "C\xF3pia do relat\xF3rio ambiental"
+    description1: "Uma c\xF3pia quentinha do relat\xF3rio ambiental"
+    description2: "O Sr. Brenes disse que isso iria ser bem importante pra fazermos
+      uma gest\xE3o ambiental de qualidade"
+    value: 6
+    itemSprite: {fileID: 21300000, guid: 8174b5d53720d052da6caa04a2da3d9b, type: 3}
+    Player: {fileID: 0}
+    Menu: {fileID: 0}
+    BotaoCloseMochila: {fileID: 0}
+    CanvasCartaMae: {fileID: 0}
   ListItem: []
   button: {fileID: 8501911955654086030}
   ButtonPanel: {fileID: 8238509103475240902}
@@ -3018,6 +3085,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29a8cb5b8567904b8642c7449aab129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Arah: {fileID: 6028199949612379625, guid: c39ce09208bf4c00186af1d0fa0eaa3b, type: 3}
+  Brenes: {fileID: 2471690095365655420, guid: 165b8fa9474372c85b66f0e352b0aca0, type: 3}
+  Diretor: {fileID: 381225604369885668, guid: 3063bb8450a3eb2a3b36d7228acaa737, type: 3}
+  Eva: {fileID: 353474128579495159, guid: 1ab2270277e26ae0585e0b8d9e1fe69a, type: 3}
+  Kano: {fileID: 2671435552019648279, guid: 14369c907c3e908258ce547e692d733e, type: 3}
+  Nebeli: {fileID: 7102493518162864737, guid: 9eab5b6e44cf1f20f9f13e944c90477a, type: 3}
+  Nibila: {fileID: 632720051189814886, guid: 1cc47dbdfa2412e838e4240ab8929a85, type: 3}
+  Persula: {fileID: 7240739283076061250, guid: 5699d83affb85036190d69da8d6861e1, type: 3}
+  _Mother: {fileID: 6135184314086726230, guid: 05c9b34f4595c261f87b3d8d60c17942, type: 3}
 --- !u!114 &5413069933652302293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7810,7 +7886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &790733432153349402
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7912,7 +7988,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6837357779163677735}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3681083544690305905}
+        m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
+        m_MethodName: DebugPrgList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6589779861604254123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17121,7 +17209,7 @@ PrefabInstance:
     - target: {fileID: 2583829307962503711, guid: 7b855e30b43148813b76dcd02044c319,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3068198167588843126, guid: 7b855e30b43148813b76dcd02044c319,
         type: 3}

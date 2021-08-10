@@ -318,4 +318,10 @@ public class QuestManager : MonoBehaviour
         ActiveExit.SetActive(true);
     }
 
+    public void DebugPrgList(){
+        foreach (GameObject inst in PrgInstances){
+            Debug.Log(inst.name);
+        }
+    }
+
 }

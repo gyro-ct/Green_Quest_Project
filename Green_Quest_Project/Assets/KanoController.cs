@@ -17,6 +17,7 @@ public class KanoController : MonoBehaviour
         QuestManager.questManager.PrgInstances.Add(gameObject);
         
     }
+    public string name = "Kano";
 
     public bool activeTrigger = true;
 

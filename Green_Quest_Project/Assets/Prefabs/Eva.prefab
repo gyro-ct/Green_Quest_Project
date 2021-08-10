@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9406beb00e2df05af7002981068775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Eva
   modeWalk: 0
   walking: 0
   start: 1
@@ -221,6 +222,7 @@ MonoBehaviour:
   sortingOrder: 10
   PlayerNear: 0
   change: 0
+  passouFase5: 0
   conv0: {fileID: 4611239036220962184, guid: 930017b431ae28e959d4d5df87dd7cf7, type: 3}
   conv1: {fileID: 6686976441392738848, guid: b862b51c82f17e6dd9c23b691168d7ba, type: 3}
   conv2: {fileID: 1510946486100048797, guid: 8e3cc077ecdf57cdb9c8ca885706c986, type: 3}
@@ -229,8 +231,14 @@ MonoBehaviour:
   conv5: {fileID: 9048901798867309799, guid: d78bf4be8cb2ccbffa1e2d999bdd539c, type: 3}
   valor: 1
   v2: 1
-  v3: 1
   v4: 1
+  oneActivation: 1
+  isOnSGA: 0
+  isColliderActive: 1
+  coffeMachineActivated: 0
+  active31: 1
+  active32: 1
+  active33: 1
 --- !u!61 &4771035850837624543
 BoxCollider2D:
   m_ObjectHideFlags: 0

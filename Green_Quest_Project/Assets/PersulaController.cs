@@ -25,6 +25,8 @@ public class PersulaController : MonoBehaviour
         PersulaController.instance.v3 = true;
     }
 
+    public string name = "Persula";
+
     public bool activeTrigger = true;
 
     public NPCConversation C1;
