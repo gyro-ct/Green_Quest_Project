@@ -23,6 +23,6 @@ O jogo foi feito na plataforma Unity (versão 2020.2.7f1) com a utilização das
 - PlayFab (SDK 2.106.210406)
 - Dialogue Editor (1.1.02)
 
-Green Quest foi feito para ser um jogo introdutório aos assuntos de sustentabilidade e gerenciamento ambiental e está finalizado para jogar apenas para um número limitado de quests referentes à primeira aula devido ao curto tempo de projeto. Maiores informações técnicas podem ser vistas no
+Green Quest foi feito para ser um jogo introdutório aos assuntos de sustentabilidade e gerenciamento ambiental e está finalizado para jogar apenas para um número limitado de quests referentes à primeira aula devido ao curto tempo de projeto. Maiores informações técnicas podem ser vistas no arquivo de Game Design Development ([a link](https://github.com/gyro-ct/Green_Quest_Project/blob/main/19122020_Game%20Design%20Document%20(GDD).docx))
 
 ## Estrutura de pastas
