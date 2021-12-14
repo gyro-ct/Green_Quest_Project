@@ -17,18 +17,12 @@ public class PlayFabManager : MonoBehaviour
     public void RegisterButton(){
 
         if (passInput.text.Length >= 6){
-            if (RAInput.text.Length == 7){
-                var request = new RegisterPlayFabUserRequest{
-                    Email = emailInput.text,
-                    Password = passInput.text,
-                    Username = RAInput.text
+            var request = new RegisterPlayFabUserRequest{
+                Email = emailInput.text,
+                Password = passInput.text,
+                Username = RAInput.text
                 };
                 PlayFabClientAPI.RegisterPlayFabUser(request, OnRegisterSuccess, OnError);
-            } else {
-                messageText.text = "Invalid RA";
-                return;
-            }
-
         } else {
             messageText.text = "Password too short";
             return;
