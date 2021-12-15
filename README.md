@@ -6,7 +6,7 @@ Green Quest é um jogo sério feito por alunos do Laboratório de Avaliação da
 
 ## Rodando o jogo
 
-Para rodar o jogo pela primeira vez, extraia a pasta ```Build``` para o seu computador e abra ela. Dentro do diretório ´`´Green Quest´´` haverá o arquivo ```Green Quest.exe```, abra este arquivo para rodar o jogo.
+Para rodar o jogo pela primeira vez, extraia a pasta ```Build``` para o seu computador e abra ela. Dentro do diretório ```Green Quest``` haverá o arquivo ```Green Quest.exe```, abra este arquivo para rodar o jogo.
 
 ## Estrutura de programação
 
