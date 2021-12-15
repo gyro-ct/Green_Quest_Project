@@ -8,8 +8,6 @@ Green Quest é um jogo sério feito por alunos do Laboratório de Avaliação da
 
 Para rodar o jogo pela primeira vez, extraia a pasta ```Build``` para o seu computador e abra ela. Dentro do diretório ´`´Green Quest´´` haverá o arquivo ```Green Quest.exe```, abra este arquivo para rodar o jogo.
 
-## Estrutura de pastas
-
 O jogo foi feito na plataforma Unity (versão 2020.2.7f1) em linguagem C# com a utilização das seguintes libraries:
 
 - 2D Entities (0.32.0-preview.5)
