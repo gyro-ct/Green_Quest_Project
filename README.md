@@ -31,7 +31,7 @@ Green Quest foi feito para ser um jogo introdutório aos assuntos de sustentabil
 
 O projeto segue a estruturação básica de um projeto Unity, sendo a pasta ```Assets``` a que apresenta as imagens, vídeos, audios, códigos-fonte, cenas e outros elementos do design do jogo.
 
-O jogo é dividido em várias cenários adaptados em diferentes cenas. Estas cenas estão na pasta ```Assets/Scenes```. Estas cenas são compostas pelos objetos adicionados (como o objeto do personagem, NPCs, interfaces presentes) e seus respectivos códigos-fonte. As cenas utilizadas no jogo (que não são exclusivas para prototipagem durante o desenvolvimento do jogo) foram:
+O jogo é dividido em vários cenários adaptados em diferentes cenas. Estas cenas estão na pasta ```Assets/Scenes```. Estas cenas são compostas pelos objetos adicionados (como o objeto do personagem, NPCs, interfaces presentes) e seus respectivos códigos-fonte. As cenas utilizadas no jogo (que não são exclusivas para prototipagem durante o desenvolvimento do jogo) foram:
 
 - LoginScene: Interface de login para o jogo
 - BedroomScene: Quarto do personagem
