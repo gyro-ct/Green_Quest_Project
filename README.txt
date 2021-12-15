@@ -2,6 +2,12 @@
 
 Green Quest é um jogo sério feito por alunos do Laboratório de Avaliação da Sustentabilidade do Ciclo de Vida (Gyro), da Universidade Tecnológica Federal do Paraná (UTFPR - Câmpus Curitiba) para a disciplina de Gestão Ambiental dos cursos de Engenharia Mecânica e Engenharia Mecatrônica. Ele está vinculado ao projeto PanGEA de desenvolvimento de ferramentas de apoio à disciplina por gamificação, vídeos e atividades.
 
+## Rodando o jogo
+
+Para rodar o jogo pela primeira vez, extraia a pasta ```Build``` para o seu computador e abra ela. Dentro do diretório ´`´Green Quest´´` haverá o arquivo ```Green Quest.exe```, abra este arquivo para rodar o jogo.
+
+## Estrutura de pastas
+
 O jogo foi feito na plataforma Unity (versão 2020.2.7f1) em linguagem C# com a utilização das seguintes libraries:
 
 - 2D Entities (0.32.0-preview.5)
