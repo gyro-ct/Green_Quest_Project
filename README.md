@@ -8,6 +8,8 @@ Green Quest é um jogo sério feito por alunos do Laboratório de Avaliação da
 
 Para rodar o jogo pela primeira vez, extraia a pasta ```Build``` para o seu computador e abra ela. Dentro do diretório ´`´Green Quest´´` haverá o arquivo ```Green Quest.exe```, abra este arquivo para rodar o jogo.
 
+## Estrutura de programação
+
 O jogo foi feito na plataforma Unity (versão 2020.2.7f1) em linguagem C# com a utilização das seguintes libraries:
 
 - 2D Entities (0.32.0-preview.5)
@@ -89,7 +91,7 @@ Os arquivos com final "Controller" são responsáveis pelo gerenciamento do pers
 - Mother: controle do NPC da mãe do personagem
 - PlayerController: controle principal dos movimentos e ações do personagem jogável (principal)
 
-Vários arquivos de código-fonte são responsáveis pelo funcionamento da interface (UI) do jogo, como botões, inputs de texto, listas, painéis e outros... Estes arquivos são:
+Vários arquivos de código-fonte são responsáveis pelo funcionamento da interface (UI) do jogo, como botões, entradas de texto, listas, painéis e outros... Estes arquivos são:
 
 - ButtonFornecedorCompras, InfoPainel, OpenSavePanel, BotaoTrocarTela, CountDownTimer, ButtonSlot, Computador, Inventory, ProgressBar, SettingsMenu, TutorialGame, UIConversationButton2, UIFade (Miscelaneous)
 - UseButton
