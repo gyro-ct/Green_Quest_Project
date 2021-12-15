@@ -89,7 +89,7 @@ Os arquivos com final "Controller" são responsáveis pelo gerenciamento do pers
 - Mother: controle do NPC da mãe do personagem
 - PlayerController: controle principal dos movimentos e ações do personagem jogável (principal)
 
-Vários arquivos de código-fonte são responsáveis pelo funcionamento da interface (UI) do jogo, como botões, inputs de texto, listas, painéis e outros... Estes arquivos são:
+Vários arquivos de código-fonte são responsáveis pelo funcionamento da interface (UI) do jogo, como botões, entradas de texto, listas, painéis e outros... Estes arquivos são:
 
 - ButtonFornecedorCompras, InfoPainel, OpenSavePanel, BotaoTrocarTela, CountDownTimer, ButtonSlot, Computador, Inventory, ProgressBar, SettingsMenu, TutorialGame, UIConversationButton2, UIFade (Miscelaneous)
 - UseButton
